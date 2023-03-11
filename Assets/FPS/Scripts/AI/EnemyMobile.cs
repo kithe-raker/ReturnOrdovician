@@ -6,6 +6,7 @@ namespace Unity.FPS.AI
     [RequireComponent(typeof(EnemyController))]
     public class EnemyMobile : MonoBehaviour
     {
+        public int test = 0;
         public enum AIState
         {
             Patrol,
@@ -29,7 +30,7 @@ namespace Unity.FPS.AI
         public MinMaxFloat PitchDistortionMovementSpeed;
 
         public AIState AiState { get; private set; }
-        EnemyController m_EnemyController;
+        public EnemyController m_EnemyController; //yes no modify to public
         AudioSource m_AudioSource;
 
         const string k_AnimMoveSpeedParameter = "MoveSpeed";
@@ -74,7 +75,7 @@ namespace Unity.FPS.AI
                 moveSpeed / m_EnemyController.NavMeshAgent.speed);
         }
 
-        void UpdateAiStateTransitions()
+         void UpdateAiStateTransitions() 
         {
             // Handle transitions 
             switch (AiState)
@@ -99,7 +100,7 @@ namespace Unity.FPS.AI
             }
         }
 
-        void UpdateCurrentAiState()
+        public virtual void UpdateCurrentAiState() //yes no modify, adding public virtual for doing class inheritance //try protect
         {
             // Handle logic 
             switch (AiState)

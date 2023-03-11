@@ -17,7 +17,6 @@ public class EnemyMantis : EnemyMobile
         {
             if(startStandStillTimer==true)
             {
-                print("hi");
                 standStillTimer += Time.deltaTime;
                  m_EnemyController.NavMeshAgent.speed = 0;
                  if(standStillTimer>stand_still_delay){

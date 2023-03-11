@@ -53,10 +53,10 @@ namespace Unity.FPS.Game
 
             // call OnDamage action
             float trueDamageAmount = healthBefore - CurrentHealth;
-            if (trueDamageAmount > 0f)
-            {
-                OnDamaged?.Invoke(trueDamageAmount, damageSource);
-            }
+            // if (trueDamageAmount > 0f)                                       //yes no modify // for stoping enemies from hp drain rapidly
+            // {
+            //     OnDamaged?.Invoke(trueDamageAmount, damageSource);
+            // }
 
             HandleDeath();
         }
