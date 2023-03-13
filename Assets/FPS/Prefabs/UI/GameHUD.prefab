@@ -2542,6 +2542,7 @@ GameObject:
   - component: {fileID: 7730855410354769530}
   - component: {fileID: 5917255261459168744}
   - component: {fileID: 8202736506323863205}
+  - component: {fileID: 2088154695752295912}
   - component: {fileID: 5499754808462435493}
   - component: {fileID: 817587990}
   - component: {fileID: 8914494409660412361}
@@ -2604,6 +2605,19 @@ MonoBehaviour:
   AmmoPanel: {fileID: 7784911861666327368}
   AmmoCounterPrefab: {fileID: 645032500860478885, guid: 381e109c8e235f54cbcfbe7434554e49,
     type: 3}
+--- !u!114 &2088154695752295912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5413294659218134590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf2995397d485ca49b59b78b9069bda1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShieldFillImage: {fileID: 5813259310826887931}
 --- !u!114 &5499754808462435493
 MonoBehaviour:
   m_ObjectHideFlags: 0
