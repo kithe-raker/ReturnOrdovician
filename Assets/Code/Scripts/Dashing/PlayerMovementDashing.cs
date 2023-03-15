@@ -98,8 +98,8 @@ public class PlayerMovementDashing : MonoBehaviour
             Invoke(nameof(ResetJump), jumpCooldown);
         }
 
-            //TextStuff();
-        }
+        //TextStuff();
+    }
 
     private void FixedUpdate()
     {
@@ -145,7 +145,7 @@ public class PlayerMovementDashing : MonoBehaviour
         }
     }
 
-    private float desiredMoveSpeed;
+    public float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
     private MovementState lastState;
     private bool keepMomentum;

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028355, g: 0.22571374, b: 0.30692255, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -242,12 +242,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   orientation: {fileID: 1707331546}
   playerCam: {fileID: 566317065}
-  dashForce: 20
+  dashForce: 170
   dashUpwardForce: 0
   maxDashYSpeed: 0
-  dashDuration: 0.25
+  dashDuration: 0.1
   cam: {fileID: 1454298859}
-  dashFov: 0
+  dashFov: 180
   useCameraForward: 0
   allowAllDirections: 1
   disableGravity: 1
@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   walkSpeed: 5
-  sprintSpeed: 15
+  sprintSpeed: 10
   dashSpeed: 20
   dashSpeedChangeFactor: 50
   maxYSpeed: 25
@@ -289,6 +289,7 @@ MonoBehaviour:
   orientation: {fileID: 1707331546}
   state: 0
   dashing: 0
+  desiredMoveSpeed: 0
 --- !u!1 &552901464
 GameObject:
   m_ObjectHideFlags: 0
