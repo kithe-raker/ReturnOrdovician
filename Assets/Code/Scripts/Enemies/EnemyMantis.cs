@@ -7,12 +7,12 @@ namespace Unity.FPS.AI
 public class EnemyMantis : EnemyMobile
 {
 
-    private float attackTimer=0; 
-    private float standStillTimer=0; 
-    private bool startStandStillTimer = false; 
-    [SerializeField] float attack_delay=0.75f;
-    [SerializeField] float stand_still_delay=2f;
-    [SerializeField] float mantis_speed=5f;
+    private float attackTimer=0; //Timer that will start when it attack, stop at attack_delay time
+    private float standStillTimer=0; //Timer that will start when it attack, stop at stand_still_delay time
+    private bool startStandStillTimer = false; //will start standStillTimer when it true, stop standStillTimer when it false
+    [SerializeField] float attack_delay=0.75f;// when mantis start causing damage after close enough
+    [SerializeField] float stand_still_delay=2f;// how long mantis will stand still after close enough
+    [SerializeField] float mantis_speed=5f;//mantis walking speed
     public override void UpdateCurrentAiState() 
         {
             if(startStandStillTimer==true)
