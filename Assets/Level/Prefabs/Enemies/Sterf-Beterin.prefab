@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 6101993491224213540}
   - component: {fileID: 450268648011032225}
   - component: {fileID: 1965949623846206832}
+  - component: {fileID: 2256198834823629115}
   m_Layer: 0
   m_Name: Sterf-Beterin
   m_TagString: Untagged
@@ -203,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test: 0
-  Animator: {fileID: 0}
+  Animator: {fileID: 2897137460048633987}
   AttackStopDistanceRatio: 0.5
   RandomHitSparks: []
   OnDetectVfx: []
@@ -394,6 +395,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &2256198834823629115
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1645786640269919655}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32a1bebe899777e4a812592ef7a9e7fe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &4709229345041539803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1869,6 +1890,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b56c491effc28c94498b5abb208c8e5e, type: 3}
+--- !u!1 &6224644531853080699 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b56c491effc28c94498b5abb208c8e5e,
+    type: 3}
+  m_PrefabInstance: {fileID: 6531073682413126954}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2897137460048633987
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6224644531853080699}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 32a1bebe899777e4a812592ef7a9e7fe, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!4 &6713091969936941761 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: b56c491effc28c94498b5abb208c8e5e,
