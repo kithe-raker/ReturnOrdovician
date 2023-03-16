@@ -856,6 +856,11 @@ PrefabInstance:
       propertyPath: Animator
       value: 
       objectReference: {fileID: 517135929}
+    - target: {fileID: 2339619639459761613, guid: 72351fb9cd0988e468d158d54cd5c727,
+        type: 3}
+      propertyPath: AttackStopDistanceRatio
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 3316114523106071941, guid: 72351fb9cd0988e468d158d54cd5c727,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
