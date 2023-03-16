@@ -214,6 +214,7 @@ MonoBehaviour:
     Min: 0
     Max: 0
   m_EnemyController: {fileID: 8301055306053329755}
+  AnimSB02: {fileID: 2897137460048633987}
   attack_delay: 0.3
   stand_still_delay: 0.8
   mantis_speed: 5
