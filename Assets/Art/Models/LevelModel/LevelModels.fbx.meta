@@ -1,9 +1,44 @@
 fileFormatVersion: 2
-guid: 7b0f7b4a954c81d4f9f113473c93c2a8
+guid: f3e39d81a7a2327478a16c63719f6e66
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackLine
+    second: {fileID: 2100000, guid: 70755deffdba539478a2fcce9714fc7c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlurLight
+    second: {fileID: 2100000, guid: 8761c568d7144814a88037d0625bff27, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 4d2c796ae81f1c44e9e8a0f94db22270, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.001
+    second: {fileID: 2100000, guid: 70035403d27a43c4dbd78e9088e3596e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.002
+    second: {fileID: 2100000, guid: eefa5f8b8c0ecd648873dfd785928076, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: a7f296b1be09015459dc76d808a7e0e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: YellowLine
+    second: {fileID: 2100000, guid: 352cb68831192b045ae33b78f8c1eb8f, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
