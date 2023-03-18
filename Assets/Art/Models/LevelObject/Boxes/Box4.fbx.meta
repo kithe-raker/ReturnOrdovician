@@ -8,22 +8,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Gray
-    second: {fileID: 2100000, guid: c3ef646efeee1f44db54dd95ed4a7269, type: 2}
+    second: {fileID: 2100000, guid: 0789fc5783ec31c41a04eda28e6ddfc2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Metal
-    second: {fileID: 2100000, guid: 1001991ce53a06347bc539a9a834a65d, type: 2}
+    second: {fileID: 2100000, guid: ddb19248deeab274382575e864cd2087, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Metal.002
-    second: {fileID: 2100000, guid: 0bdaffbeed9a20640bf604ced4bc8e5e, type: 2}
+    second: {fileID: 2100000, guid: dd47ad2e5c76c9246974cac489f1d862, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Red
-    second: {fileID: 2100000, guid: ee7fe53331e041849a22d03835aba899, type: 2}
+    second: {fileID: 2100000, guid: 046ea3e94b97b5742bd85047f9d88cbe, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

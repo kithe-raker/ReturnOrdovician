@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e7effaa6c3a440744a65630498bcefa9
+guid: 07fc361bd154f464ab003948257553b0
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,23 +7,48 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Gray
-    second: {fileID: 2100000, guid: 15e5f182ce90ea44b9850ed1f38f7d22, type: 2}
+      name: ArmArmor1
+    second: {fileID: 2100000, guid: 1a1de862f9d0071488e1e4092ef435cf, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Metal
-    second: {fileID: 2100000, guid: 38fe941f7d654954b8fdeb256fbf09bf, type: 2}
+      name: ArmArmorPlate1
+    second: {fileID: 2100000, guid: dfed5c6bfd7f68649a8f2eb684c1d365, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Metal.002
-    second: {fileID: 2100000, guid: 3adbe373846f08b44baeb9887c9fc45c, type: 2}
+      name: ArmArmorPlate2
+    second: {fileID: 2100000, guid: 8e6f4658a5612094d83beaf7c6617147, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Red
-    second: {fileID: 2100000, guid: e6f9dbff4c3c3054da6c2b3beb660527, type: 2}
+      name: ArmArmorTablet
+    second: {fileID: 2100000, guid: 18ceee2a51a04d04892ca416c237bf53, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Black1
+    second: {fileID: 2100000, guid: ae081e21696781e4f95f41b2a71ea187, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackMetal
+    second: {fileID: 2100000, guid: ddc4fdbea97d19e4ab73b07d435c5b9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal1
+    second: {fileID: 2100000, guid: 3f138bd5c18dea44689e1edbe12b62af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal2
+    second: {fileID: 2100000, guid: c1a595e53abfba04384c0fa87d8a3652, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: RedLight1
+    second: {fileID: 2100000, guid: b2cfa5d0809a80b4f82f1738ad82b6b7, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
