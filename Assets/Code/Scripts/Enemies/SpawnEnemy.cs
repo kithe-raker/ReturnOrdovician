@@ -6,11 +6,23 @@ using Unity.FPS.Gameplay;
 
 public class SpawnEnemy : MonoBehaviour
 {
+    //Which enemy to spawn
     public GameObject enemyPrefab;
+
+    //list of spawn points
     public List<Transform> points;
+
+    //Number of enemies to spawn
     public int numEnemiesToSpawn = 1;
+
+    //Objective script
     private ObjectiveKillEnemies objectiveKillEnemies;
+
+    //How many kill until next wave
     public int Limits = 4;
+
+    //When to stop/ after how many kill
+    public int End = 10;
 
     void Start()
     {
@@ -25,7 +37,7 @@ public class SpawnEnemy : MonoBehaviour
 
     void Update()
     {
-        if (objectiveKillEnemies != null && objectiveKillEnemies.killedTest >= Limits && objectiveKillEnemies.m_KillTotal < 8)
+        if (objectiveKillEnemies != null && objectiveKillEnemies.killedTest >= Limits && objectiveKillEnemies.m_KillTotal < End)
         {
             SpawnEnemies();
         }
