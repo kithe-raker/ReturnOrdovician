@@ -6,14 +6,15 @@ namespace Unity.FPS.AI
 {  
 public class EnemyMantis : EnemyMobile
 {
-
-    private float attackTimer=0; //Timer that will start when it attack, stop at attack_delay time
-    private float standStillTimer=0; //Timer that will start when it attack, stop at stand_still_delay time
-    private bool startStandStillTimer = false; //will start standStillTimer when it true, stop standStillTimer when it false
-    [SerializeField] float attack_delay=0.75f;// when mantis start causing damage after close enough
-    [SerializeField] float stand_still_delay=2f;// how long mantis will stand still after close enough
-    [SerializeField] float mantis_speed=5f;//mantis walking speed
-    public override void UpdateCurrentAiState() 
+        public Animator AnimSB02;
+        public bool left = true;
+        private float attackTimer=0; //Timer that will start when it attack, stop at attack_delay time
+        private float standStillTimer=0; //Timer that will start when it attack, stop at stand_still_delay time
+        private bool startStandStillTimer = false; //will start standStillTimer when it true, stop standStillTimer when it false
+        [SerializeField] float attack_delay=0.75f;// when mantis start causing damage after close enough
+        [SerializeField] float stand_still_delay=2f;// how long mantis will stand still after close enough
+        [SerializeField] float mantis_speed=5f;//mantis walking speed
+        public override void UpdateCurrentAiState() 
         {
             if(startStandStillTimer==true)
             {
@@ -49,6 +50,7 @@ public class EnemyMantis : EnemyMobile
                 case AIState.Attack:
                     attackTimer += Time.deltaTime;
                     startStandStillTimer=true;
+                    AnimSB02.SetBool("Stop", true);
                     if (Vector3.Distance(m_EnemyController.KnownDetectedTarget.transform.position,
                             m_EnemyController.DetectionModule.DetectionSourcePoint.position)
                         >= (AttackStopDistanceRatio * m_EnemyController.DetectionModule.AttackRange))
@@ -63,7 +65,18 @@ public class EnemyMantis : EnemyMobile
                     m_EnemyController.OrientTowards(m_EnemyController.KnownDetectedTarget.transform.position);
                     m_EnemyController.TryAtack(m_EnemyController.KnownDetectedTarget.transform.position);
                     attackTimer = 0;
+                        if (left == true)
+                        {
+                            AnimSB02.SetBool("Left", false);
+                            left= false;
+                        }
+                        else
+                        {
+                            AnimSB02.SetBool("Left", true);
+                            left= true;
+                        }
                     }
+                    
                     break;
             }
         }
