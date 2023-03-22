@@ -51,6 +51,8 @@ namespace Unity.FPS.Game
             CurrentHealth -= damage;
             CurrentHealth = Mathf.Clamp(CurrentHealth, 0f, MaxHealth);
 
+            print("Take Damage: "+ CurrentHealth);
+
             // call OnDamage action
             float trueDamageAmount = healthBefore - CurrentHealth;
             // if (trueDamageAmount > 0f)                                       //yes no modify // for stoping enemies from hp drain rapidly
