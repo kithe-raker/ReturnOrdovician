@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.34404832, g: 0.095656, b: 0.10394843, a: 1}
+  m_IndirectSpecularColor: {r: 0.34394988, g: 0.09565756, b: 0.10389267, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -954,6 +954,11 @@ PrefabInstance:
       propertyPath: Animator
       value: 
       objectReference: {fileID: 517135929}
+    - target: {fileID: 2339619639459761613, guid: 72351fb9cd0988e468d158d54cd5c727,
+        type: 3}
+      propertyPath: AttackVfxLifetime
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 2339619639459761613, guid: 72351fb9cd0988e468d158d54cd5c727,
         type: 3}
       propertyPath: AttackStopDistanceRatio
