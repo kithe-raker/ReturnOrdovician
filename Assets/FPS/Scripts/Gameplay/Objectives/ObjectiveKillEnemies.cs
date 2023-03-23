@@ -1,8 +1,11 @@
 ﻿using Unity.FPS.Game;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Unity.FPS.Gameplay
 {
+
     public class ObjectiveKillEnemies : Objective
     {
         [Tooltip("Chose whether you need to kill every enemies or only a minimum amount")]
@@ -16,12 +19,27 @@ namespace Unity.FPS.Gameplay
 
         public int m_KillTotal;
         public int killedTest;
+
         
+
+        //Number of enemies to spawn
+        public int numEnemiesToSpawn = 1;
+
+        //How many waves?
+        public int Waves = 3;
+
+        //list of spawn points
+        public List<Transform> points;
+
+
+
+
         protected override void Start()
         {
             base.Start();
 
             EventManager.AddListener<EnemyKillEvent>(OnEnemyKilled);
+            KillsToCompleteObjective = Waves * numEnemiesToSpawn * points.Count;
 
             // set a title and description specific for this type of objective, if it hasn't one
             if (string.IsNullOrEmpty(Title))
@@ -41,7 +59,7 @@ namespace Unity.FPS.Gameplay
             killedTest++;
 
             if (MustKillAllEnemies)
-                KillsToCompleteObjective = evt.RemainingEnemyCount + m_KillTotal;
+                KillsToCompleteObjective = Waves*numEnemiesToSpawn*points.Count;
 
             int targetRemaining = MustKillAllEnemies ? evt.RemainingEnemyCount : KillsToCompleteObjective - m_KillTotal;
 
@@ -50,14 +68,14 @@ namespace Unity.FPS.Gameplay
             {
                 CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
             }
-            else if (targetRemaining == 1)
+            else if (/*targetRemaining == 1*/m_KillTotal == Waves * numEnemiesToSpawn * points.Count)
             {
                 string notificationText = NotificationEnemiesRemainingThreshold >= targetRemaining
                     ? "One enemy left"
                     : string.Empty;
-                UpdateObjective(string.Empty, GetUpdatedCounterAmount(), notificationText);
+                //UpdateObjective(string.Empty, GetUpdatedCounterAmount(), notificationText);
             }
-            else
+            /*else
             {
                 // create a notification text if needed, if it stays empty, the notification will not be created
                 string notificationText = NotificationEnemiesRemainingThreshold >= targetRemaining
@@ -66,6 +84,7 @@ namespace Unity.FPS.Gameplay
 
                 UpdateObjective(string.Empty, GetUpdatedCounterAmount(), notificationText);
             }
+            */
         }
 
         string GetUpdatedCounterAmount()

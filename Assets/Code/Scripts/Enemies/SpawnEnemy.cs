@@ -9,20 +9,18 @@ public class SpawnEnemy : MonoBehaviour
     //Which enemy to spawn
     public GameObject enemyPrefab;
 
-    //list of spawn points
-    public List<Transform> points;
-
-    //Number of enemies to spawn
-    public int numEnemiesToSpawn = 1;
-
     //Objective script
     private ObjectiveKillEnemies objectiveKillEnemies;
 
     //How many kill until next wave
     public int Limits = 4;
 
-    //When to stop/ after how many kill
-    public int End = 10;
+    
+
+    //Current wave
+    public int CurrentWave = 0;
+
+    
 
     void Start()
     {
@@ -37,23 +35,25 @@ public class SpawnEnemy : MonoBehaviour
 
     void Update()
     {
-        if (objectiveKillEnemies != null && objectiveKillEnemies.killedTest >= Limits && objectiveKillEnemies.m_KillTotal < End)
+        if (objectiveKillEnemies != null && objectiveKillEnemies.killedTest >= Limits && CurrentWave < objectiveKillEnemies.Waves)
         {
             SpawnEnemies();
+            
         }
     }
 
     void SpawnEnemies()
     {
-        for (int i = 0; i < numEnemiesToSpawn; i++)
+        for (int i = 0; i < objectiveKillEnemies.numEnemiesToSpawn; i++)
         {
-            for (int j = 0; j < points.Count; j++)
+            for (int j = 0; j < objectiveKillEnemies.points.Count; j++)
             {
-            Instantiate(enemyPrefab, points[j].position, transform.rotation);
+            Instantiate(enemyPrefab, objectiveKillEnemies.points[j].position, transform.rotation);
             
             }
             
         }
         objectiveKillEnemies.killedTest = 0;
+        CurrentWave++;
     }
 }
