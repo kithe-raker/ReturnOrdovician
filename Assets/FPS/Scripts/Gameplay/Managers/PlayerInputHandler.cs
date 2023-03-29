@@ -140,7 +140,7 @@ namespace Unity.FPS.Gameplay
         {
             if (CanProcessInput())
             {
-                return Input.GetButton(GameConstants.k_ButtonNameSprint);
+                return Input.GetButtonDown(GameConstants.k_ButtonNameSprint);
             }
 
             return false;

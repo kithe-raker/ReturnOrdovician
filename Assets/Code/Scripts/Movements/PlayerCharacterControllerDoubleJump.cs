@@ -33,7 +33,7 @@ namespace Unity.FPS.Gameplay
         public float MaxSpeedCrouchedRatio = 0.5f;
 
         [Tooltip("Max movement speed when not grounded")]
-        public float MaxSpeedInAir = 10f;
+        public float MaxSpeedInAir = 30f;
 
         [Tooltip("Acceleration speed when in the air")]
         public float AccelerationSpeedInAir = 25f;
@@ -298,7 +298,7 @@ namespace Unity.FPS.Gameplay
                     isSprinting = SetCrouchingState(false, false);
                 }
 
-                float speedModifier = isSprinting ? SprintSpeedModifier : 1f;
+                 float speedModifier = isSprinting ? SprintSpeedModifier : 1f;
 
                 // converts move input to a worldspace vector based on our character's transform orientation
                 Vector3 worldspaceMoveInput = transform.TransformVector(m_InputHandler.GetMoveInput());
@@ -326,6 +326,12 @@ namespace Unity.FPS.Gameplay
                         // Force grounding to false
                         IsGrounded = false;
                         m_GroundNormal = Vector3.up;
+
+                        /*if(m_InputHandler.GetSprintInputHeld())
+                        {
+                            CharacterVelocity = CharacterVelocity * speedModifier;
+                        }
+                        */
                     }
                 }
 
