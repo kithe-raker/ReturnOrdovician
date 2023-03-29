@@ -20,7 +20,7 @@ MonoBehaviour:
     x: 352
     y: -190
     width: 1014
-    height: 1643
+    height: 1623
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -955,7 +955,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":0.0,"g":3.105882406234741,"b":0.250980406999588,"a":1.0}'
+      m_SerializableObject: '{"r":0.02330642379820347,"g":2.816556453704834,"b":0.0,"a":1.0}'
     m_Space: 2147483647
   m_Property:
     name: bolder_color
@@ -1125,7 +1125,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"r":3.4415907859802248,"g":3.4415907859802248,"b":3.4415907859802248,"a":0.0}'
+      m_SerializableObject: '{"r":3.4677693843841554,"g":3.4677693843841554,"b":3.4677693843841554,"a":0.0}'
     m_Space: 2147483647
   m_Property:
     name: color_main

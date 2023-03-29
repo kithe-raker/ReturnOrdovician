@@ -2,10 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;//for timer
+using UnityEngine.UIElements;
+
 namespace Unity.FPS.AI
 {  
 public class EnemyMantis : EnemyMobile
 {
+        public float AttackVfxLifetime;
+        public GameObject AttackVfx;
+
+        public Transform SB02;
         public Animator AnimSB02;
         public bool left = true;
         private float attackTimer=0; //Timer that will start when it attack, stop at attack_delay time
@@ -14,6 +20,7 @@ public class EnemyMantis : EnemyMobile
         [SerializeField] float attack_delay=0.75f;// when mantis start causing damage after close enough
         [SerializeField] float stand_still_delay=2f;// how long mantis will stand still after close enough
         [SerializeField] float mantis_speed=5f;//mantis walking speed
+
         public override void UpdateCurrentAiState() 
         {
             if(startStandStillTimer==true)
@@ -55,20 +62,24 @@ public class EnemyMantis : EnemyMobile
                             m_EnemyController.DetectionModule.DetectionSourcePoint.position)
                         >= (AttackStopDistanceRatio * m_EnemyController.DetectionModule.AttackRange))
                     {
+                        
                         m_EnemyController.SetNavDestination(m_EnemyController.KnownDetectedTarget.transform.position);
                     }
                     else
                     {
                         m_EnemyController.SetNavDestination(transform.position);
                     }
-                    if(attackTimer> attack_delay){
-                    m_EnemyController.OrientTowards(m_EnemyController.KnownDetectedTarget.transform.position);
-                    m_EnemyController.TryAtack(m_EnemyController.KnownDetectedTarget.transform.position);
-                    attackTimer = 0;
+                    if(attackTimer> attack_delay)
+                    {
+                        m_EnemyController.OrientTowards(m_EnemyController.KnownDetectedTarget.transform.position);
+                        m_EnemyController.TryAtack(m_EnemyController.KnownDetectedTarget.transform.position);
+                        
+                        attackTimer = 0;
                         if (left == true)
                         {
                             AnimSB02.SetBool("Left", false);
-                            left= false;
+                            
+                            left = false;
                         }
                         else
                         {
