@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 9124008031221689424}
   - component: {fileID: 8911154808894672412}
   - component: {fileID: 9200722478942359818}
+  - component: {fileID: 9075354760405789485}
   m_Layer: 0
   m_Name: PlasmaPistol
   m_TagString: Untagged
@@ -126,6 +127,7 @@ MonoBehaviour:
   ContinuousShootStartSfx: {fileID: 0}
   ContinuousShootLoopSfx: {fileID: 0}
   ContinuousShootEndSfx: {fileID: 0}
+  m_CurrentAmmo: 0
 --- !u!114 &8911154808894672412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +303,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &9075354760405789485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3351475413545876481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a0f490938596e147962c4951d92656e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wc: {fileID: 9124008031221689424}
+  ProjectilePrefabAlt: {fileID: 5661369378029084177, guid: 7b67824036e0d6e45b48b2e102a55182,
+    type: 3}
+  ProjectilePrefabOriginal: {fileID: 8763371203062193377, guid: aea82e98fed7bf6478ff52b318f410a7,
+    type: 3}
+  WeaponPoint: {fileID: 6746763307337606353}
 --- !u!1 &3425149962159498982
 GameObject:
   m_ObjectHideFlags: 0
