@@ -134,7 +134,7 @@ namespace Unity.FPS.Game
         public event Action OnShootProcessed;
 
         int m_CarriedPhysicalBullets;
-        public float m_CurrentAmmo;
+        public float m_CurrentAmmo;           //YesNo edit by Zen
         float m_LastTimeShot = Mathf.NegativeInfinity;
         public float LastChargeTriggerTimestamp { get; private set; }
         Vector3 m_LastMuzzlePosition;
@@ -399,7 +399,7 @@ namespace Unity.FPS.Game
             }
         }
 
-        public bool TryShoot()
+        public bool TryShoot()      //YesNo edit by Zen (just change to public)
         {
             if (m_CurrentAmmo >= 1f
                 && m_LastTimeShot + DelayBetweenShots < Time.time)
