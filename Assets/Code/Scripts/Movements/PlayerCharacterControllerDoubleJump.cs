@@ -106,6 +106,11 @@ namespace Unity.FPS.Gameplay
 
         //Added
         public int m_JumpsLeft = 2;
+        public float dashCooldown = 5f; // The cooldown for each dash in seconds
+        public float[] dashCooldowns = new float[3]; // The cooldowns for each dash
+        private float nextDashTime = 0f; // The next available dash time
+        public int dash = 3;
+        float speedModifier;
 
         public float RotationMultiplier
         {
@@ -293,12 +298,51 @@ namespace Unity.FPS.Gameplay
             // character movement handling
             bool isSprinting = m_InputHandler.GetSprintInputHeld();
             {
-                if (isSprinting)
+                //old code
+                //if (isSprinting && dash >=1)
+                //{
+                //    SetCrouchingState(false, false);
+                //    dash--;
+                //    speedModifier = SprintSpeedModifier;
+                //}
+                //else
+                //{
+                //    speedModifier = 1;
+                //}
+                //float speedModifier = isSprinting ? SprintSpeedModifier : 1f;
+
+                if (isSprinting && dash > 0)
                 {
-                    isSprinting = SetCrouchingState(false, false);
+                    SetCrouchingState(false, false);
+                    dash--;
+                    speedModifier = SprintSpeedModifier;
+                    nextDashTime = Time.time + dashCooldown; // Set the next dash time based on the dash cooldown
+                }
+                else
+                {
+                    speedModifier = 1;
                 }
 
-                 float speedModifier = isSprinting ? SprintSpeedModifier : 1f;
+                // Increase the dash count if the cooldown for the corresponding dash has expired
+                for (int i = 0; i < dashCooldowns.Length; i++)
+                {
+                    if (dashCooldowns[i] > 0f)
+                    {
+                        dashCooldowns[i] -= Time.deltaTime;
+                        if (dashCooldowns[i] <= 0f)
+                        {
+                            dash++;
+                        }
+                    }
+                }
+
+                // Reset the cooldown for the corresponding dash if the player has dashed
+                if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldowns[dash] <= 0f)
+                {
+                    dashCooldowns[dash] = dashCooldown;
+                }
+
+
 
                 // converts move input to a worldspace vector based on our character's transform orientation
                 Vector3 worldspaceMoveInput = transform.TransformVector(m_InputHandler.GetMoveInput());
