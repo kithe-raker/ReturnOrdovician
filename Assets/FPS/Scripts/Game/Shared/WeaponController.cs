@@ -251,7 +251,7 @@ namespace Unity.FPS.Game
 
         void UpdateAmmo()
         {
-            if(Input.GetKeyDown("r")){  // Yesno modify start
+            if(Input.GetKeyDown("r") && IsWeaponActive){  // Yesno modify start
                 checkReload = 1;
             }   
             if(m_CurrentAmmo == MaxAmmo){
