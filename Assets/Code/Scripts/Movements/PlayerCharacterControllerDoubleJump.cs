@@ -14,7 +14,7 @@ namespace Unity.FPS.Gameplay
         public AudioSource AudioSource;
 
         [Header("General")] [Tooltip("Force applied downward when in the air")]
-        public float GravityDownForce = 20f;
+        public float GravityDownForce = 9.81f;
 
         [Tooltip("Physic layers checked to consider the player grounded")]
         public LayerMask GroundCheckLayers = -1;
@@ -98,7 +98,15 @@ namespace Unity.FPS.Gameplay
 
         public UnityAction<bool> OnStanceChanged;
 
-        public Vector3 CharacterVelocity { get; set; }
+        //public Vector3 CharacterVelocity { get; set; }
+        [SerializeField]
+        private Vector3 characterVelocity;
+
+        public Vector3 CharacterVelocity
+        {
+            get { return characterVelocity; }
+            set { characterVelocity = value; }
+        }
         public bool IsGrounded { get; private set; }
         public bool HasJumpedThisFrame { get; private set; }
         public bool IsDead { get; private set; }
@@ -111,6 +119,7 @@ namespace Unity.FPS.Gameplay
         private float nextDashTime = 0f; // The next available dash time
         public int dash = 3;
         float speedModifier;
+        public bool isDashing;
 
         public float RotationMultiplier
         {
@@ -311,16 +320,18 @@ namespace Unity.FPS.Gameplay
                 //}
                 //float speedModifier = isSprinting ? SprintSpeedModifier : 1f;
 
-                if (isSprinting && dash > 0)
+                if (isSprinting && dash > 0 && Vector3.SqrMagnitude(CharacterVelocity) != 0f)
                 {
                     SetCrouchingState(false, false);
                     dash--;
                     speedModifier = SprintSpeedModifier;
                     nextDashTime = Time.time + dashCooldown; // Set the next dash time based on the dash cooldown
+                    isDashing = true;
                 }
                 else
                 {
                     speedModifier = 1;
+                    isDashing = false;
                 }
 
                 // Increase the dash count if the cooldown for the corresponding dash has expired
@@ -411,17 +422,27 @@ namespace Unity.FPS.Gameplay
                 // handle air movement
                 else
                 {
-                    // add air acceleration
-                    CharacterVelocity += worldspaceMoveInput * AccelerationSpeedInAir * Time.deltaTime;
+                    if(isDashing && Vector3.SqrMagnitude(CharacterVelocity) != 0f)
+                    {
+                        CharacterVelocity = worldspaceMoveInput * MaxSpeedOnGround * speedModifier;
 
-                    // limit air speed to a maximum, but only horizontally
-                    float verticalVelocity = CharacterVelocity.y;
-                    Vector3 horizontalVelocity = Vector3.ProjectOnPlane(CharacterVelocity, Vector3.up);
-                    horizontalVelocity = Vector3.ClampMagnitude(horizontalVelocity, MaxSpeedInAir * speedModifier);
-                    CharacterVelocity = horizontalVelocity + (Vector3.up * verticalVelocity);
+                        //CharacterVelocity += Vector3.up * (GravityDownForce * Time.deltaTime);
+                    }
+                    else
+                    {
+                        // add air acceleration
+                        CharacterVelocity += worldspaceMoveInput * AccelerationSpeedInAir * Time.deltaTime;
 
-                    // apply the gravity to the velocity
-                    CharacterVelocity += Vector3.down * GravityDownForce * Time.deltaTime;
+                        // limit air speed to a maximum, but only horizontally
+                        float verticalVelocity = CharacterVelocity.y;
+                        Vector3 horizontalVelocity = Vector3.ProjectOnPlane(CharacterVelocity, Vector3.up);
+                        horizontalVelocity = Vector3.ClampMagnitude(horizontalVelocity, MaxSpeedInAir * speedModifier);
+                        CharacterVelocity = horizontalVelocity + (Vector3.up * verticalVelocity);
+
+                        // apply the gravity to the velocity
+                        CharacterVelocity += Vector3.down * GravityDownForce * Time.deltaTime;
+                    }
+                    
                 }
             }
 
