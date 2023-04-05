@@ -16,8 +16,6 @@ namespace Unity.FPS.Gameplay
             PutUpNew,
         }
 
-        public bool canAim; //yesno added by Zen  (Kapom Idea) 
-
         [Tooltip("List of weapon the player will start with")]
         public List<WeaponController> StartingWeapons = new List<WeaponController>();
 
@@ -288,7 +286,7 @@ namespace Unity.FPS.Gameplay
             if (m_WeaponSwitchState == WeaponSwitchState.Up)
             {
                 WeaponController activeWeapon = GetActiveWeapon();
-                if (IsAiming && activeWeapon && canAim)
+                if (IsAiming && activeWeapon)
                 {
                     m_WeaponMainLocalPosition = Vector3.Lerp(m_WeaponMainLocalPosition,
                         AimingWeaponPosition.localPosition + activeWeapon.AimOffset,
