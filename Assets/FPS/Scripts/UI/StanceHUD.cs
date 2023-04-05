@@ -27,7 +27,7 @@ namespace Unity.FPS.UI
 
         void OnStanceChanged(bool crouched)
         {
-            StanceImage.sprite = crouched ? CrouchingSprite : StandingSprite;
+            //StanceImage.sprite = crouched ? CrouchingSprite : StandingSprite;
         }
     }
 }
