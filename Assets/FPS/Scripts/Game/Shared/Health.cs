@@ -64,7 +64,7 @@ namespace Unity.FPS.Game
         {
             if (Invincible)
                 return;
-            if (CurrentShield >= 0)
+            if (CurrentShield > 0)
             {
                 float ShieldBefore = CurrentShield;
                 CurrentShield -= damage;
@@ -124,10 +124,10 @@ namespace Unity.FPS.Game
 
             yield return new WaitForSeconds(ShieldRegenRate);
 
-            while ((float)CurrentShield < (int)MaxShield && regenShield)
+            while (((float)CurrentShield < (int)MaxShield) && regenShield)
             {
                 CurrentShield += RegenAmount;
-                if (CurrentShield == MaxShield)
+                if (CurrentShield == MaxShield/2)
                 {
                     regenShield = false;
                     break;
