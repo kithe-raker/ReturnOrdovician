@@ -189,7 +189,6 @@ namespace Unity.FPS.Gameplay
                         closestHit.point = Root.position;
                         closestHit.normal = -transform.forward;
                     }
-
                     OnHit(closestHit.point, closestHit.normal, closestHit.collider);
                 }
             }

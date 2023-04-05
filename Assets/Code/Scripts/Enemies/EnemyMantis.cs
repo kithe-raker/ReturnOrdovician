@@ -8,8 +8,10 @@ namespace Unity.FPS.AI
 {  
 public class EnemyMantis : EnemyMobile
 {
-        public float AttackVfxLifetime;
-        public GameObject AttackVfx;
+        
+
+        public GameObject TrailsVFXr;
+        public GameObject TrailsVFXl;
 
         public Transform SB02;
         public Animator AnimSB02;
@@ -40,14 +42,15 @@ public class EnemyMantis : EnemyMobile
             }
             switch (AiState)
             {
-                
                 case AIState.Patrol:
+                    AnimSB02.SetBool("Stop", false);
                     stopStandStillFunc();
                     attackTimer = 0;
                     m_EnemyController.UpdatePathDestination();
                     m_EnemyController.SetNavDestination(m_EnemyController.GetDestinationOnPath());
                     break;
                 case AIState.Follow:
+                    AnimSB02.SetBool("Stop", false);
                     stopStandStillFunc();
                     attackTimer = 0;
                     m_EnemyController.SetNavDestination(m_EnemyController.KnownDetectedTarget.transform.position);
@@ -58,6 +61,8 @@ public class EnemyMantis : EnemyMobile
                     attackTimer += Time.deltaTime;
                     startStandStillTimer=true;
                     AnimSB02.SetBool("Stop", true);
+                    TrailsVFXr.SetActive(true);
+                    TrailsVFXl.SetActive(true);
                     if (Vector3.Distance(m_EnemyController.KnownDetectedTarget.transform.position,
                             m_EnemyController.DetectionModule.DetectionSourcePoint.position)
                         >= (AttackStopDistanceRatio * m_EnemyController.DetectionModule.AttackRange))
@@ -77,15 +82,19 @@ public class EnemyMantis : EnemyMobile
                         attackTimer = 0;
                         if (left == true)
                         {
-                            AnimSB02.SetBool("Left", false);
                             
+                            AnimSB02.SetBool("Left", false);
                             left = false;
                         }
                         else
                         {
+                            
                             AnimSB02.SetBool("Left", true);
                             left= true;
                         }
+                        
+                        TrailsVFXr.SetActive(false);
+                        TrailsVFXl.SetActive(false);
                     }
                     
                     break;
