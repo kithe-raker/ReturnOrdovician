@@ -15,7 +15,7 @@ namespace Unity.FPS.Game
                 ProjectilePrefabOriginal = wc.ProjectilePrefab;
             }
             void Update(){
-            if(Input.GetKeyDown("mouse 1") && wc.IsWeaponActive){
+            if(Input.GetKeyDown("mouse 1") && wc.IsWeaponActive && wc.reloadStart == false){
                 if(wc.m_CurrentAmmo>=16){
                     wc.ProjectilePrefab = ProjectilePrefabAlt;
                     wc.TryShoot();

@@ -149,6 +149,10 @@ namespace Unity.FPS.Game
         public Vector3 MuzzleWorldVelocity { get; private set; }
 
         int checkReload = 0;  // YesNo modify
+        public bool reloadStart = false;
+        float currentReloadTime = 0;
+        public float reloadDelayYesno = 1;
+        
 
         public float GetAmmoNeededToShoot() =>
             (ShootType != WeaponShootType.Charge ? 1f : Mathf.Max(1f, AmmoUsedOnStartCharge)) /
@@ -252,10 +256,21 @@ namespace Unity.FPS.Game
         void UpdateAmmo()
         {
             if(Input.GetKeyDown("r") && IsWeaponActive){  // Yesno modify start
+                currentReloadTime = 0;
+                if(m_CurrentAmmo < MaxAmmo){
+                    reloadStart = true;
+                }
                 checkReload = 1;
             }   
             if(m_CurrentAmmo == MaxAmmo){
                 checkReload = 0;
+            }
+            if(reloadStart == true){
+                currentReloadTime += Time.deltaTime;
+                if(currentReloadTime >= reloadDelayYesno){
+                    //print("it worrkkkkkk reeee");
+                    reloadStart = false;
+                }
             }//YesNo modify end
 
             if (AutomaticReload && m_LastTimeShot + AmmoReloadDelay < Time.time && m_CurrentAmmo < MaxAmmo && !IsCharging   /* Yesno modify start */ ||checkReload == 1/* Yesno modify end */ )
@@ -402,7 +417,7 @@ namespace Unity.FPS.Game
         public bool TryShoot()      //YesNo edit by Zen (just change to public)
         {
             if (m_CurrentAmmo >= 1f
-                && m_LastTimeShot + DelayBetweenShots < Time.time)
+                && m_LastTimeShot + DelayBetweenShots < Time.time /*yesno modify start*/ && reloadStart == false /*yes no modify end (by Zen)*/)
             {
                 HandleShoot();
                 m_CurrentAmmo -= 1f;

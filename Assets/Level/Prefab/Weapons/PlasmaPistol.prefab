@@ -128,6 +128,8 @@ MonoBehaviour:
   ContinuousShootLoopSfx: {fileID: 0}
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
+  currentReloadTime: 0
+  reloadDelayYesno: 1
 --- !u!114 &8911154808894672412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -318,9 +320,6 @@ MonoBehaviour:
   wc: {fileID: 9124008031221689424}
   ProjectilePrefabAlt: {fileID: 5661369378029084177, guid: 7b67824036e0d6e45b48b2e102a55182,
     type: 3}
-  ProjectilePrefabOriginal: {fileID: 8763371203062193377, guid: aea82e98fed7bf6478ff52b318f410a7,
-    type: 3}
-  WeaponPoint: {fileID: 6746763307337606353}
 --- !u!1 &3425149962159498982
 GameObject:
   m_ObjectHideFlags: 0
