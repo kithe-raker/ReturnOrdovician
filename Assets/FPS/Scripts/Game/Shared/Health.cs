@@ -127,7 +127,7 @@ namespace Unity.FPS.Game
             while (((float)CurrentShield < (int)MaxShield) && regenShield)
             {
                 CurrentShield += RegenAmount;
-                if (CurrentShield == MaxShield/2)
+                if (CurrentShield == MaxShield)
                 {
                     regenShield = false;
                     break;
