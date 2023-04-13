@@ -7,6 +7,7 @@ public class SkillManager : MonoBehaviour
     public Skill skill;
     float cooldownTime;
     float activeTime;
+    public KeyCode key;
 
     enum AbilityState
     {
@@ -16,7 +17,6 @@ public class SkillManager : MonoBehaviour
     }
     AbilityState state = AbilityState.ready;
 
-    public KeyCode key;
 
     void Update()
     {
@@ -37,6 +37,7 @@ public class SkillManager : MonoBehaviour
                 }
                 else
                 {
+                    skill.Deactivate();
                     state = AbilityState.cooldown;
                     cooldownTime = skill.cooldownTime;
                 }
@@ -53,6 +54,6 @@ public class SkillManager : MonoBehaviour
                 break;
         }
 
-        
+
     }
 }

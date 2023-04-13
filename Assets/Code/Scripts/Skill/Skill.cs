@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Skill :  ScriptableObject
+public class Skill : MonoBehaviour
 {
-    public new string name;
-    public float cooldownTime;
-    public float activeTime;
+    public string skillName = "";
+    public float cooldownTime = .0f;
+    public float activeTime = .0f;
+
+    public Skill(string name, float cooldown, float active)
+    {
+        this.skillName = name;
+        this.cooldownTime = cooldown;
+        this.activeTime = active;
+    }
 
     public virtual void Activate() { }
+    public virtual void Deactivate() { }
 }
