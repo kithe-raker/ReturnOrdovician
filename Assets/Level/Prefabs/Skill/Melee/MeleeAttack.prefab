@@ -81,11 +81,11 @@ MonoBehaviour:
   Root: {fileID: 6201078290741449209}
   Tip: {fileID: 7712249270394406840}
   MaxLifeTime: 1
-  ImpactVfx: {fileID: 7655095426451682942, guid: a7d68b1a502e02a49b8efb1b86a8c931,
+  ImpactVfx: {fileID: 7655095426451682942, guid: 4d48b487f11e62940a978c7c0c0cbcb4,
     type: 3}
   ImpactVfxLifetime: 1
   ImpactVfxSpawnOffset: 0.1
-  ImpactSfxClip: {fileID: 0}
+  ImpactSfxClip: {fileID: 8300000, guid: a7fae22399a6e1d448dc0dd2210f1dac, type: 3}
   HittableLayers:
     serializedVersion: 2
     m_Bits: 36151
