@@ -234,7 +234,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 800
+  MaxShield: 0
   CriticalHealthRatio: 0.3
+  isDamaged: 0
+  RegenAmount: 5
+  ShieldRegenRate: 5
 --- !u!114 &4412675999646725942
 MonoBehaviour:
   m_ObjectHideFlags: 0
