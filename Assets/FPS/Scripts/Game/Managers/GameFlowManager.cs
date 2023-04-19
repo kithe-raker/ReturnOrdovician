@@ -5,6 +5,8 @@ namespace Unity.FPS.Game
 {
     public class GameFlowManager : MonoBehaviour
     {
+        private bool PlayerDie;
+
         [Header("Parameters")] [Tooltip("Duration of the fade-to-black at the end of the game")]
         public float EndSceneLoadDelay = 3f;
 
@@ -27,7 +29,7 @@ namespace Unity.FPS.Game
         [Header("Lose")] [Tooltip("This string has to be the name of the scene you want to load when losing")]
         public string LoseSceneName = "LoseScene";
 
-
+        public GameObject BrokenGlass;
         public bool GameIsEnding { get; private set; }
 
         float m_TimeLoadEndGameScene;
@@ -48,6 +50,8 @@ namespace Unity.FPS.Game
         {
             if (GameIsEnding)
             {
+                BrokenGlass.SetActive(true);
+
                 float timeRatio = 1 - (m_TimeLoadEndGameScene - Time.time) / EndSceneLoadDelay;
                 EndGameFadeCanvasGroup.alpha = timeRatio;
 
