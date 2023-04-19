@@ -1,6 +1,7 @@
 ﻿using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 
 namespace Unity.FPS.Gameplay
 {
@@ -115,9 +116,12 @@ namespace Unity.FPS.Gameplay
         //Added
         public int m_JumpsLeft = 2;
         public float dashCooldown = 5f; // The cooldown for each dash in seconds
-        public float[] dashCooldowns = new float[3]; // The cooldowns for each dash
+        //public float[] dashCooldowns = new float[3]; // The cooldowns for each dash
         private float nextDashTime = 0f; // The next available dash time
-        public int dash = 3;
+        public int maxDashCount = 3; // Maximum number of dashes the player is allowed to perform
+        public int dash = 0;
+        float dashDuration = 2f;
+        
         float speedModifier;
         public bool isDashing;
 
@@ -150,6 +154,11 @@ namespace Unity.FPS.Gameplay
         const float k_JumpGroundingPreventionTime = 0.2f;
         const float k_GroundCheckDistanceInAir = 0.07f;
 
+        IEnumerator EndDash()
+        {
+            yield return new WaitForSeconds(dashCooldown);
+            dash--;
+        }
         void Awake()
         {
             ActorsManager actorsManager = FindObjectOfType<ActorsManager>();
@@ -185,7 +194,8 @@ namespace Unity.FPS.Gameplay
             // force the crouch state to false when starting
             SetCrouchingState(false, true);
             UpdateCharacterHeight(true);
-        }
+         
+    }
 
         void Update()
         {
@@ -319,39 +329,40 @@ namespace Unity.FPS.Gameplay
                 //    speedModifier = 1;
                 //}
                 //float speedModifier = isSprinting ? SprintSpeedModifier : 1f;
-
-                if (isSprinting && dash > 0 && Vector3.SqrMagnitude(CharacterVelocity) != 0f)
-                {
-                    SetCrouchingState(false, false);
-                    dash--;
-                    speedModifier = SprintSpeedModifier;
-                    nextDashTime = Time.time + dashCooldown; // Set the next dash time based on the dash cooldown
-                    isDashing = true;
-                }
-                else
-                {
-                    speedModifier = 1;
-                    isDashing = false;
-                }
-
-                // Increase the dash count if the cooldown for the corresponding dash has expired
-                for (int i = 0; i < dashCooldowns.Length; i++)
-                {
-                    if (dashCooldowns[i] > 0f)
+                // Check if the player is sprinting and has enough dashes left to perform a dash
+                    if (isSprinting && dash < maxDashCount && Vector3.SqrMagnitude(CharacterVelocity) != 0f && !isDashing)
                     {
-                        dashCooldowns[i] -= Time.deltaTime;
-                        if (dashCooldowns[i] <= 0f)
-                        {
-                            dash++;
-                        }
+                        SetCrouchingState(false, false);
+                        //dashCooldowns[dash] = dashCooldown;
+                        dash++;
+                        speedModifier = SprintSpeedModifier;
+                        nextDashTime = Time.time + dashCooldown; // Set the next dash time based on the dash cooldown
+                        isDashing = true;
+                        StartCoroutine(EndDash());
+                }
+                    else
+                    {
+                        speedModifier = 1;
+                        isDashing = false;
                     }
-                }
 
-                // Reset the cooldown for the corresponding dash if the player has dashed
-                if (Input.GetKeyDown(KeyCode.LeftShift) && dashCooldowns[dash] <= 0f)
-                {
-                    dashCooldowns[dash] = dashCooldown;
-                }
+                    // Increase the dash count if the cooldown for the corresponding dash has expired
+                    //for (int i = 0; i < maxDashCount; i++)
+                    //{
+                    //    if (dashCooldowns[i] > 0f)
+                    //    {
+                    //        dashCooldowns[i] -= Time.deltaTime;
+                    //        if (dashCooldowns[i] <= 0f)
+                    //        {
+                    //            dash--;
+                    //            // Make sure dash never goes above the maximum value
+                    //            dash = Mathf.Clamp(dash, 0, maxDashCount);
+                    //        }
+                    //    }
+                    //}
+
+                   
+                
 
 
 

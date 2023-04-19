@@ -564,6 +564,11 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 1997233770665073882, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: Damage
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 2020865915525802225, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: m_Layer
@@ -840,7 +845,12 @@ MonoBehaviour:
   MaxSpeedForFallDamage: 40
   FallDamageAtMinSpeed: 10
   FallDamageAtMaxSpeed: 30
+  characterVelocity: {x: 0, y: 0, z: 0}
   m_JumpsLeft: 2
+  dashCooldown: 5
+  maxDashCount: 3
+  dash: 0
+  isDashing: 0
 --- !u!114 &904566502
 MonoBehaviour:
   m_ObjectHideFlags: 2
