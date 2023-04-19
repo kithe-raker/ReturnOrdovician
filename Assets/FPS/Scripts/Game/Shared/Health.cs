@@ -22,6 +22,9 @@ namespace Unity.FPS.Game
 
         public float GetRatio() => CurrentHealth / MaxHealth;
         public bool IsCritical() => GetRatio() <= CriticalHealthRatio;
+
+        public bool isDamaged;
+
         public float RegenAmount = 5.0f;
 
         public int ShieldRegenRate = 5;
@@ -34,13 +37,14 @@ namespace Unity.FPS.Game
         
         void Start()
         {
+            isDamaged = false;
             CurrentHealth = MaxHealth;
             CurrentShield = MaxShield;
         }
         private void Update()
         {
             bool doRegen = (CurrentShield < MaxShield) && !regenShield;
-            if (doRegen)
+            if (doRegen )
             {
                 shiledRegenCour = StartCoroutine(RegenerateShield());
             }
@@ -64,6 +68,7 @@ namespace Unity.FPS.Game
         {
             if (Invincible)
                 return;
+            isDamaged= true;
             if (CurrentShield > 0)
             {
                 float ShieldBefore = CurrentShield;
@@ -110,6 +115,7 @@ namespace Unity.FPS.Game
             // call OnDie action
             if (CurrentHealth <= 0f)
             {
+                isDamaged = true;
                 m_IsDead = true;
                 OnDie?.Invoke();
             }
@@ -127,9 +133,10 @@ namespace Unity.FPS.Game
             while (((float)CurrentShield < (int)MaxShield) && regenShield)
             {
                 CurrentShield += RegenAmount;
-                if (CurrentShield == MaxShield)
+                if (CurrentShield == MaxShield || isDamaged)
                 {
                     regenShield = false;
+                    isDamaged= false;
                     break;
                 }
                 yield return new WaitForSeconds(1.0f);
