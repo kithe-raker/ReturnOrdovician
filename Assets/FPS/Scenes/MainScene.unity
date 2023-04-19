@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.34404823, g: 0.09565599, b: 0.10394842, a: 1}
+  m_IndirectSpecularColor: {r: 0.34394988, g: 0.09565756, b: 0.10389267, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4932,6 +4932,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1315839542190839936, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
+      propertyPath: BrokenGlass
+      value: 
+      objectReference: {fileID: 4008933581619590513}
     - target: {fileID: 1315839542190839937, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: m_RootOrder
@@ -5047,6 +5052,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4011344889136594896, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5361894503528414270, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -5105,6 +5115,11 @@ PrefabInstance:
     - target: {fileID: 5795911186866624658, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6166684044072328221, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6277484531393056600, guid: c996b53e9f849234393d1e90f68d1679,
@@ -5205,6 +5220,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 7204283831900476724, guid: c996b53e9f849234393d1e90f68d1679, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: c996b53e9f849234393d1e90f68d1679, type: 3}
+--- !u!1 &4008933581619590513 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6166684044072328221, guid: c996b53e9f849234393d1e90f68d1679,
+    type: 3}
+  m_PrefabInstance: {fileID: 4008933581619590512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9217268748774167426
 PrefabInstance:
   m_ObjectHideFlags: 0
