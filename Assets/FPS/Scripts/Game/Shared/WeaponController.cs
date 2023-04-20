@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-
+                                                                    // note: press r to reload modify on line 151, 154 to 159, and 161
 namespace Unity.FPS.Game
 {
     public enum WeaponShootType
@@ -134,7 +134,7 @@ namespace Unity.FPS.Game
         public event Action OnShootProcessed;
 
         int m_CarriedPhysicalBullets;
-        public float m_CurrentAmmo;
+        public float m_CurrentAmmo;           //YesNo edit by Zen
         float m_LastTimeShot = Mathf.NegativeInfinity;
         public float LastChargeTriggerTimestamp { get; private set; }
         Vector3 m_LastMuzzlePosition;
@@ -147,6 +147,12 @@ namespace Unity.FPS.Game
         public bool IsCooling { get; private set; }
         public float CurrentCharge { get; private set; }
         public Vector3 MuzzleWorldVelocity { get; private set; }
+
+        int checkReload = 0;  // YesNo modify
+        public bool reloadStart = false;
+        float currentReloadTime = 0;
+        public float reloadDelayYesno = 1;
+        
 
         public float GetAmmoNeededToShoot() =>
             (ShootType != WeaponShootType.Charge ? 1f : Mathf.Max(1f, AmmoUsedOnStartCharge)) /
@@ -249,7 +255,25 @@ namespace Unity.FPS.Game
 
         void UpdateAmmo()
         {
-            if (AutomaticReload && m_LastTimeShot + AmmoReloadDelay < Time.time && m_CurrentAmmo < MaxAmmo && !IsCharging)
+            if(Input.GetKeyDown("r") && IsWeaponActive){  // Yesno modify start
+                currentReloadTime = 0;
+                if(m_CurrentAmmo < MaxAmmo){
+                    reloadStart = true;
+                }
+                checkReload = 1;
+            }   
+            if(m_CurrentAmmo == MaxAmmo){
+                checkReload = 0;
+            }
+            if(reloadStart == true){
+                currentReloadTime += Time.deltaTime;
+                if(currentReloadTime >= reloadDelayYesno){
+                    //print("it worrkkkkkk reeee");
+                    reloadStart = false;
+                }
+            }//YesNo modify end
+
+            if (AutomaticReload && m_LastTimeShot + AmmoReloadDelay < Time.time && m_CurrentAmmo < MaxAmmo && !IsCharging   /* Yesno modify start */ ||checkReload == 1/* Yesno modify end */ )
             {
                 // reloads weapon over time
                 m_CurrentAmmo += AmmoReloadRate * Time.deltaTime;
@@ -390,10 +414,10 @@ namespace Unity.FPS.Game
             }
         }
 
-        public bool TryShoot()
+        public bool TryShoot()      //YesNo edit by Zen (just change to public)
         {
             if (m_CurrentAmmo >= 1f
-                && m_LastTimeShot + DelayBetweenShots < Time.time)
+                && m_LastTimeShot + DelayBetweenShots < Time.time /*yesno modify start*/ && reloadStart == false /*yes no modify end (by Zen)*/)
             {
                 HandleShoot();
                 m_CurrentAmmo -= 1f;
