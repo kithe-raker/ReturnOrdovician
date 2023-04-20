@@ -139,7 +139,7 @@ namespace Unity.FPS.Game
                     isDamaged= false;
                     break;
                 }
-                yield return new WaitForSeconds(1.0f);
+                yield return new WaitForSeconds(0.025f);
             }
             Debug.Log("regen false");
         }
