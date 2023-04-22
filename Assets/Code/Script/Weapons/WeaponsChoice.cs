@@ -12,7 +12,7 @@ public class WeaponsChoice : MonoBehaviour
     int numOfPoint;
 
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update  //what, why it not upload to github
     void Start()
     {
         numOfItems = item.Count;
