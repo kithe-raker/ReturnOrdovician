@@ -46,12 +46,20 @@ namespace Unity.FPS.Game
             AudioUtility.SetMasterVolume(1);
         }
 
+        void OnAllObjectivesCompleted(AllObjectivesCompletedEvent evt) => EndGame(true);
+        void OnPlayerDeath(PlayerDeathEvent evt)
+        {
+            EndGame(false);
+            PlayerDie = true;
+        }
         void Update()
         {
             if (GameIsEnding)
             {
-                BrokenGlass.SetActive(true);
-
+                if (PlayerDie)
+                {
+                    BrokenGlass.SetActive(true);
+                }
                 float timeRatio = 1 - (m_TimeLoadEndGameScene - Time.time) / EndSceneLoadDelay;
                 EndGameFadeCanvasGroup.alpha = timeRatio;
 
@@ -66,8 +74,8 @@ namespace Unity.FPS.Game
             }
         }
 
-        void OnAllObjectivesCompleted(AllObjectivesCompletedEvent evt) => EndGame(true);
-        void OnPlayerDeath(PlayerDeathEvent evt) => EndGame(false);
+        
+
 
         void EndGame(bool win)
         {
