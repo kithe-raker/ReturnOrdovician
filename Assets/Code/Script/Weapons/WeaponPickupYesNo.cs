@@ -7,7 +7,7 @@ namespace Unity.FPS.Gameplay
     {
         [Tooltip("The prefab for the weapon that will be added to the player on pickup")]
         public WeaponController WeaponPrefab;
-        public WeaponController testRemovePrefab;
+        //public WeaponController testRemovePrefab;
         protected override void Start()
         {
             base.Start();
