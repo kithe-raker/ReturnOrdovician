@@ -20318,6 +20318,7 @@ GameObject:
   - component: {fileID: 7608161430351779404}
   - component: {fileID: 7608161430351779405}
   - component: {fileID: 7608161430351779394}
+  - component: {fileID: 5451197844418168488}
   - component: {fileID: 7608161430351779406}
   m_Layer: 0
   m_Name: Pickup_PlasmaPistol
@@ -20371,7 +20372,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7608161430351779406
+--- !u!114 &5451197844418168488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -20379,6 +20380,27 @@ MonoBehaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7608161430351779395}
   m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 487f3d41bd896e943ac843300b2369c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  VerticalBobFrequency: 1
+  BobbingAmount: 1
+  RotatingSpeed: 360
+  PickupSfx: {fileID: 0}
+  PickupVfxPrefab: {fileID: 0}
+  WeaponPrefab: {fileID: 9124008031221689424, guid: 696e09b91d5bd0a41a3610199e2511df,
+    type: 3}
+  testRemovePrefab: {fileID: 8323776800172828795, guid: b318fabc73446b746a1005cede0c4ceb,
+    type: 3}
+--- !u!114 &7608161430351779406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7608161430351779395}
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4bffb1311779ed346a19fef7c9fa65ea, type: 3}
   m_Name: 

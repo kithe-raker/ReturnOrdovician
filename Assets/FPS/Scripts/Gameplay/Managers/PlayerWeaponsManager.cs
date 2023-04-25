@@ -82,7 +82,7 @@ namespace Unity.FPS.Gameplay
         public UnityAction<WeaponController, int> OnAddedWeapon;
         public UnityAction<WeaponController, int> OnRemovedWeapon;
 
-        WeaponController[] m_WeaponSlots = new WeaponController[9]; // 9 available weapon slots
+        public WeaponController[] m_WeaponSlots = new WeaponController[9]; // 9 available weapon slots  //yesNo edit to public
         PlayerInputHandler m_InputHandler;
         PlayerCharacterController m_PlayerCharacterController;
         float m_WeaponBobFactor;
@@ -174,6 +174,14 @@ namespace Unity.FPS.Gameplay
                             SwitchToWeaponIndex(switchWeaponInput - 1);
                     }
                 }
+
+
+                // if (Input.GetKeyDown("space")){                                                                              //Yesno test remove
+                //     print("space work");
+                //     RemoveWeapon(m_WeaponSlots[ActiveWeaponIndex]);
+                // }
+
+
             }
 
             // Pointing at enemy handling
