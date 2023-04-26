@@ -23,22 +23,86 @@ namespace Unity.FPS.Gameplay
         protected override void OnPicked(PlayerCharacterController byPlayer)
         {
             PlayerWeaponsManager playerWeaponsManager = byPlayer.GetComponent<PlayerWeaponsManager>();
+           
             if (playerWeaponsManager)
             {
-                print("this work");
-                playerWeaponsManager.RemoveWeapon(playerWeaponsManager.m_WeaponSlots[playerWeaponsManager.ActiveWeaponIndex]);
+                
+                //if(playerWeaponsManager.m_WeaponSlots[0]!=null&&playerWeaponsManager.m_WeaponSlots[1]!=null){   //fail cause it detect after pickup
+                //haveNullDetect = 0;
+
+                print("start: " + playerWeaponsManager.haveNullDetect);
+                if(playerWeaponsManager.haveNullDetect==0){
+                    Instantiate(playerWeaponsManager.spawnWeapons[playerWeaponsManager.m_WeaponSlots[playerWeaponsManager.ActiveWeaponIndex].weaponIdYesno], playerWeaponsManager.weaponSpawnLocation.position, transform.rotation);
+                    playerWeaponsManager.RemoveWeapon(playerWeaponsManager.m_WeaponSlots[playerWeaponsManager.ActiveWeaponIndex]);
+                }
+
+
+
+                                                    // if(playerWeaponsManager.m_WeaponSlots[0]==null){
+                                                    //     print("weapon 0 null");
+                                                    // }
+                                                    // if(playerWeaponsManager.m_WeaponSlots[0]!=null){
+                                                    //     print("weapon 0 not null");
+                                                    // }
+                                                    // if(playerWeaponsManager.m_WeaponSlots[1]==null){
+                                                    //     print("weapon 1 null");
+                                                    // }
+                                                    // if(playerWeaponsManager.m_WeaponSlots[1]!=null){
+                                                    //     print("weapon 1 not null");
+                                                    // }
+
+
+                if(playerWeaponsManager.m_WeaponSlots[0]!=null&&playerWeaponsManager.m_WeaponSlots[1]!=null){            
+                    playerWeaponsManager.haveNullDetect = 0;
+                }
+
+                print("lomid: " + playerWeaponsManager.haveNullDetect);
 
                 if (playerWeaponsManager.AddWeapon(WeaponPrefab))
                 {
+
+                    if(playerWeaponsManager.m_WeaponSlots[0]==null||playerWeaponsManager.m_WeaponSlots[1]==null){            
+                    playerWeaponsManager.haveNullDetect = 1;
+                }
+                else{
+                    playerWeaponsManager.haveNullDetect = 0;
+                }  
+                print("output: " + playerWeaponsManager.haveNullDetect);
+
+
                     // Handle auto-switching to weapon if no weapons currently
-                    //if (playerWeaponsManager.GetActiveWeapon() == null)
-                    //{
-                        playerWeaponsManager.SwitchWeapon(true);
-                    //}
+                    if (playerWeaponsManager.GetActiveWeapon() == null)
+                    {
+                       playerWeaponsManager.SwitchWeapon(true);
+                    }
                     PlayPickupFeedback();
+
                     Destroy(gameObject);
                 }
             }
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+////how I find out why logic fail
+// if(playerWeaponsManager.m_WeaponSlots[0]==null){
+                //     print("weapon 0 null");
+                // }
+                // if(playerWeaponsManager.m_WeaponSlots[0]!=null){
+                //     print("weapon 0 not null");
+                // }
+                // if(playerWeaponsManager.m_WeaponSlots[1]==null){
+                //     print("weapon 1 null");
+                // }
+                // if(playerWeaponsManager.m_WeaponSlots[1]!=null){
+                //     print("weapon 1 not null");
+                // }

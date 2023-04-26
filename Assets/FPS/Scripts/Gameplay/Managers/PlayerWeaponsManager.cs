@@ -82,7 +82,7 @@ namespace Unity.FPS.Gameplay
         public UnityAction<WeaponController, int> OnAddedWeapon;
         public UnityAction<WeaponController, int> OnRemovedWeapon;
 
-        public WeaponController[] m_WeaponSlots = new WeaponController[9]; // 9 available weapon slots  //yesNo edit to public
+        public WeaponController[] m_WeaponSlots = new WeaponController[2]; // 9 available weapon slots  //yesNo edit to public
         PlayerInputHandler m_InputHandler;
         PlayerCharacterController m_PlayerCharacterController;
         float m_WeaponBobFactor;
@@ -98,6 +98,9 @@ namespace Unity.FPS.Gameplay
         public Transform weaponSpawnLocation;   //yesNoEdit add by Zen for spawn deleted weapon out of player ass, Wanna name it PlayerPoopLocation but afraid it's will B 2 hard 2 edit.
         public List<GameObject> spawnWeapons; //yesNoEdit add by Zen for spawn deleted weapon out of player ass
         
+        public int haveNullDetect = 1;  //yesNoEdit  for pickup weapon,If detect null in pickup weapon, it's will detect when it already pickup, this use in add weapon function and weapon pickup yesno script
+
+
 
         void Start()
         {
@@ -180,9 +183,18 @@ namespace Unity.FPS.Gameplay
                 }
 
 
-                if (Input.GetKeyDown("space")){                                                                              //Yesno test remove
-                    print(m_WeaponSlots[ActiveWeaponIndex].weaponIdYesno);
-                    Instantiate(spawnWeapons[0], weaponSpawnLocation.position, transform.rotation);
+                if (Input.GetKeyDown("g")){    
+                                                                                           //Yesno test remove
+                    //print(m_WeaponSlots[ActiveWeaponIndex].weaponIdYesno);
+                    //print("space work");
+                    if(m_WeaponSlots[0]==null){
+                        print("weapon 0 null");
+                    }
+                    if(m_WeaponSlots[1]==null){
+                        print("weapon 1 null");
+                    }
+                    
+                    //Instantiate(spawnWeapons[0], weaponSpawnLocation.position, transform.rotation);
                     //RemoveWeapon(m_WeaponSlots[ActiveWeaponIndex]);
                 }
 

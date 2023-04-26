@@ -88,7 +88,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732248835926222970}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0.431, z: -1.319}
+  m_LocalPosition: {x: 0, y: 0.431, z: -2.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -549,7 +549,10 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   weaponSpawnLocation: {fileID: 6442097169088684935}
-  spawnWeapons: []
+  spawnWeapons:
+  - {fileID: 7608161430351779395, guid: cad23df5e39e4364db5e8585888218cd, type: 3}
+  - {fileID: 800413450853706965, guid: 5c6f533fd204c074096a51ad69d947ae, type: 3}
+  - {fileID: 4955061865751452311, guid: bcc086affc1b32f4ebecfb8b52d1d689, type: 3}
 --- !u!114 &783424908873546082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -991,6 +994,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 806887368}
     m_Modifications:
+    - target: {fileID: 6530784527232116, guid: 7468cd18030a0204ab08baf7ac36ff1e, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6226484437272429138, guid: 7468cd18030a0204ab08baf7ac36ff1e,
         type: 3}
       propertyPath: m_RootOrder
