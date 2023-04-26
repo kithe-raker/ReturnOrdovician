@@ -152,6 +152,9 @@ namespace Unity.FPS.Game
         public bool reloadStart = false;
         float currentReloadTime = 0;
         public float reloadDelayYesno = 1;
+
+
+        public int weaponIdYesno = 0;
         
 
         public float GetAmmoNeededToShoot() =>

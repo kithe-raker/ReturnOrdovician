@@ -128,8 +128,9 @@ MonoBehaviour:
   ContinuousShootLoopSfx: {fileID: 0}
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
-  currentReloadTime: 0
-  reloadDelayYesno: 1
+  reloadStart: 0
+  reloadDelayYesno: 0
+  weaponIdYesno: 360
 --- !u!114 &8911154808894672412
 MonoBehaviour:
   m_ObjectHideFlags: 0

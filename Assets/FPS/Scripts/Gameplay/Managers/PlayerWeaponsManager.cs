@@ -94,6 +94,10 @@ namespace Unity.FPS.Gameplay
         float m_TimeStartedWeaponSwitch;
         WeaponSwitchState m_WeaponSwitchState;
         int m_WeaponSwitchNewWeaponIndex;
+        
+        public Transform weaponSpawnLocation;   //yesNoEdit add by Zen for spawn deleted weapon out of player ass, Wanna name it PlayerPoopLocation but afraid it's will B 2 hard 2 edit.
+        public List<GameObject> spawnWeapons; //yesNoEdit add by Zen for spawn deleted weapon out of player ass
+        
 
         void Start()
         {
@@ -176,10 +180,11 @@ namespace Unity.FPS.Gameplay
                 }
 
 
-                // if (Input.GetKeyDown("space")){                                                                              //Yesno test remove
-                //     print("space work");
-                //     RemoveWeapon(m_WeaponSlots[ActiveWeaponIndex]);
-                // }
+                if (Input.GetKeyDown("space")){                                                                              //Yesno test remove
+                    print(m_WeaponSlots[ActiveWeaponIndex].weaponIdYesno);
+                    Instantiate(spawnWeapons[0], weaponSpawnLocation.position, transform.rotation);
+                    //RemoveWeapon(m_WeaponSlots[ActiveWeaponIndex]);
+                }
 
 
             }
