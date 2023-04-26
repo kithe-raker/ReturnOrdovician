@@ -55,6 +55,9 @@ namespace Unity.FPS.Gameplay
                 if(playerWeaponsManager.m_WeaponSlots[0]!=null&&playerWeaponsManager.m_WeaponSlots[1]!=null){            
                     playerWeaponsManager.haveNullDetect = 0;
                 }
+                else{
+                    playerWeaponsManager.haveNullDetect = 1;
+                }  
 
                 print("lomid: " + playerWeaponsManager.haveNullDetect);
 
