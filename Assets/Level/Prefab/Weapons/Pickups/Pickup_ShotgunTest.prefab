@@ -243,6 +243,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   reloadStart: 0
   reloadDelayYesno: 1
+  weaponIdYesno: 0
 --- !u!114 &5752977998496618822
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,7 +438,6 @@ GameObject:
   - component: {fileID: 4955061865751452312}
   - component: {fileID: 4955061865751452313}
   - component: {fileID: 4955061865751452310}
-  - component: {fileID: 4955061865751452314}
   - component: {fileID: 6922974839133346331}
   m_Layer: 0
   m_Name: Pickup_ShotgunTest
@@ -491,25 +491,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4955061865751452314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4955061865751452311}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bffb1311779ed346a19fef7c9fa65ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VerticalBobFrequency: 1
-  BobbingAmount: 0.3
-  RotatingSpeed: 360
-  PickupSfx: {fileID: 8300000, guid: 7b83d61917ac1224f942a0609b1221f2, type: 3}
-  PickupVfxPrefab: {fileID: 0}
-  WeaponPrefab: {fileID: 8323776800172828795, guid: 31d97e822763d1f4cb769f7e3f7f7333,
-    type: 3}
 --- !u!114 &6922974839133346331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -529,7 +510,6 @@ MonoBehaviour:
   PickupVfxPrefab: {fileID: 0}
   WeaponPrefab: {fileID: 8323776800172828795, guid: 31d97e822763d1f4cb769f7e3f7f7333,
     type: 3}
-  testRemovePrefab: {fileID: 0}
 --- !u!1 &5094886221617628849
 GameObject:
   m_ObjectHideFlags: 0

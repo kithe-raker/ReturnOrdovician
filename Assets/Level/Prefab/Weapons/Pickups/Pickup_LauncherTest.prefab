@@ -467,7 +467,6 @@ GameObject:
   - component: {fileID: 800413450853706970}
   - component: {fileID: 800413450853706971}
   - component: {fileID: 800413450853706964}
-  - component: {fileID: 800413450853706968}
   - component: {fileID: 8842641839137963335}
   m_Layer: 0
   m_Name: Pickup_LauncherTest
@@ -521,25 +520,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &800413450853706968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 800413450853706965}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bffb1311779ed346a19fef7c9fa65ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VerticalBobFrequency: 1
-  BobbingAmount: 0.3
-  RotatingSpeed: 360
-  PickupSfx: {fileID: 8300000, guid: 6f3e0904bbbace745bdef08cdbcdfec0, type: 3}
-  PickupVfxPrefab: {fileID: 0}
-  WeaponPrefab: {fileID: 8323776800172828795, guid: 3439b4874b7b44e4eb2216314c46b85c,
-    type: 3}
 --- !u!114 &8842641839137963335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5490,6 +5470,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   reloadStart: 0
   reloadDelayYesno: 1
+  weaponIdYesno: 0
 --- !u!114 &3497373435880023034
 MonoBehaviour:
   m_ObjectHideFlags: 0
