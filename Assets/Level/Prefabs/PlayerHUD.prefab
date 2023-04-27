@@ -305,8 +305,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 7.739898}
-  m_SizeDelta: {x: 0, y: 15.48}
+  m_AnchoredPosition: {x: 0, y: 49.848827}
+  m_SizeDelta: {x: 0, y: 99.6978}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4478075709980716605
 CanvasRenderer:
@@ -2333,7 +2333,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5334489148540058294}
   - component: {fileID: 2891990594570880999}
-  - component: {fileID: 2444095241004929489}
+  - component: {fileID: 7070745869282460871}
   - component: {fileID: 2782013966296321533}
   - component: {fileID: 1516162428463311387}
   - component: {fileID: 7002648425356076313}
@@ -2378,7 +2378,7 @@ MonoBehaviour:
   AmmoPanel: {fileID: 5492984694317055365}
   AmmoCounterPrefab: {fileID: 645032500860478885, guid: 381e109c8e235f54cbcfbe7434554e49,
     type: 3}
---- !u!114 &2444095241004929489
+--- !u!114 &7070745869282460871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2387,7 +2387,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7714222529064160511}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2995397d485ca49b59b78b9069bda1, type: 3}
+  m_Script: {fileID: 11500000, guid: eb9e23b1594fad84bba2ccbe9dc162a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   HealthFillImage: {fileID: 3613506114642692814}
@@ -2795,7 +2795,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: -0.000015258789}
+  m_AnchoredPosition: {x: 0, y: -0.000030517578}
   m_SizeDelta: {x: 100, y: 145.85}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &4797549939757650311

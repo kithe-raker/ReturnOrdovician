@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1727681, g: 0.21589208, b: 0.29782575, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -659,6 +659,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3122855503829242450, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
+      propertyPath: m_Height
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3122855503829242450, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
       propertyPath: m_StepOffset
       value: 0.3
       objectReference: {fileID: 0}
@@ -666,6 +671,46 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782584008852775612, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: JumpForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782584008852775612, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782584008852775612, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: MaxSpeedInAir
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782584008852775612, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: GravityDownForce
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782584008852775612, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: MaxSpeedOnGround
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782584008852775612, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: SprintSpeedModifier
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782584008852775612, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: CapsuleHeightStanding
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5782584008852775612, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: AccelerationSpeedInAir
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6717119209339842490, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
@@ -710,6 +755,11 @@ PrefabInstance:
     - target: {fileID: 7491190654590824519, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8694137560673455815, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8746678193447392789, guid: 761cdc9e4e883334cbdcea062d0befa7,
@@ -904,7 +954,7 @@ MonoBehaviour:
   AimingRotationMultiplier: 0.4
   JumpForce: 9
   CameraHeightRatio: 0.9
-  CapsuleHeightStanding: 1.8
+  CapsuleHeightStanding: 1.2
   CapsuleHeightCrouching: 0.9
   CrouchingSharpness: 10
   FootstepSfxFrequency: 1
@@ -1062,6 +1112,11 @@ PrefabInstance:
     - target: {fileID: 1325207114, guid: 6bcb893784eb53e4c874dd2093cf5dc3, type: 3}
       propertyPath: m_Size.y
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 982223624855016163, guid: 6bcb893784eb53e4c874dd2093cf5dc3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2191140176525444997, guid: 6bcb893784eb53e4c874dd2093cf5dc3,
         type: 3}
