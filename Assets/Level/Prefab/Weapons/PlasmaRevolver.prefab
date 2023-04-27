@@ -983,7 +983,7 @@ MonoBehaviour:
   m_CurrentAmmo: 0
   reloadStart: 0
   reloadDelayYesno: 0.2
-  weaponIdYesno: 0
+  weaponIdYesno: 2
 --- !u!114 &3292291589171319650
 MonoBehaviour:
   m_ObjectHideFlags: 0
