@@ -36036,7 +36036,7 @@ GameObject:
   - component: {fileID: 7575015050323937601}
   - component: {fileID: 3164566451076956487}
   - component: {fileID: 2471101268460576010}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
