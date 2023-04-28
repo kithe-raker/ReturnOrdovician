@@ -123,6 +123,9 @@ MonoBehaviour:
     CrosshairSprite: {fileID: 21300000, guid: e881aa18189b12f4e915fc5b14ddc421, type: 3}
     CrosshairSize: 40
     CrosshairColor: {r: 1, g: 0, b: 0, a: 1}
+  FireRateYn: 1
+  ReloadSpeedYn: 3
+  MagSizeYn: 3
   WeaponRoot: {fileID: 3556211190983047227}
   WeaponMuzzle: {fileID: 6203473067862454689}
   ShootType: 0
@@ -160,7 +163,7 @@ MonoBehaviour:
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
   reloadStart: 0
-  reloadDelayYesno: 2
+  weaponIdYesno: 0
 --- !u!114 &6693353111079811784
 MonoBehaviour:
   m_ObjectHideFlags: 0
