@@ -151,7 +151,10 @@ namespace Unity.FPS.Game
         int checkReload = 0;  // YesNo modify
         public bool reloadStart = false;
         float currentReloadTime = 0;
-        public float reloadDelayYesno = 1;
+        float reloadDelayYesno = 1;
+
+
+        public int weaponIdYesno = 0;
         
 
         public float GetAmmoNeededToShoot() =>
@@ -239,6 +242,10 @@ namespace Unity.FPS.Game
                 IsReloading = true;
             }
         }
+        
+        void Start(){
+            reloadDelayYesno = (MaxAmmo/AmmoReloadRate)+0.1f;
+        }
 
         void Update()
         {
@@ -257,6 +264,7 @@ namespace Unity.FPS.Game
         {
             if(Input.GetKeyDown("r") && IsWeaponActive){  // Yesno modify start
                 currentReloadTime = 0;
+                m_CurrentAmmo = 0; //kapom idea since we remove reloading animation
                 if(m_CurrentAmmo < MaxAmmo){
                     reloadStart = true;
                 }
