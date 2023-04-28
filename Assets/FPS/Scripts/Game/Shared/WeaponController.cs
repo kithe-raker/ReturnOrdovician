@@ -29,6 +29,8 @@ namespace Unity.FPS.Game
     public class WeaponController : MonoBehaviour
     {
         [Header("Information")] [Tooltip("The name that will be displayed in the UI for this weapon")]
+    
+
         public string WeaponName;
 
         [Tooltip("The image that will be displayed in the UI for this weapon")]
@@ -39,6 +41,14 @@ namespace Unity.FPS.Game
 
         [Tooltip("Data for the crosshair when targeting an enemy")]
         public CrosshairData CrosshairDataTargetInSight;
+
+        [Header("YN___~,===,(OwO)___YESNO STAT SETTING__(OwO),===,~__YN")] 
+        public float Fire_rate_YESNO;
+        public float Reload_speed_YESNO;
+        public int Mag_size_YESNO;
+        [Header("==================================================")] 
+
+
 
         [Header("Internal References")]
         [Tooltip("The root object for the weapon, this is what will be deactivated when the weapon isn't active")]
@@ -156,6 +166,7 @@ namespace Unity.FPS.Game
 
         public int weaponIdYesno = 0;
         
+    
 
         public float GetAmmoNeededToShoot() =>
             (ShootType != WeaponShootType.Charge ? 1f : Mathf.Max(1f, AmmoUsedOnStartCharge)) /
@@ -243,8 +254,13 @@ namespace Unity.FPS.Game
             }
         }
         
+        
         void Start(){
-            reloadDelayYesno = (MaxAmmo/AmmoReloadRate)+0.1f;
+            DelayBetweenShots = 1/Fire_rate_YESNO;
+            MaxAmmo = Mag_size_YESNO;
+            AmmoReloadRate = (MaxAmmo/Reload_speed_YESNO); 
+            reloadDelayYesno = Reload_speed_YESNO; 
+            //reloadDelayYesno = (MaxAmmo/AmmoReloadRate)+0.1f; 
         }
 
         void Update()
@@ -275,7 +291,7 @@ namespace Unity.FPS.Game
             }
             if(reloadStart == true){
                 currentReloadTime += Time.deltaTime;
-                if(currentReloadTime >= reloadDelayYesno){
+                if(currentReloadTime-0.1f >= reloadDelayYesno){ //zen yesNo, have -0.1 cause it fix some bug that cause bullet to increase even while shooting
                     //print("it worrkkkkkk reeee");
                     reloadStart = false;
                 }
