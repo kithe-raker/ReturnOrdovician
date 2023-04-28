@@ -11,7 +11,7 @@ namespace Unity.FPS.Game
             public ProjectileBase ProjectilePrefabAlt;
             ProjectileBase ProjectilePrefabOriginal;
             void Start(){
-                print("start func in pistol alt work");
+                //print("start func in pistol alt work");
                 ProjectilePrefabOriginal = wc.ProjectilePrefab;
             }
             void Update(){

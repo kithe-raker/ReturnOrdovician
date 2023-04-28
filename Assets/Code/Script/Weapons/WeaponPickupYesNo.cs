@@ -30,27 +30,11 @@ namespace Unity.FPS.Gameplay
                 //if(playerWeaponsManager.m_WeaponSlots[0]!=null&&playerWeaponsManager.m_WeaponSlots[1]!=null){   //fail cause it detect after pickup
                 //haveNullDetect = 0;
 
-                print("start: " + playerWeaponsManager.haveNullDetect);
+               // print("start: " + playerWeaponsManager.haveNullDetect);
                 if(playerWeaponsManager.haveNullDetect==0){
                     Instantiate(playerWeaponsManager.spawnWeapons[playerWeaponsManager.m_WeaponSlots[playerWeaponsManager.ActiveWeaponIndex].weaponIdYesno], playerWeaponsManager.weaponSpawnLocation.position, transform.rotation);
                     playerWeaponsManager.RemoveWeapon(playerWeaponsManager.m_WeaponSlots[playerWeaponsManager.ActiveWeaponIndex]);
                 }
-
-
-
-                                                    // if(playerWeaponsManager.m_WeaponSlots[0]==null){
-                                                    //     print("weapon 0 null");
-                                                    // }
-                                                    // if(playerWeaponsManager.m_WeaponSlots[0]!=null){
-                                                    //     print("weapon 0 not null");
-                                                    // }
-                                                    // if(playerWeaponsManager.m_WeaponSlots[1]==null){
-                                                    //     print("weapon 1 null");
-                                                    // }
-                                                    // if(playerWeaponsManager.m_WeaponSlots[1]!=null){
-                                                    //     print("weapon 1 not null");
-                                                    // }
-
 
                 if(playerWeaponsManager.m_WeaponSlots[0]!=null&&playerWeaponsManager.m_WeaponSlots[1]!=null){            
                     playerWeaponsManager.haveNullDetect = 0;
@@ -59,7 +43,7 @@ namespace Unity.FPS.Gameplay
                     playerWeaponsManager.haveNullDetect = 1;
                 }  
 
-                print("lomid: " + playerWeaponsManager.haveNullDetect);
+                //print("lomid: " + playerWeaponsManager.haveNullDetect);
 
                 if (playerWeaponsManager.AddWeapon(WeaponPrefab))
                 {
@@ -70,7 +54,7 @@ namespace Unity.FPS.Gameplay
                 else{
                     playerWeaponsManager.haveNullDetect = 0;
                 }  
-                print("output: " + playerWeaponsManager.haveNullDetect);
+                //print("output: " + playerWeaponsManager.haveNullDetect);
 
 
                     // Handle auto-switching to weapon if no weapons currently
