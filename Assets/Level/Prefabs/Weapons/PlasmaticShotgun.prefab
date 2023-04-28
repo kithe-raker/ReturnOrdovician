@@ -1820,7 +1820,7 @@ MonoBehaviour:
   WeaponRoot: {fileID: 3052708693839710420}
   WeaponMuzzle: {fileID: 6564357952951397709}
   ShootType: 0
-  ProjectilePrefab: {fileID: 8557326736989169919, guid: e9669dd4b9e707944a6ceb39d8897f48,
+  ProjectilePrefab: {fileID: 5620821098347306918, guid: 40ec4fafbd7437e4abbd055c8a88378d,
     type: 3}
   DelayBetweenShots: 0.8
   BulletSpreadAngle: 10
@@ -1854,7 +1854,7 @@ MonoBehaviour:
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
   reloadStart: 0
-  reloadDelayYesno: 2
+  weaponIdYesno: 0
 --- !u!114 &630483637044290119
 MonoBehaviour:
   m_ObjectHideFlags: 0
