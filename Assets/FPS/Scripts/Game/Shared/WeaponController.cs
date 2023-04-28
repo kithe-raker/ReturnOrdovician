@@ -42,10 +42,10 @@ namespace Unity.FPS.Game
         [Tooltip("Data for the crosshair when targeting an enemy")]
         public CrosshairData CrosshairDataTargetInSight;
 
-        [Header("YN___~,===,(OwO)___YESNO STAT SETTING__(OwO),===,~__YN")] 
-        public float Fire_rate_YESNO;
-        public float Reload_speed_YESNO;
-        public int Mag_size_YESNO;
+        [Header("YN___~,===,(OwO)___YESNO STATS SETTING__(OwO),===,~__YN")] 
+        public float FireRateYn;
+        public float ReloadSpeedYn;
+        public int MagSizeYn;
         [Header("==================================================")] 
 
 
@@ -185,6 +185,10 @@ namespace Unity.FPS.Game
 
         void Awake()
         {
+            DelayBetweenShots = 1/FireRateYn; //yesNo Added
+            MaxAmmo = MagSizeYn;
+            AmmoReloadRate = (MaxAmmo/ReloadSpeedYn);  //yesNo added end
+
             m_CurrentAmmo = MaxAmmo;
             m_CarriedPhysicalBullets = HasPhysicalBullets ? ClipSize : 0;
             m_LastMuzzlePosition = WeaponMuzzle.position;
@@ -255,11 +259,11 @@ namespace Unity.FPS.Game
         }
         
         
-        void Start(){
-            DelayBetweenShots = 1/Fire_rate_YESNO;
-            MaxAmmo = Mag_size_YESNO;
-            AmmoReloadRate = (MaxAmmo/Reload_speed_YESNO); 
-            reloadDelayYesno = Reload_speed_YESNO; 
+        void Start(){   //only in yesno
+            DelayBetweenShots = 1/FireRateYn;
+            MaxAmmo = MagSizeYn;
+            AmmoReloadRate = (MaxAmmo/ReloadSpeedYn); 
+            reloadDelayYesno = ReloadSpeedYn; 
             //reloadDelayYesno = (MaxAmmo/AmmoReloadRate)+0.1f; 
         }
 
