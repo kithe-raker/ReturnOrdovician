@@ -42,7 +42,7 @@ namespace Unity.FPS.Game
         [Tooltip("Data for the crosshair when targeting an enemy")]
         public CrosshairData CrosshairDataTargetInSight;
 
-        [Header("YN___~,===,(OwO)___YESNO STATS SETTING__(OwO),===,~__YN")] 
+        [Header("YN___~,===,(OwO)___YESNO STATS SETTING___(OwO),===,~___YN")] 
         public float FireRateYn;
         public float ReloadSpeedYn;
         public int MagSizeYn;
