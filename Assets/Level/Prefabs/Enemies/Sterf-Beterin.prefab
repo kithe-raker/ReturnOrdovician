@@ -467,7 +467,7 @@ GameObject:
   - component: {fileID: 1445181152364332447}
   - component: {fileID: 493397952450740567}
   - component: {fileID: 10721558935276975}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,9 +885,9 @@ MonoBehaviour:
     CrosshairSprite: {fileID: 0}
     CrosshairSize: 0
     CrosshairColor: {r: 0, g: 0, b: 0, a: 0}
-  FireRateYn: 0
-  ReloadSpeedYn: 0
-  MagSizeYn: 0
+  FireRateYn: 1
+  ReloadSpeedYn: 0.1
+  MagSizeYn: 99999
   WeaponRoot: {fileID: 8609234169731216114}
   WeaponMuzzle: {fileID: 1168470810085505896}
   ShootType: 1
