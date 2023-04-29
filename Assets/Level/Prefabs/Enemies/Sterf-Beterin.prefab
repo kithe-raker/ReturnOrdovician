@@ -885,6 +885,9 @@ MonoBehaviour:
     CrosshairSprite: {fileID: 0}
     CrosshairSize: 0
     CrosshairColor: {r: 0, g: 0, b: 0, a: 0}
+  FireRateYn: 0
+  ReloadSpeedYn: 0
+  MagSizeYn: 0
   WeaponRoot: {fileID: 8609234169731216114}
   WeaponMuzzle: {fileID: 1168470810085505896}
   ShootType: 1
@@ -921,7 +924,7 @@ MonoBehaviour:
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
   reloadStart: 0
-  reloadDelayYesno: 1
+  weaponIdYesno: 0
 --- !u!82 &1429398585341396635
 AudioSource:
   m_ObjectHideFlags: 0

@@ -189,6 +189,9 @@ MonoBehaviour:
     CrosshairSprite: {fileID: 21300000, guid: e881aa18189b12f4e915fc5b14ddc421, type: 3}
     CrosshairSize: 40
     CrosshairColor: {r: 1, g: 0, b: 0, a: 1}
+  FireRateYn: 0
+  ReloadSpeedYn: 0
+  MagSizeYn: 0
   WeaponRoot: {fileID: 1505447205160222267}
   WeaponMuzzle: {fileID: 8334323006752503713}
   ShootType: 1
@@ -226,7 +229,7 @@ MonoBehaviour:
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
   reloadStart: 0
-  reloadDelayYesno: 1
+  weaponIdYesno: 0
 --- !u!114 &8745372878802205896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1492,7 +1495,7 @@ PrefabInstance:
     - target: {fileID: 8455270613747015080, guid: 21c8bd050f24da54285f8a3987ee6253,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 7.52
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21c8bd050f24da54285f8a3987ee6253, type: 3}
