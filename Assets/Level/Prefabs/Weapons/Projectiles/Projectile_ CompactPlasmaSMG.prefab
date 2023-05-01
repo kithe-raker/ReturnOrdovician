@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1179607680882145059
+--- !u!1 &2147084203400328335
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1179607680881978115}
-  - component: {fileID: 1179607680885369635}
-  - component: {fileID: 1179607680884402659}
+  - component: {fileID: 3170269174712318148}
+  - component: {fileID: 4890204423248894203}
+  - component: {fileID: 2711164819285224806}
   m_Layer: 0
   m_Name: Mesh_Projectile
   m_TagString: Untagged
@@ -18,37 +18,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1179607680881978115
+--- !u!4 &3170269174712318148
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179607680882145059}
+  m_GameObject: {fileID: 2147084203400328335}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7712249270394406840}
-  m_Father: {fileID: 6201078290741449209}
+  - {fileID: 3715508053607406314}
+  m_Father: {fileID: 719913064141509058}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &1179607680885369635
+--- !u!33 &4890204423248894203
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179607680882145059}
+  m_GameObject: {fileID: 2147084203400328335}
   m_Mesh: {fileID: 4300002, guid: dac2420a19d8c8e46b7d36c8e3817523, type: 3}
---- !u!23 &1179607680884402659
+--- !u!23 &2711164819285224806
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1179607680882145059}
+  m_GameObject: {fileID: 2147084203400328335}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 530af3a8082ffb14897ac6b74259b8a1, type: 2}
+  - {fileID: 2100000, guid: a7baa8fdcb831b44d87d70b1e6941b39, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &3022811224103059290
+--- !u!1 &5009536206697264744
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7712249270394406840}
+  - component: {fileID: 3715508053607406314}
   m_Layer: 0
   m_Name: Tip
   m_TagString: Untagged
@@ -100,22 +100,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7712249270394406840
+--- !u!4 &3715508053607406314
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3022811224103059290}
+  m_GameObject: {fileID: 5009536206697264744}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 101.4293}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1179607680881978115}
+  m_Father: {fileID: 3170269174712318148}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6201078290741449208
+--- !u!1 &7528972102777103764
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -123,59 +123,59 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6201078290741449209}
-  - component: {fileID: 2242399446117798594}
+  - component: {fileID: 719913064141509058}
+  - component: {fileID: 1398024071781447361}
   m_Layer: 0
-  m_Name: MantisMeleeAttack
+  m_Name: Projectile_ CompactPlasmaSMG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6201078290741449209
+--- !u!4 &719913064141509058
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6201078290741449208}
+  m_GameObject: {fileID: 7528972102777103764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 2}
+  m_LocalScale: {x: 1, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1179607680881978115}
+  - {fileID: 3170269174712318148}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2242399446117798594
+--- !u!114 &1398024071781447361
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6201078290741449208}
+  m_GameObject: {fileID: 7528972102777103764}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: de99b30e1e73fd14e98cc5371da25d12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Radius: 0.8
-  Root: {fileID: 6201078290741449209}
-  Tip: {fileID: 7712249270394406840}
-  MaxLifeTime: 1
-  ImpactVfx: {fileID: 7655095426451682942, guid: a7d68b1a502e02a49b8efb1b86a8c931,
+  Radius: 0.1
+  Root: {fileID: 719913064141509058}
+  Tip: {fileID: 3715508053607406314}
+  MaxLifeTime: 5
+  ImpactVfx: {fileID: 7655095426451682942, guid: 358eca6adc32a89459c54b6b62d9c825,
     type: 3}
-  ImpactVfxLifetime: 1
+  ImpactVfxLifetime: 5
   ImpactVfxSpawnOffset: 0.1
   ImpactSfxClip: {fileID: 0}
   HittableLayers:
     serializedVersion: 2
-    m_Bits: 36215
-  Speed: 1
-  GravityDownAcceleration: 0
-  TrajectoryCorrectionDistance: 0
+    m_Bits: 4294967295
+  Speed: 150
+  GravityDownAcceleration: 20
+  TrajectoryCorrectionDistance: -1
   InheritWeaponVelocity: 0
-  Damage: 50
+  Damage: 12
   AreaOfDamage: {fileID: 0}
   RadiusColor: {r: 0, g: 1, b: 1, a: 1}

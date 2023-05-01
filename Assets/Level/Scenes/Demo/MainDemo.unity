@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.1727681, g: 0.21589208, b: 0.29782575, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -282,7 +282,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_BuildHeightMesh: 0
-  m_NavMeshData: {fileID: 23800000, guid: 6ffba71d72dda5a4aaad483db1176370, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7168f2db6e367b04b85e76c7dc688fa3, type: 2}
 --- !u!4 &552901467
 Transform:
   m_ObjectHideFlags: 0
@@ -11926,6 +11926,9 @@ MonoBehaviour:
     CrosshairSprite: {fileID: 21300000, guid: e881aa18189b12f4e915fc5b14ddc421, type: 3}
     CrosshairSize: 40
     CrosshairColor: {r: 1, g: 0, b: 0, a: 1}
+  FireRateYn: 0
+  ReloadSpeedYn: 0
+  MagSizeYn: 0
   WeaponRoot: {fileID: 6469200168530494817}
   WeaponMuzzle: {fileID: 4506464512246582523}
   ShootType: 1
@@ -11963,7 +11966,7 @@ MonoBehaviour:
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
   reloadStart: 0
-  reloadDelayYesno: 1
+  weaponIdYesno: 0
 --- !u!199 &4812680292350725803
 ParticleSystemRenderer:
   serializedVersion: 6

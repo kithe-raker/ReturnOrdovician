@@ -29,6 +29,8 @@ namespace Unity.FPS.Game
     public class WeaponController : MonoBehaviour
     {
         [Header("Information")] [Tooltip("The name that will be displayed in the UI for this weapon")]
+    
+
         public string WeaponName;
 
         [Tooltip("The image that will be displayed in the UI for this weapon")]
@@ -39,6 +41,14 @@ namespace Unity.FPS.Game
 
         [Tooltip("Data for the crosshair when targeting an enemy")]
         public CrosshairData CrosshairDataTargetInSight;
+
+        [Header("YN___~,===,(OwO)___YESNO STATS SETTING___(OwO),===,~___YN")] 
+        public float FireRateYn;
+        public float ReloadSpeedYn;
+        public int MagSizeYn;
+        [Header("==================================================")] 
+
+
 
         [Header("Internal References")]
         [Tooltip("The root object for the weapon, this is what will be deactivated when the weapon isn't active")]
@@ -151,8 +161,12 @@ namespace Unity.FPS.Game
         int checkReload = 0;  // YesNo modify
         public bool reloadStart = false;
         float currentReloadTime = 0;
-        public float reloadDelayYesno = 1;
+        float reloadDelayYesno = 1;
+
+
+        public int weaponIdYesno = 0;
         
+    
 
         public float GetAmmoNeededToShoot() =>
             (ShootType != WeaponShootType.Charge ? 1f : Mathf.Max(1f, AmmoUsedOnStartCharge)) /
@@ -171,6 +185,10 @@ namespace Unity.FPS.Game
 
         void Awake()
         {
+            DelayBetweenShots = 1/FireRateYn; //yesNo Added
+            MaxAmmo = MagSizeYn;
+            AmmoReloadRate = (MaxAmmo/ReloadSpeedYn);  //yesNo added end
+
             m_CurrentAmmo = MaxAmmo;
             m_CarriedPhysicalBullets = HasPhysicalBullets ? ClipSize : 0;
             m_LastMuzzlePosition = WeaponMuzzle.position;
@@ -239,6 +257,15 @@ namespace Unity.FPS.Game
                 IsReloading = true;
             }
         }
+        
+        
+        void Start(){   //only in yesno
+            DelayBetweenShots = 1/FireRateYn;
+            MaxAmmo = MagSizeYn;
+            AmmoReloadRate = (MaxAmmo/ReloadSpeedYn); 
+            reloadDelayYesno = ReloadSpeedYn; 
+            //reloadDelayYesno = (MaxAmmo/AmmoReloadRate)+0.1f; 
+        }
 
         void Update()
         {
@@ -257,6 +284,7 @@ namespace Unity.FPS.Game
         {
             if(Input.GetKeyDown("r") && IsWeaponActive){  // Yesno modify start
                 currentReloadTime = 0;
+                m_CurrentAmmo = 0; //kapom idea since we remove reloading animation
                 if(m_CurrentAmmo < MaxAmmo){
                     reloadStart = true;
                 }
@@ -267,7 +295,7 @@ namespace Unity.FPS.Game
             }
             if(reloadStart == true){
                 currentReloadTime += Time.deltaTime;
-                if(currentReloadTime >= reloadDelayYesno){
+                if(currentReloadTime-0.1f >= reloadDelayYesno){ //zen yesNo, have -0.1 cause it fix some bug that cause bullet to increase even while shooting
                     //print("it worrkkkkkk reeee");
                     reloadStart = false;
                 }
