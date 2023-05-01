@@ -3,7 +3,62 @@ guid: 49c055f285a1f324f83ac8808465e3c6
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlackLine
+    second: {fileID: 2100000, guid: 1ca1c2abd27795c4381e6cd7d15e875f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: BlurLight
+    second: {fileID: 2100000, guid: 15926f0813a272444a2b1fe473e7076f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: db0de501d2c337d4e9d4f21029e56064, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal
+    second: {fileID: 2100000, guid: 8c7f5aff380584442ae615ffd66ef12e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.001
+    second: {fileID: 2100000, guid: 20bda2091c2b16c48a2d61174097f6b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.002
+    second: {fileID: 2100000, guid: 17df9046b6fcb824384876816446d4aa, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.004
+    second: {fileID: 2100000, guid: 806a1651c2179d343943fa3e3e4dbb02, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Metal.006
+    second: {fileID: 2100000, guid: faad030064f376d40a5a150c29cca25b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Orange
+    second: {fileID: 2100000, guid: a6d4350c54c3fa745905d345b6b34c04, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: OrangeLight
+    second: {fileID: 2100000, guid: 1b66651fc35927c42870da1f501b7bd9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: YellowLine
+    second: {fileID: 2100000, guid: ceca7a600e5d59248a4d4634ac6cbbdc, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
