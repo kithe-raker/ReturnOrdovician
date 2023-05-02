@@ -29,7 +29,11 @@ namespace Unity.FPS.Gameplay
         public int Waves = 3;
 
         //list of spawn points
-        public List<Transform> points;
+        public List<Transform> pointsLevel1;
+        public List<Transform> pointsLevel2;
+        public List<Transform> pointsLevel3;
+
+
 
 
 
@@ -39,7 +43,7 @@ namespace Unity.FPS.Gameplay
             base.Start();
 
             EventManager.AddListener<EnemyKillEvent>(OnEnemyKilled);
-            KillsToCompleteObjective = Waves * numEnemiesToSpawn * points.Count;
+            KillsToCompleteObjective = Waves * numEnemiesToSpawn * pointsLevel1.Count;
 
             // set a title and description specific for this type of objective, if it hasn't one
             if (string.IsNullOrEmpty(Title))
@@ -59,7 +63,7 @@ namespace Unity.FPS.Gameplay
             killedTest++;
 
             if (MustKillAllEnemies)
-                KillsToCompleteObjective = Waves*numEnemiesToSpawn*points.Count;
+                KillsToCompleteObjective = Waves*numEnemiesToSpawn*pointsLevel1.Count;
 
             int targetRemaining = MustKillAllEnemies ? evt.RemainingEnemyCount : KillsToCompleteObjective - m_KillTotal;
 
@@ -68,7 +72,7 @@ namespace Unity.FPS.Gameplay
             {
                 CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
             }
-            else if (/*targetRemaining == 1*/m_KillTotal == Waves * numEnemiesToSpawn * points.Count)
+            else if (/*targetRemaining == 1*/m_KillTotal == Waves * numEnemiesToSpawn * pointsLevel1.Count)
             {
                 string notificationText = NotificationEnemiesRemainingThreshold >= targetRemaining
                     ? "One enemy left"
