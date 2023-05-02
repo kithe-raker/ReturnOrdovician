@@ -8,27 +8,27 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Glass
-    second: {fileID: 2100000, guid: 5aa331a3c5363dd40ace3a621bf67695, type: 2}
+    second: {fileID: 2100000, guid: 9a48fa463537e8e40a4f4a8d63a74668, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Metal
-    second: {fileID: 2100000, guid: fbc14f5a17d70b546ab9c576ef5e4bdf, type: 2}
+    second: {fileID: 2100000, guid: 40a5f34fa39ad584a805bfcb143e8e84, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Metal.001
-    second: {fileID: 2100000, guid: 43019162f26d20c4dbccd6a93944751a, type: 2}
+    second: {fileID: 2100000, guid: 670b9b73ac2bfb84497c771fb972ff18, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Metal.002
-    second: {fileID: 2100000, guid: b7910a3c293c7f24fbc9e0cb6ecc3e41, type: 2}
+    second: {fileID: 2100000, guid: ba59f8698358f1e4fa632f1666ce463c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Yellow
-    second: {fileID: 2100000, guid: 455b822a784793a4b949c2f03097fba9, type: 2}
+    second: {fileID: 2100000, guid: 34f2f6c3982924b49a73fdbe10b23205, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
