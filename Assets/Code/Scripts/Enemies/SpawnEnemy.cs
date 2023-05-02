@@ -46,9 +46,9 @@ public class SpawnEnemy : MonoBehaviour
     {
         for (int i = 0; i < objectiveKillEnemies.numEnemiesToSpawn; i++)
         {
-            for (int j = 0; j < objectiveKillEnemies.points.Count; j++)
+            for (int j = 0; j < objectiveKillEnemies.pointsLevel1.Count; j++)
             {
-            Instantiate(enemyPrefab, objectiveKillEnemies.points[j].position, transform.rotation);
+            Instantiate(enemyPrefab, objectiveKillEnemies.pointsLevel1[j].position, transform.rotation);
             
             }
             
