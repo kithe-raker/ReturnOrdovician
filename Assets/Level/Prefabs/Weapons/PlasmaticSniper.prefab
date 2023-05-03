@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 6693353111079811784}
   - component: {fileID: 2452829571981069933}
   - component: {fileID: 6194184040838564946}
+  - component: {fileID: 4032565912677819080}
   m_Layer: 0
   m_Name: PlasmaticSniper
   m_TagString: Untagged
@@ -361,6 +362,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &4032565912677819080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4277535572319568467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f773442819fe3e0418711425760330a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wc: {fileID: 6214300749284617851}
+  ProjectilePrefabAlt: {fileID: 3138145252487797216, guid: 3754860aca683524e8410cac9a7f07bd,
+    type: 3}
 --- !u!1 &6161366521779103039
 GameObject:
   m_ObjectHideFlags: 0

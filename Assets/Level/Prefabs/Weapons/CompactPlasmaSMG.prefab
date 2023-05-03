@@ -116,7 +116,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wc: {fileID: 7540296755513790978}
-  ProjectilePrefabAlt: {fileID: 6017487953724789293, guid: 5578bc54d64938f4798bd5859c3f1fc5,
+  ProjectilePrefabAlt: {fileID: 2801692511924693224, guid: cc6c406ffcd8a9e4383f54aaa36eeac2,
     type: 3}
 --- !u!114 &8653191531315182811
 MonoBehaviour:
