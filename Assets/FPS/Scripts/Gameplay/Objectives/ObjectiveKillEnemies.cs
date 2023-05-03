@@ -18,7 +18,7 @@ namespace Unity.FPS.Gameplay
         public int NotificationEnemiesRemainingThreshold = 3;
 
         public int m_KillTotal;
-        public int killedTest;
+        public int killedTrigger;
 
         
 
@@ -33,8 +33,15 @@ namespace Unity.FPS.Gameplay
         public List<Transform> pointsLevel2;
         public List<Transform> pointsLevel3;
 
+        //Level
+        public int level = 1;
+        public int change2 = 30;
+        public int change3 = 80;
 
+        //public int enemiesKillTest = 10;
 
+        //Current wave
+        public int CurrentWave = 0;
 
 
 
@@ -43,7 +50,7 @@ namespace Unity.FPS.Gameplay
             base.Start();
 
             EventManager.AddListener<EnemyKillEvent>(OnEnemyKilled);
-            KillsToCompleteObjective = Waves * numEnemiesToSpawn * pointsLevel1.Count;
+            KillsToCompleteObjective = 9;
 
             // set a title and description specific for this type of objective, if it hasn't one
             if (string.IsNullOrEmpty(Title))
@@ -60,10 +67,10 @@ namespace Unity.FPS.Gameplay
                 return;
 
             m_KillTotal++;
-            killedTest++;
+            killedTrigger++;
 
             if (MustKillAllEnemies)
-                KillsToCompleteObjective = Waves*numEnemiesToSpawn*pointsLevel1.Count;
+                KillsToCompleteObjective = 9;
 
             int targetRemaining = MustKillAllEnemies ? evt.RemainingEnemyCount : KillsToCompleteObjective - m_KillTotal;
 
@@ -72,7 +79,7 @@ namespace Unity.FPS.Gameplay
             {
                 CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
             }
-            else if (/*targetRemaining == 1*/m_KillTotal == Waves * numEnemiesToSpawn * pointsLevel1.Count)
+            else if (/*targetRemaining == 1*/m_KillTotal == 149)
             {
                 string notificationText = NotificationEnemiesRemainingThreshold >= targetRemaining
                     ? "One enemy left"
@@ -89,6 +96,17 @@ namespace Unity.FPS.Gameplay
                 UpdateObjective(string.Empty, GetUpdatedCounterAmount(), notificationText);
             }
             */
+
+            if (m_KillTotal >= change2 && level == 1)
+            {
+                level = 2;
+                Debug.Log("Changed to level 2!");
+            }
+            else if (m_KillTotal >= change3 && level == 2)
+            {
+                level = 3;
+                Debug.Log("Changed to level 3!");
+            }
         }
 
         string GetUpdatedCounterAmount()
