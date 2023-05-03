@@ -15672,7 +15672,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SelfDestructYHeight: -20
   PathReachingRadius: 2
-  OrientationSpeed: 13
+  OrientationSpeed: 8
   DeathDuration: 0
   SwapToNextWeapon: 0
   DelayAfterWeaponSwap: 0
@@ -15733,8 +15733,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test: 0
-  Animator: {fileID: 3300735926219562649}
-  AttackStopDistanceRatio: 0.08
+  Animator: {fileID: 391680718432542123}
+  AttackStopDistanceRatio: 0.2
   RandomHitSparks:
   - {fileID: 6276258594483486813}
   - {fileID: 6379026029587215153}
@@ -15790,11 +15790,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 10
+  m_Speed: 8
   m_Acceleration: 1555
   avoidancePriority: 50
   m_AngularSpeed: 1000
-  m_StoppingDistance: 0.2
+  m_StoppingDistance: 0.8
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -21144,7 +21144,7 @@ MonoBehaviour:
   ShootType: 1
   ProjectilePrefab: {fileID: 2681351028071303765, guid: f897264dfd7994840b7cd5b0c4f84e56,
     type: 3}
-  DelayBetweenShots: 0.2
+  DelayBetweenShots: 0.8
   BulletSpreadAngle: 0
   BulletsPerShot: 1
   RecoilForce: 1

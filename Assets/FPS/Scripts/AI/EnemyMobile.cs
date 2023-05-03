@@ -134,6 +134,7 @@ namespace Unity.FPS.AI
 
         void OnAttack()
         {
+            Animator.SetBool("Attack", true);
             Animator.SetTrigger(k_AnimAttackParameter);
         }
 
