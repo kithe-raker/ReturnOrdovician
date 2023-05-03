@@ -28,10 +28,7 @@ namespace Unity.FPS.Gameplay
         //How many waves?
         public int Waves = 3;
 
-        //list of spawn points
-        public List<Transform> pointsLevel1;
-        public List<Transform> pointsLevel2;
-        public List<Transform> pointsLevel3;
+        
 
         //Level
         public int level = 1;

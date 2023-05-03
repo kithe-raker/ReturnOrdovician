@@ -238,40 +238,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 33.276, y: 0, z: 0}
---- !u!1 &31172724
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 31172725}
-  m_Layer: 0
-  m_Name: Level1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &31172725
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 31172724}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.9, y: 1.46, z: 0.18769646}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 413956550}
-  - {fileID: 1505018805}
-  - {fileID: 1093495174}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &64281968
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,7 +292,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 99636086}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.06, y: -5.09, z: -4.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1214,6 +1180,10 @@ MonoBehaviour:
   enemyPrefab1: {fileID: 1645786640269919655, guid: 72351fb9cd0988e468d158d54cd5c727,
     type: 3}
   Limits: 1
+  pointsLevel1:
+  - {fileID: 899318701}
+  pointsLevel2: []
+  pointsLevel3: []
 --- !u!4 &413956550
 Transform:
   m_ObjectHideFlags: 0
@@ -1222,13 +1192,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413956548}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -8.63, y: -1.6700001, z: 0}
+  m_LocalPosition: {x: -5.73, y: -0.21000004, z: 0.18769646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 899318701}
-  m_Father: {fileID: 31172725}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &899318700
 GameObject:
@@ -1253,8 +1223,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 899318700}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.06, y: -5.09, z: -4.47}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.060001, y: -5.09, z: -4.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1315,7 +1285,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952641979}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -10.06, y: -5.09, z: -4.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1348,13 +1318,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1093495173}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.33, y: -0.29, z: 0}
+  m_LocalPosition: {x: 11.23, y: 1.1700001, z: 0.18769646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 952641980}
-  m_Father: {fileID: 31172725}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1093495175
 MonoBehaviour:
@@ -1371,6 +1341,10 @@ MonoBehaviour:
   enemyPrefab3: {fileID: 1792440314709070920, guid: aa697f9f5e4960543b840de4187f59f6,
     type: 3}
   Limits: 1
+  pointsLevel1:
+  - {fileID: 952641980}
+  pointsLevel2: []
+  pointsLevel3: []
 --- !u!1001 &1162064629
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1614,13 +1588,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505018804}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.47, y: -2.04, z: 0}
+  m_LocalPosition: {x: 4.37, y: -0.5799999, z: 0.18769646}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 99636087}
-  m_Father: {fileID: 31172725}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1505018806
 MonoBehaviour:
@@ -1637,6 +1611,10 @@ MonoBehaviour:
   enemyPrefab2: {fileID: 5303048886805015163, guid: 67b21fca18e384941bebe47bc118b260,
     type: 3}
   Limits: 1
+  pointsLevel1:
+  - {fileID: 99636087}
+  pointsLevel2: []
+  pointsLevel3: []
 --- !u!1 &1540888804
 GameObject:
   m_ObjectHideFlags: 0
