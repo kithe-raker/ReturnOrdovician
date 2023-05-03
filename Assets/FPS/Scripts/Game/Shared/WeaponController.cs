@@ -162,9 +162,9 @@ namespace Unity.FPS.Game
         public bool reloadStart = false;
         float currentReloadTime = 0;
         float reloadDelayYesno = 1;
+        public GameObject pickUpWeaponYesNo;
 
-
-        public int weaponIdYesno = 0;
+        //public int weaponIdYesno = 0;
         
     
 

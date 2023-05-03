@@ -95,6 +95,9 @@ namespace Unity.FPS.Gameplay
         WeaponSwitchState m_WeaponSwitchState;
         int m_WeaponSwitchNewWeaponIndex;
 
+        [Header("YesNo added")]
+        public Transform weaponSpawnLocation;
+
         void Start()
         {
             ActiveWeaponIndex = -1;
@@ -435,12 +438,12 @@ namespace Unity.FPS.Gameplay
                 return false;
             }
 
-            //yesNo Modify start   by zen
-            if(m_WeaponSlots[0]!=null&&m_WeaponSlots[1]!=null){
+
+
+            if(m_WeaponSlots[0]!=null && m_WeaponSlots[1]!=null){   //yesNo Edit by zen
+                Instantiate(m_WeaponSlots[ActiveWeaponIndex].pickUpWeaponYesNo, weaponSpawnLocation.position, transform.rotation);
                 RemoveWeapon(m_WeaponSlots[ActiveWeaponIndex]);
-                print("remove work");
-            }
-            //yesNo Modify start   by zen
+            }   //yesNo edit end
 
             // search our weapon slots for the first free one, assign the weapon to it, and return true if we found one. Return false otherwise
             for (int i = 0; i < m_WeaponSlots.Length; i++)

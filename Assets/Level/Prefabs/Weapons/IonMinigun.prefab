@@ -1436,7 +1436,8 @@ MonoBehaviour:
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
   reloadStart: 0
-  weaponIdYesno: 0
+  pickUpWeaponYesNo: {fileID: 2543277051847762851, guid: dc8d3364378887f46b8c3f1846b3f7ea,
+    type: 3}
 --- !u!114 &8420990767206549179
 MonoBehaviour:
   m_ObjectHideFlags: 0
