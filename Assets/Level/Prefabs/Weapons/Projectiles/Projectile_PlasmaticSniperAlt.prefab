@@ -165,7 +165,7 @@ MonoBehaviour:
   Root: {fileID: 7105787170488097499}
   Tip: {fileID: 6887443954248223898}
   MaxLifeTime: 15
-  ImpactVfx: {fileID: 7655095426451682942, guid: 358eca6adc32a89459c54b6b62d9c825,
+  ImpactVfx: {fileID: 2470489655939147833, guid: 1fe6bfebeb2676640a49be8b39a3dd90,
     type: 3}
   ImpactVfxLifetime: 5
   ImpactVfxSpawnOffset: 0.1
