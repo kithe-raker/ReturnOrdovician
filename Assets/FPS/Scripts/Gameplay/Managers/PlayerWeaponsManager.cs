@@ -82,7 +82,7 @@ namespace Unity.FPS.Gameplay
         public UnityAction<WeaponController, int> OnAddedWeapon;
         public UnityAction<WeaponController, int> OnRemovedWeapon;
 
-        WeaponController[] m_WeaponSlots = new WeaponController[9]; // 9 available weapon slots
+        public WeaponController[] m_WeaponSlots = new WeaponController[2]; // 9 available weapon slots
         PlayerInputHandler m_InputHandler;
         PlayerCharacterController m_PlayerCharacterController;
         float m_WeaponBobFactor;
@@ -434,6 +434,13 @@ namespace Unity.FPS.Gameplay
             {
                 return false;
             }
+
+            //yesNo Modify start   by zen
+            if(m_WeaponSlots[0]!=null&&m_WeaponSlots[1]!=null){
+                RemoveWeapon(m_WeaponSlots[ActiveWeaponIndex]);
+                print("remove work");
+            }
+            //yesNo Modify start   by zen
 
             // search our weapon slots for the first free one, assign the weapon to it, and return true if we found one. Return false otherwise
             for (int i = 0; i < m_WeaponSlots.Length; i++)
