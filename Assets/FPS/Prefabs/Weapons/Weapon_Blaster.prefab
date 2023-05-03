@@ -229,7 +229,7 @@ MonoBehaviour:
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
   reloadStart: 0
-  weaponIdYesno: 0
+  pickUpWeaponYesNo: {fileID: 0}
 --- !u!114 &8745372878802205896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,7 +1495,7 @@ PrefabInstance:
     - target: {fileID: 8455270613747015080, guid: 21c8bd050f24da54285f8a3987ee6253,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21c8bd050f24da54285f8a3987ee6253, type: 3}
