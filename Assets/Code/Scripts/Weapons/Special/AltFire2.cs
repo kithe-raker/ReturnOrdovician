@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace Unity.FPS.Game
 {
-    public class AltFire : MonoBehaviour
+    public class AltFire2 : MonoBehaviour
     {
         public WeaponController wc;         //wc is stand for Water Closet aka bathroom not Weapon Controller... wait.... the opposite!
         public ProjectileBase ProjectilePrefabAlt;
@@ -17,13 +17,12 @@ namespace Unity.FPS.Game
         }
         void Update()
         {
-            if (Input.GetKeyDown("mouse 1") && wc.IsWeaponActive && wc.reloadStart == false)
+            if (Input.GetKey("mouse 1") && wc.IsWeaponActive && wc.reloadStart == false)
             {
-                if (wc.m_CurrentAmmo >= wc.MagSizeYn)
+                if (wc.m_CurrentAmmo != 0)
                 {
                     wc.ProjectilePrefab = ProjectilePrefabAlt;
                     wc.TryShoot();
-                    wc.m_CurrentAmmo = 0;
                     wc.ProjectilePrefab = ProjectilePrefabOriginal;
                 }
             }

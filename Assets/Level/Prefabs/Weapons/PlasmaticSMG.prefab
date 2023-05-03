@@ -345,7 +345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1946356566589042521}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.086, y: 0.156, z: 1.167}
+  m_LocalPosition: {x: 0.086, y: 0.156, z: 1.124}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1638,6 +1638,7 @@ GameObject:
   - component: {fileID: 1324300149421486254}
   - component: {fileID: 7820915582964335627}
   - component: {fileID: 1978596840974239284}
+  - component: {fileID: 7415298722307401545}
   m_Layer: 0
   m_Name: PlasmaticSMG
   m_TagString: Untagged
@@ -1923,6 +1924,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7415298722307401545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8493667099168589877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7975215655d51ab43b83ec86595a06b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wc: {fileID: 1783121241799189533}
+  ProjectilePrefabAlt: {fileID: 6959740759232867713, guid: 05e0cb621d8727647b30698eb0af5247,
+    type: 3}
 --- !u!1 &8593441996566783377
 GameObject:
   m_ObjectHideFlags: 0
