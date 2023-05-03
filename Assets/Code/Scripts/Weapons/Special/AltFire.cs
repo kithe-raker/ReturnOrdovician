@@ -19,7 +19,7 @@ namespace Unity.FPS.Game
         {
             if (Input.GetKeyDown("mouse 1") && wc.IsWeaponActive && wc.reloadStart == false)
             {
-                if (wc.m_CurrentAmmo >= 16)
+                if (wc.m_CurrentAmmo >= wc.MagSizeYn)
                 {
                     wc.ProjectilePrefab = ProjectilePrefabAlt;
                     wc.TryShoot();
