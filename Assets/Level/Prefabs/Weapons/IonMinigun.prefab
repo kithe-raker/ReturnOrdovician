@@ -1397,7 +1397,7 @@ MonoBehaviour:
     CrosshairSize: 40
     CrosshairColor: {r: 1, g: 0, b: 0, a: 1}
   FireRateYn: 24
-  ReloadSpeedYn: 10
+  ReloadSpeedYn: 0.1
   MagSizeYn: 10000
   WeaponRoot: {fileID: 9134525939027564655}
   WeaponMuzzle: {fileID: 63936509371453204}
