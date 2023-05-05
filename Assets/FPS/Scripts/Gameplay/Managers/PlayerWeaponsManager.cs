@@ -16,6 +16,8 @@ namespace Unity.FPS.Gameplay
             PutUpNew,
         }
 
+        public bool canAim; //yesno added by Zen  (Kapom Idea) 
+
         [Tooltip("List of weapon the player will start with")]
         public List<WeaponController> StartingWeapons = new List<WeaponController>();
 
@@ -80,7 +82,7 @@ namespace Unity.FPS.Gameplay
         public UnityAction<WeaponController, int> OnAddedWeapon;
         public UnityAction<WeaponController, int> OnRemovedWeapon;
 
-        WeaponController[] m_WeaponSlots = new WeaponController[9]; // 9 available weapon slots
+        public WeaponController[] m_WeaponSlots = new WeaponController[2]; // 9 available weapon slots
         PlayerInputHandler m_InputHandler;
         PlayerCharacterController m_PlayerCharacterController;
         float m_WeaponBobFactor;
@@ -92,6 +94,9 @@ namespace Unity.FPS.Gameplay
         float m_TimeStartedWeaponSwitch;
         WeaponSwitchState m_WeaponSwitchState;
         int m_WeaponSwitchNewWeaponIndex;
+
+        [Header("YesNo added")]
+        public Transform weaponSpawnLocation;
 
         void Start()
         {
@@ -286,7 +291,7 @@ namespace Unity.FPS.Gameplay
             if (m_WeaponSwitchState == WeaponSwitchState.Up)
             {
                 WeaponController activeWeapon = GetActiveWeapon();
-                if (IsAiming && activeWeapon)
+                if (IsAiming && activeWeapon && canAim)
                 {
                     m_WeaponMainLocalPosition = Vector3.Lerp(m_WeaponMainLocalPosition,
                         AimingWeaponPosition.localPosition + activeWeapon.AimOffset,
@@ -432,6 +437,13 @@ namespace Unity.FPS.Gameplay
             {
                 return false;
             }
+
+
+
+            if(m_WeaponSlots[0]!=null && m_WeaponSlots[1]!=null){   //yesNo Edit by zen
+                Instantiate(m_WeaponSlots[ActiveWeaponIndex].pickUpWeaponYesNo, weaponSpawnLocation.position, transform.rotation);
+                RemoveWeapon(m_WeaponSlots[ActiveWeaponIndex]);
+            }   //yesNo edit end
 
             // search our weapon slots for the first free one, assign the weapon to it, and return true if we found one. Return false otherwise
             for (int i = 0; i < m_WeaponSlots.Length; i++)

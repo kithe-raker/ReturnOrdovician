@@ -89,10 +89,10 @@ namespace Unity.FPS.Game
 
             // call OnDamage action
             float trueDamageAmount = healthBefore - CurrentHealth;
-            if (trueDamageAmount > 0f)
-            {
-                OnDamaged?.Invoke(trueDamageAmount, damageSource);
-            }
+            // if (trueDamageAmount > 0f)
+            // {
+            //     OnDamaged?.Invoke(trueDamageAmount, damageSource);
+            // }
 
             HandleDeath();
         }
@@ -139,7 +139,7 @@ namespace Unity.FPS.Game
                     isDamaged= false;
                     break;
                 }
-                yield return new WaitForSeconds(0.1f);
+                yield return new WaitForSeconds(0.025f);
             }
             Debug.Log("regen false");
         }

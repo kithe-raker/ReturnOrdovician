@@ -55,6 +55,10 @@ namespace Unity.FPS.Gameplay
         [Header("Debug")] [Tooltip("Color of the projectile radius debug view")]
         public Color RadiusColor = Color.cyan * 0.2f;
 
+        int YesNoTimeStop = 1; //yesNo edit
+        public bool YesNoTimeStopMod = false;
+        float saveDamage;
+
         ProjectileBase m_ProjectileBase;
         Vector3 m_LastRootPosition;
         Vector3 m_Velocity;
@@ -121,10 +125,29 @@ namespace Unity.FPS.Gameplay
             }
         }
 
+        void Start()            //YesNo Added Start for smg alt
+        {
+           saveDamage = Damage; 
+        }
+        void YesNoTimeStopFunc(){
+            if(YesNoTimeStopMod){
+                if(Input.GetKey("mouse 1")){    //put it outside script kindna not fast enough and turn it into flame thrower instead. 
+                    Damage = 0f;
+                    YesNoTimeStop = 0;
+                }
+                else{
+                    Damage = saveDamage;
+                    YesNoTimeStop = 1;
+                }
+            }                    //YesNo Added end
+        }
+
+        
         void Update()
         {
+            YesNoTimeStopFunc();
             // Move
-            transform.position += m_Velocity * Time.deltaTime;
+            transform.position += m_Velocity * Time.deltaTime * YesNoTimeStop; //yesNo edit
             if (InheritWeaponVelocity)
             {
                 transform.position += m_ProjectileBase.InheritedMuzzleVelocity * Time.deltaTime;
@@ -189,7 +212,6 @@ namespace Unity.FPS.Gameplay
                         closestHit.point = Root.position;
                         closestHit.normal = -transform.forward;
                     }
-
                     OnHit(closestHit.point, closestHit.normal, closestHit.collider);
                 }
             }
