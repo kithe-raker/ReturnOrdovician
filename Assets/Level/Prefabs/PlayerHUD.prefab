@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 3999824945239083908}
   - component: {fileID: 8431264822780977245}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: DashGrey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 1961774944619178428}
   - component: {fileID: 6899547939834402300}
   m_Layer: 5
-  m_Name: Image (1)
+  m_Name: MeleeGrey
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,7 +522,7 @@ GameObject:
   - component: {fileID: 1287066021948098866}
   - component: {fileID: 6638832963271488399}
   m_Layer: 5
-  m_Name: Image
+  m_Name: MeleeImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2501,7 +2501,7 @@ GameObject:
   - component: {fileID: 6941538828464120726}
   - component: {fileID: 8885756429150960805}
   m_Layer: 5
-  m_Name: Image
+  m_Name: DashImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2702,7 +2702,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5334489148540058294}
   - component: {fileID: 2891990594570880999}
-  - component: {fileID: 2444095241004929489}
   - component: {fileID: 2782013966296321533}
   - component: {fileID: 1516162428463311387}
   - component: {fileID: 7002648425356076313}
@@ -2748,19 +2747,6 @@ MonoBehaviour:
   AmmoPanel: {fileID: 5492984694317055365}
   AmmoCounterPrefab: {fileID: 645032500860478885, guid: 381e109c8e235f54cbcfbe7434554e49,
     type: 3}
---- !u!114 &2444095241004929489
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714222529064160511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf2995397d485ca49b59b78b9069bda1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HealthFillImage: {fileID: 3613506114642692814}
 --- !u!114 &2782013966296321533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2886,8 +2872,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   abilityImg1: {fileID: 6899547939834402300}
+  abilityImg2: {fileID: 8431264822780977245}
   cooldown1: 5
+  cooldown2: 3
   ability1: 102
+  ability2: 0
 --- !u!1 &7778325573507791429
 GameObject:
   m_ObjectHideFlags: 0

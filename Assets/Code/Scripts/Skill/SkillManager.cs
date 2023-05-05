@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillManager : MonoBehaviour
 {
@@ -17,9 +18,10 @@ public class SkillManager : MonoBehaviour
     }
     AbilityState state = AbilityState.ready;
 
-
+    
     void Update()
     {
+        
         switch (state)
         {
             case AbilityState.ready:
