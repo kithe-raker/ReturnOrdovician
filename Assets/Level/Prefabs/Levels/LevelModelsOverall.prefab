@@ -303,26 +303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   doors:
-  - left: {fileID: 6832792434369630946}
-    right: {fileID: 2840008188763196547}
-    isOpen: 0
-    currentRange: 0
-    openRange: 20
-  - left: {fileID: 8300962845493613939}
-    right: {fileID: 4027036074806499969}
-    isOpen: 0
-    currentRange: 0
-    openRange: 20
-  - left: {fileID: 3016091163652676321}
-    right: {fileID: 4936008716175539563}
-    isOpen: 0
-    currentRange: 0
-    openRange: 20
-  - left: {fileID: 8222448604959807128}
-    right: {fileID: 8001094783135927849}
-    isOpen: 0
-    currentRange: 0
-    openRange: 20
+  - {fileID: 4064494774744671461}
 --- !u!1 &223638797457165910
 GameObject:
   m_ObjectHideFlags: 0
@@ -5942,6 +5923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7302074581314856740}
+  - component: {fileID: 4064494774744671461}
   m_Layer: 0
   m_Name: DoorL
   m_TagString: Untagged
@@ -5966,6 +5948,23 @@ Transform:
   m_Father: {fileID: 1538159731680950957}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4064494774744671461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1280452920924366774}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5a13f33293d2c847a2ca9741360c9c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  left: {fileID: 6832792434369630946}
+  right: {fileID: 2840008188763196547}
+  isOpen: 0
+  currentRange: 0
+  openRange: 2
 --- !u!1 &1393767325623152671
 GameObject:
   m_ObjectHideFlags: 0
