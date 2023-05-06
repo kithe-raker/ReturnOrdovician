@@ -15746,8 +15746,8 @@ MonoBehaviour:
   OnDetectSfx: {fileID: 8300000, guid: 25722734eeccba042a18e26e376ca542, type: 3}
   MovementSound: {fileID: 0}
   PitchDistortionMovementSpeed:
-    Min: 12
-    Max: 12
+    Min: 9.5
+    Max: 9.5
   m_EnemyController: {fileID: 0}
 --- !u!114 &8202899549096615199
 MonoBehaviour:
@@ -15793,7 +15793,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 12
+  m_Speed: 9.5
   m_Acceleration: 1555
   avoidancePriority: 50
   m_AngularSpeed: 1000
