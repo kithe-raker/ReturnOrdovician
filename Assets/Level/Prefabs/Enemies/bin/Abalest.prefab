@@ -10202,7 +10202,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3125570466375460113}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.00036058843, y: 3.37, z: 0.42}
+  m_LocalPosition: {x: -0.00036058843, y: 3.83, z: 0.42}
   m_LocalScale: {x: 1, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10426,7 +10426,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 40
+  MaxShield: 100
   CriticalHealthRatio: 0.3
+  isDamaged: 0
+  RegenAmount: 5
+  ShieldRegenRate: 5
 --- !u!114 &8996625616484216682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35564,7 +35568,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6666322087191879481}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.052}
+  m_LocalPosition: {x: 0, y: 0, z: -0.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -35595,6 +35599,9 @@ MonoBehaviour:
     CrosshairSprite: {fileID: 0}
     CrosshairSize: 0
     CrosshairColor: {r: 0, g: 0, b: 0, a: 0}
+  FireRateYn: 1
+  ReloadSpeedYn: 0.1
+  MagSizeYn: 9999
   WeaponRoot: {fileID: 860502429397539288}
   WeaponMuzzle: {fileID: 2389026526994925098}
   ShootType: 1
@@ -35629,6 +35636,10 @@ MonoBehaviour:
   ContinuousShootStartSfx: {fileID: 0}
   ContinuousShootLoopSfx: {fileID: 0}
   ContinuousShootEndSfx: {fileID: 0}
+  m_CurrentAmmo: 0
+  reloadStart: 0
+  reloadDelayYesno: 1
+  pickUpWeaponYesNo: {fileID: 0}
 --- !u!82 &8524981976061848529
 AudioSource:
   m_ObjectHideFlags: 0

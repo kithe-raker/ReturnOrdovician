@@ -210,16 +210,16 @@ MonoBehaviour:
   OnDetectSfx: {fileID: 0}
   MovementSound: {fileID: 0}
   PitchDistortionMovementSpeed:
-    Min: 0
-    Max: 0
+    Min: 5
+    Max: 5
   m_EnemyController: {fileID: 8301055306053329755}
   TrailsVFXr: {fileID: 2898192198230690867}
   TrailsVFXl: {fileID: 7840344511355293235}
   SB02: {fileID: 0}
   AnimSB02: {fileID: 2897137460048633987}
   left: 0
-  attack_delay: 0.5
-  stand_still_delay: 0.75
+  attack_delay: 0.3
+  stand_still_delay: 0.5
   mantis_speed: 5
 --- !u!114 &6144448099344105794
 MonoBehaviour:
@@ -234,7 +234,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 800
+  MaxShield: 0
   CriticalHealthRatio: 0.3
+  isDamaged: 0
+  RegenAmount: 0
+  ShieldRegenRate: 0
 --- !u!114 &4412675999646725942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,7 +790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8251215692714964195}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.038, y: 1.393, z: 1.128}
+  m_LocalPosition: {x: -0.038, y: 1.393, z: 1.516}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -851,7 +855,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9042326525308782746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.052}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -882,6 +886,9 @@ MonoBehaviour:
     CrosshairSprite: {fileID: 0}
     CrosshairSize: 0
     CrosshairColor: {r: 0, g: 0, b: 0, a: 0}
+  FireRateYn: 0.5
+  ReloadSpeedYn: 0.1
+  MagSizeYn: 99999
   WeaponRoot: {fileID: 8609234169731216114}
   WeaponMuzzle: {fileID: 1168470810085505896}
   ShootType: 1
@@ -916,6 +923,10 @@ MonoBehaviour:
   ContinuousShootStartSfx: {fileID: 0}
   ContinuousShootLoopSfx: {fileID: 0}
   ContinuousShootEndSfx: {fileID: 0}
+  m_CurrentAmmo: 0
+  reloadStart: 0
+  reloadDelayYesno: 1
+  pickUpWeaponYesNo: {fileID: 0}
 --- !u!82 &1429398585341396635
 AudioSource:
   m_ObjectHideFlags: 0

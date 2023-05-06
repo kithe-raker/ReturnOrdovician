@@ -24,11 +24,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1430920019218933709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 10, y: 10, z: 101.4293}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3059709999123608468}
+  m_Father: {fileID: 7792968149287307630}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3059709999123967924
@@ -60,10 +60,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5850142098475196207}
+  m_Children: []
   m_Father: {fileID: 7792968149287307630}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3059709999120741300
 MeshFilter:
@@ -144,6 +143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5850142098475196207}
   - {fileID: 3059709999123608468}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -164,18 +164,18 @@ MonoBehaviour:
   Root: {fileID: 7792968149287307630}
   Tip: {fileID: 5850142098475196207}
   MaxLifeTime: 20
-  ImpactVfx: {fileID: 7655095426451682942, guid: a7d68b1a502e02a49b8efb1b86a8c931,
-    type: 3}
+  ImpactVfx: {fileID: 0}
   ImpactVfxLifetime: 10
   ImpactVfxSpawnOffset: 0.1
   ImpactSfxClip: {fileID: 0}
   HittableLayers:
     serializedVersion: 2
-    m_Bits: 3383
-  Speed: 50
+    m_Bits: 3447
+  Speed: 150
   GravityDownAcceleration: 0
   TrajectoryCorrectionDistance: 0
   InheritWeaponVelocity: 0
   Damage: 15
   AreaOfDamage: {fileID: 0}
   RadiusColor: {r: 0, g: 1, b: 1, a: 1}
+  YesNoTimeStopMod: 0

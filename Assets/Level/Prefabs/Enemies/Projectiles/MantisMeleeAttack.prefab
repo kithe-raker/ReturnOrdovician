@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1179607680881978115
 Transform:
   m_ObjectHideFlags: 0
@@ -29,10 +29,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 7712249270394406840}
+  m_Children: []
   m_Father: {fileID: 6201078290741449209}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1179607680885369635
 MeshFilter:
@@ -108,11 +107,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3022811224103059290}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 10, y: 10, z: 101.4293}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1179607680881978115}
+  m_Father: {fileID: 6201078290741449209}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6201078290741449208
@@ -144,6 +143,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 7712249270394406840}
   - {fileID: 1179607680881978115}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -163,19 +163,19 @@ MonoBehaviour:
   Radius: 0.8
   Root: {fileID: 6201078290741449209}
   Tip: {fileID: 7712249270394406840}
-  MaxLifeTime: 1
-  ImpactVfx: {fileID: 7655095426451682942, guid: a7d68b1a502e02a49b8efb1b86a8c931,
-    type: 3}
+  MaxLifeTime: 10
+  ImpactVfx: {fileID: 0}
   ImpactVfxLifetime: 1
   ImpactVfxSpawnOffset: 0.1
   ImpactSfxClip: {fileID: 0}
   HittableLayers:
     serializedVersion: 2
-    m_Bits: 3383
-  Speed: 1
+    m_Bits: 3447
+  Speed: 150
   GravityDownAcceleration: 0
   TrajectoryCorrectionDistance: 0
   InheritWeaponVelocity: 0
   Damage: 100
   AreaOfDamage: {fileID: 0}
   RadiusColor: {r: 0, g: 1, b: 1, a: 1}
+  YesNoTimeStopMod: 0

@@ -835,7 +835,7 @@ MonoBehaviour:
     m_Bits: 4294967295
   GroundCheckDistance: 0.05
   MaxSpeedOnGround: 10
-  MovementSharpnessOnGround: 15
+  MovementSharpnessOnGround: 10
   MaxSpeedCrouchedRatio: 0.5
   MaxSpeedInAir: 10
   AccelerationSpeedInAir: 25
