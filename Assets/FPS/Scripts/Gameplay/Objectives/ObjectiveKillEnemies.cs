@@ -22,11 +22,10 @@ namespace Unity.FPS.Gameplay
 
         
 
-        //Number of enemies to spawn
-        public int numEnemiesToSpawn = 1;
+        
+        
 
-        //How many waves?
-        public int Waves = 3;
+        
 
         
 
@@ -37,8 +36,7 @@ namespace Unity.FPS.Gameplay
 
         //public int enemiesKillTest = 10;
 
-        //Current wave
-        public int CurrentWave = 0;
+        
 
 
 
