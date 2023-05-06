@@ -2038,7 +2038,7 @@ GameObject:
   - component: {fileID: 630483637044290119}
   - component: {fileID: 2900018941484015474}
   - component: {fileID: 3939243404847884041}
-  - component: {fileID: 8901614358477962988}
+  - component: {fileID: -6161049399051153188}
   m_Layer: 0
   m_Name: PlasmaticShotgun
   m_TagString: Untagged
@@ -2326,7 +2326,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8901614358477962988
+--- !u!114 &-6161049399051153188
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2335,17 +2335,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 8583470710870371278}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c50d73d9d40bb114bbb8e2360c2773cd, type: 3}
+  m_Script: {fileID: 11500000, guid: f773442819fe3e0418711425760330a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   wc: {fileID: 271814295123398020}
   ProjectilePrefabAlt: {fileID: 1706685818768280401, guid: a99ba8953b148a343af1d00bdf187721,
     type: 3}
-  NumberUI: {fileID: 5306041491320531111}
-  AltBulletSpreadAngle: 40
-  AltBulletsPerShot: 96
-  WarCrimeClusterBombAmount: 3
-  AmmoUse: 1
 --- !u!1 &8738291536733058907
 GameObject:
   m_ObjectHideFlags: 0
