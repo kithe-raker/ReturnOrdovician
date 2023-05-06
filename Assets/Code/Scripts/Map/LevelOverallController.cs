@@ -12,7 +12,6 @@ public class LevelOverallController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        SetExitLevelDoorStatus(0, true);
     }
 
     // Update is called once per frame
