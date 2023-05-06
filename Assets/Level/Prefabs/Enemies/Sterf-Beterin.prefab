@@ -184,7 +184,8 @@ MonoBehaviour:
   DeathVfx: {fileID: 8950624839484268180, guid: 2a8f5052fe50f7b41b17149abb0f7414,
     type: 3}
   DeathVfxSpawnPoint: {fileID: 604470872742725686}
-  LootPrefab: {fileID: 0}
+  LootPrefab: {fileID: 2529580269645609534, guid: 9973c412032becb4ca116ca08be62edf,
+    type: 3}
   DropRate: 1
   PathReachingRangeColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   AttackRangeColor: {r: 1, g: 0, b: 0, a: 1}
@@ -233,11 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 800
-  MaxShield: 0
   CriticalHealthRatio: 0.3
-  isDamaged: 0
-  RegenAmount: 5
-  ShieldRegenRate: 5
 --- !u!114 &4412675999646725942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -467,7 +464,7 @@ GameObject:
   - component: {fileID: 1445181152364332447}
   - component: {fileID: 493397952450740567}
   - component: {fileID: 10721558935276975}
-  m_Layer: 3
+  m_Layer: 12
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -885,9 +882,6 @@ MonoBehaviour:
     CrosshairSprite: {fileID: 0}
     CrosshairSize: 0
     CrosshairColor: {r: 0, g: 0, b: 0, a: 0}
-  FireRateYn: 1
-  ReloadSpeedYn: 0.1
-  MagSizeYn: 99999
   WeaponRoot: {fileID: 8609234169731216114}
   WeaponMuzzle: {fileID: 1168470810085505896}
   ShootType: 1
@@ -922,9 +916,6 @@ MonoBehaviour:
   ContinuousShootStartSfx: {fileID: 0}
   ContinuousShootLoopSfx: {fileID: 0}
   ContinuousShootEndSfx: {fileID: 0}
-  m_CurrentAmmo: 0
-  reloadStart: 0
-  weaponIdYesno: 0
 --- !u!82 &1429398585341396635
 AudioSource:
   m_ObjectHideFlags: 0
