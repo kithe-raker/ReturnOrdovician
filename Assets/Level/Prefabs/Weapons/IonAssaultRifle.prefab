@@ -77,6 +77,7 @@ GameObject:
   - component: {fileID: 8745372878802205896}
   - component: {fileID: 555188489432107117}
   - component: {fileID: 8090847488450120274}
+  - component: {fileID: 3559822473245736246}
   m_Layer: 0
   m_Name: IonAssaultRifle
   m_TagString: Untagged
@@ -164,6 +165,7 @@ MonoBehaviour:
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
   reloadStart: 0
+  reloadDelayYesno: 1
   pickUpWeaponYesNo: {fileID: 893604086084341391, guid: 33b6c7c8f43b3604d9f986ce78a46e19,
     type: 3}
 --- !u!114 &8745372878802205896
@@ -362,6 +364,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3559822473245736246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2225486910712267859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f773442819fe3e0418711425760330a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wc: {fileID: 8323776800172828795}
+  ProjectilePrefabAlt: {fileID: 5608803984461512080, guid: a12a344542fd0f449863ab3ce7b84322,
+    type: 3}
 --- !u!1 &8088409166493606719
 GameObject:
   m_ObjectHideFlags: 0

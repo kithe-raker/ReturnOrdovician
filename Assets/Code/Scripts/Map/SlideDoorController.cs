@@ -12,7 +12,7 @@ public class SlideDoorController : MonoBehaviour
     public float openRange = 2;
 
 
-    private const float _openDoorSpeed = .5f;
+    private const float _openDoorSpeed = 2f;
 
 
     // Start is called before the first frame update
