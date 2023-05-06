@@ -19,7 +19,7 @@ public class LevelOverallController : MonoBehaviour
     void Update()
     {
     }
-    
+
     public void SetDoorStatus(int doorIndex, bool open)
     {
         if (doorIndex < doors.Count)
