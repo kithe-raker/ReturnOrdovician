@@ -21,7 +21,14 @@ public class SpawnEnemy01 : MonoBehaviour
     public List<Transform> pointsLevel2;
     public List<Transform> pointsLevel3;
 
+    //Number of enemies to spwan
+    public int numEnemiesToSpawn = 1;
 
+    //How many waves?
+    public int Waves = 3;
+
+    //Current wave
+    public int CurrentWave = 0;
 
 
 
@@ -41,7 +48,7 @@ public class SpawnEnemy01 : MonoBehaviour
 
     void Update()
     {
-        if (objectiveKillEnemies != null && objectiveKillEnemies.killedTrigger >= Limits && objectiveKillEnemies.CurrentWave < objectiveKillEnemies.Waves)
+        if (objectiveKillEnemies != null && objectiveKillEnemies.killedTrigger >= Limits && CurrentWave < Waves)
         {
             SpawnEnemies01();
             
@@ -53,31 +60,34 @@ public class SpawnEnemy01 : MonoBehaviour
         switch (objectiveKillEnemies.level)
         {
             case 1:
-                for (int i = 0; i < objectiveKillEnemies.numEnemiesToSpawn; i++)
+                for (int i = 0; i < numEnemiesToSpawn; i++)
                 {
                     for (int j = 0; j < pointsLevel1.Count; j++)
                     {
                         Instantiate(spawn, pointsLevel1[j].position, transform.rotation);
                     }
                 }
+                CurrentWave++;
                 break;
             case 2:
-                for (int i = 0; i < objectiveKillEnemies.numEnemiesToSpawn; i++)
+                for (int i = 0; i < numEnemiesToSpawn; i++)
                 {
                     for (int j = 0; j < pointsLevel2.Count; j++)
                     {
                         Instantiate(spawn, pointsLevel2[j].position, transform.rotation);
                     }
                 }
+                CurrentWave++;
                 break;
             case 3:
-                for (int i = 0; i < objectiveKillEnemies.numEnemiesToSpawn; i++)
+                for (int i = 0; i < numEnemiesToSpawn; i++)
                 {
                     for (int j = 0; j < pointsLevel3.Count; j++)
                     {
                         Instantiate(spawn, pointsLevel3[j].position, transform.rotation);
                     }
                 }
+                CurrentWave++;
                 break;
             default:
                 Debug.LogError("Invalid level specified!");
