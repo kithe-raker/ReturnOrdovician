@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SkillManager : MonoBehaviour
 {
     public Skill skill;
-    float cooldownTime;
+    public float cooldownTime;
     float activeTime;
     public KeyCode key;
 
