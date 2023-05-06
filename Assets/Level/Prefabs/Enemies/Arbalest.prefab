@@ -610,7 +610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DetectionSourcePoint: {fileID: 4151674465350394230}
-  DetectionRange: 20
+  DetectionRange: 20000
   AttackRange: 10
   KnownTargetTimeout: 12
   Animator: {fileID: 0}
@@ -963,7 +963,8 @@ MonoBehaviour:
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
   reloadStart: 0
-  weaponIdYesno: 0
+  reloadDelayYesno: 1
+  pickUpWeaponYesNo: {fileID: 0}
 --- !u!82 &789070899035378010
 AudioSource:
   m_ObjectHideFlags: 0
