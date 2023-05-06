@@ -3,7 +3,42 @@ guid: b56c491effc28c94498b5abb208c8e5e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02ArmorGold
+    second: {fileID: 2100000, guid: b86d6226bcbe55e4b9cf99d05195e9e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02BodyGreenGlow
+    second: {fileID: 2100000, guid: 189a44832bdf6ba4ba9cffa5fc3eec82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02BottomExoGrey
+    second: {fileID: 2100000, guid: afcd177fc25372148a8f13f69002bd01, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02EyesGreenGlow
+    second: {fileID: 2100000, guid: f7a78744874979940aedbf7256e66fed, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02HardExoGreen
+    second: {fileID: 2100000, guid: f21c754d33f5610408e49883e5c6f755, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02ScytheExoGreen
+    second: {fileID: 2100000, guid: 69a044d545bf8ea4d8f41bd0715b44ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 02SoftExoGreen
+    second: {fileID: 2100000, guid: f8ddf516ecd2ad8478f0133866c29fa1, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

@@ -3,7 +3,42 @@ guid: fe4451a435cae8a48b59a4accb21665b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown.007
+    second: {fileID: 2100000, guid: 121347056947d604bb79fcf1f6c8efba, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown.008
+    second: {fileID: 2100000, guid: 2ced12be0c9d6aa40b86052be8fb64eb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown.009
+    second: {fileID: 2100000, guid: 560a5eadb4b296b46ae9ce4c2f1e89de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown.010
+    second: {fileID: 2100000, guid: 7bf7099b244805d49ab04c252dbc5951, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown.011
+    second: {fileID: 2100000, guid: d1f93660fc43a6e4cb1eb5b8de2ce708, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown.012
+    second: {fileID: 2100000, guid: 6da8fe8ed724b334d857a846ec9ba0d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Brown.013
+    second: {fileID: 2100000, guid: 5c80bd5eca4c4824394bcff4f304888e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
