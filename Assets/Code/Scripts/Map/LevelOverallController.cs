@@ -6,13 +6,13 @@ using UnityEngine.ProBuilder.Shapes;
 
 public class LevelOverallController : MonoBehaviour
 {
-    public List<SlideDoorController> doors;
+    public List<LevelRoomObject> roomObjects;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        SetDoorStatus(0, true);
+        SetExitLevelDoorStatus(0, true);
     }
 
     // Update is called once per frame
@@ -20,11 +20,20 @@ public class LevelOverallController : MonoBehaviour
     {
     }
 
-    public void SetDoorStatus(int doorIndex, bool open)
+    public void SetEnterLevelDoorStatus(int levelIndex, bool open)
     {
-        if (doorIndex < doors.Count)
+        if (levelIndex < roomObjects.Count)
         {
-            doors[doorIndex].SetDoor(open);
+            roomObjects[levelIndex].SetEnterDoors(open);
+        }
+    }
+
+
+    public void SetExitLevelDoorStatus(int levelIndex, bool open)
+    {
+        if (levelIndex < roomObjects.Count)
+        {
+            roomObjects[levelIndex].SetExitDoors(open);
         }
     }
 
