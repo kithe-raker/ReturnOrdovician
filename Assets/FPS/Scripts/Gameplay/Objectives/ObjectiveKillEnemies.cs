@@ -18,16 +18,18 @@ namespace Unity.FPS.Gameplay
         public int NotificationEnemiesRemainingThreshold = 3;
 
         public int m_KillTotal;
-        public int killedTrigger;
+        public int killedTriggerMantis;
+        public int killedTriggerFarex;
+        public int killedTriggerWasp;
 
-        
 
-        
-        
 
-        
 
-        
+
+
+
+
+
 
         //Level
         public int level = 1;
@@ -62,7 +64,10 @@ namespace Unity.FPS.Gameplay
                 return;
 
             m_KillTotal++;
-            killedTrigger++;
+            killedTriggerMantis++;
+            killedTriggerFarex++;
+            killedTriggerWasp++;
+
 
             if (MustKillAllEnemies)
                 KillsToCompleteObjective = 9;

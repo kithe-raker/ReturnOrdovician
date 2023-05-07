@@ -154,6 +154,8 @@ namespace Unity.FPS.Gameplay
         const float k_JumpGroundingPreventionTime = 0.2f;
         const float k_GroundCheckDistanceInAir = 0.07f;
 
+        public int DashFOV = 100;
+
         IEnumerator EndDash()
         {
             yield return new WaitForSeconds(dashCooldown);
@@ -164,6 +166,13 @@ namespace Unity.FPS.Gameplay
             ActorsManager actorsManager = FindObjectOfType<ActorsManager>();
             if (actorsManager != null)
                 actorsManager.SetPlayer(gameObject);
+        }
+
+        IEnumerator ChangeFov()
+        {
+            Camera.main.fieldOfView = DashFOV;
+            yield return new WaitForSeconds(2f);
+            Camera.main.fieldOfView = 60f;
         }
 
         void Start()
@@ -241,6 +250,15 @@ namespace Unity.FPS.Gameplay
             UpdateCharacterHeight(false);
 
             HandleCharacterMovement();
+
+            if(isDashing)
+            {
+                StartCoroutine(ChangeFov());
+            }
+            //else
+            {
+                //Camera.main.fieldOfView = 60f;
+            }
         }
 
         void OnDie()

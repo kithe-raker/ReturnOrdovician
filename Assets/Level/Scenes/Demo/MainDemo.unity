@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1188013275}
-  m_IndirectSpecularColor: {r: 0.0016858352, g: 0.021253178, b: 0.07210842, a: 1}
+  m_IndirectSpecularColor: {r: 0.0016969639, g: 0.021227868, b: 0.0720466, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1346,8 +1346,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1635279193}
   - {fileID: 1249671964}
+  - {fileID: 1635279193}
   - {fileID: 786764138}
   m_Father: {fileID: 0}
   m_RootOrder: 11
@@ -1675,6 +1675,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7316344013651781548, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: sharedProfile
+      value: 
+      objectReference: {fileID: 11400000, guid: f27fb397c96753647b2361058b131a60,
+        type: 2}
     - target: {fileID: 7383874627095517793, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
       propertyPath: m_Layer
@@ -1926,15 +1932,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 786764137}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4c7bb3cc52bc7242b4acbd516717c3c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bf4b435a710a3c4cb1678955c3e38b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab1: {fileID: 1792440314709070920, guid: aa697f9f5e4960543b840de4187f59f6,
     type: 3}
   Limits: 3
   pointsLevel1: []
-  pointsLevel2: []
-  pointsLevel3: []
+  pointsLevel2:
+  - {fileID: 368366381}
+  - {fileID: 1850741223}
+  - {fileID: 677025345}
+  pointsLevel3:
+  - {fileID: 1142853481}
+  - {fileID: 1622204365}
+  - {fileID: 1363624852}
+  - {fileID: 1071818602}
   numEnemiesToSpawn: 1
   Waves: 5
   CurrentWave: 0
@@ -2060,7 +2073,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 851391862}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.06, y: 3.05, z: 1.23}
+  m_LocalPosition: {x: 4.06, y: 3.05, z: 2.35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2168,6 +2181,7 @@ MonoBehaviour:
   maxDashCount: 3
   dash: 0
   isDashing: 0
+  DashFOV: 100
 --- !u!114 &904566502
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2529,7 +2543,7 @@ Transform:
   - {fileID: 666254617}
   - {fileID: 518297564}
   m_Father: {fileID: 587029403}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1249671965
 MonoBehaviour:
@@ -3245,7 +3259,7 @@ Transform:
   - {fileID: 1920654462}
   - {fileID: 1889302465}
   m_Father: {fileID: 587029403}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1635279194
 MonoBehaviour:
@@ -3256,7 +3270,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1635279192}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4c7bb3cc52bc7242b4acbd516717c3c, type: 3}
+  m_Script: {fileID: 11500000, guid: 83724287050eaf646b258c7b94a370da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab1: {fileID: 1645786640269919655, guid: 72351fb9cd0988e468d158d54cd5c727,

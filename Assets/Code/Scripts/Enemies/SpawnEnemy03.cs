@@ -4,7 +4,7 @@ using UnityEngine;
 
 using Unity.FPS.Gameplay;
 
-public class SpawnEnemy01 : MonoBehaviour
+public class SpawnEnemy03 : MonoBehaviour
 {
     //Which enemy to spawn
     public GameObject enemyPrefab1;
@@ -41,21 +41,21 @@ public class SpawnEnemy01 : MonoBehaviour
         {
             Debug.LogError("Could not find ObjectiveKillEnemies component!");
         }
-        objectiveKillEnemies.killedTriggerFarex = 0;
-        SpawnEnemies01();
+        objectiveKillEnemies.killedTriggerWasp = 0;
+        //SpawnEnemies01();
         
     }
 
     void Update()
     {
-        if (objectiveKillEnemies != null && objectiveKillEnemies.killedTriggerFarex >= Limits && CurrentWave < Waves)
+        if (objectiveKillEnemies != null && objectiveKillEnemies.killedTriggerWasp >= Limits && CurrentWave < Waves)
         {
-            SpawnEnemies01();
+            SpawnEnemies03();
             
         }
     }
 
-    void SpawnEnemies01()
+    void SpawnEnemies03()
     {
         switch (objectiveKillEnemies.level)
         {
@@ -94,7 +94,7 @@ public class SpawnEnemy01 : MonoBehaviour
                 break;
         }
         Debug.Log("Spawning " + spawn.name);
-        objectiveKillEnemies.killedTriggerFarex = 0;
+        objectiveKillEnemies.killedTriggerWasp = 0;
         
     }
 
