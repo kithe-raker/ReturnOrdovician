@@ -366,17 +366,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test: 0
-  Animator: {fileID: 0}
+  Animator: {fileID: 6618365500650959918}
   AttackStopDistanceRatio: 0.08
   RandomHitSparks:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  OnDetectVfx:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  OnDetectVfx: []
   OnDetectSfx: {fileID: 8300000, guid: 25722734eeccba042a18e26e376ca542, type: 3}
   MovementSound: {fileID: 0}
   PitchDistortionMovementSpeed:
