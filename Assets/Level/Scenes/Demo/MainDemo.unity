@@ -1899,7 +1899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &786764138
 Transform:
   m_ObjectHideFlags: 0
@@ -1931,12 +1931,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab1: {fileID: 1792440314709070920, guid: aa697f9f5e4960543b840de4187f59f6,
     type: 3}
-  Limits: 4
+  Limits: 3
   pointsLevel1: []
   pointsLevel2: []
   pointsLevel3: []
   numEnemiesToSpawn: 1
-  Waves: 3
+  Waves: 5
   CurrentWave: 0
 --- !u!1 &795871452
 GameObject:
@@ -3228,7 +3228,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1635279193
 Transform:
   m_ObjectHideFlags: 0
@@ -3261,7 +3261,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab1: {fileID: 1645786640269919655, guid: 72351fb9cd0988e468d158d54cd5c727,
     type: 3}
-  Limits: 4
+  Limits: 3
   pointsLevel1: []
   pointsLevel2:
   - {fileID: 851391863}
@@ -3276,7 +3276,7 @@ MonoBehaviour:
   - {fileID: 831304421}
   - {fileID: 1861071214}
   numEnemiesToSpawn: 1
-  Waves: 3
+  Waves: 5
   CurrentWave: 0
 --- !u!1001 &1690944418
 PrefabInstance:
