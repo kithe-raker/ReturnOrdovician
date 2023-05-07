@@ -1349,6 +1349,7 @@ GameObject:
   - component: {fileID: 8420990767206549179}
   - component: {fileID: 8124958447859320958}
   - component: {fileID: 992580628082675919}
+  - component: {fileID: 6036933608609840597}
   m_Layer: 0
   m_Name: IonMinigun
   m_TagString: Untagged
@@ -1436,6 +1437,7 @@ MonoBehaviour:
   ContinuousShootEndSfx: {fileID: 0}
   m_CurrentAmmo: 0
   reloadStart: 0
+  reloadDelayYesno: 1
   pickUpWeaponYesNo: {fileID: 2543277051847762851, guid: dc8d3364378887f46b8c3f1846b3f7ea,
     type: 3}
 --- !u!114 &8420990767206549179
@@ -1634,6 +1636,21 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &6036933608609840597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5785801803785207010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e4162c36743e184e946353d62dce385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wc: {fileID: 886814318043299051}
+  altFireRate: 48
+  altBulletSpread: 15
 --- !u!1 &5842900368743762816
 GameObject:
   m_ObjectHideFlags: 0
