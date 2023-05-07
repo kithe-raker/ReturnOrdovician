@@ -220,7 +220,7 @@ MonoBehaviour:
   left: 0
   attack_delay: 0.3
   stand_still_delay: 0.5
-  mantis_speed: 5
+  mantis_speed: 7
 --- !u!114 &6144448099344105794
 MonoBehaviour:
   m_ObjectHideFlags: 0
