@@ -175,7 +175,7 @@ MonoBehaviour:
   GravityDownAcceleration: 0
   TrajectoryCorrectionDistance: 0
   InheritWeaponVelocity: 0
-  Damage: 15
+  Damage: 1
   AreaOfDamage: {fileID: 0}
   RadiusColor: {r: 0, g: 1, b: 1, a: 1}
   YesNoTimeStopMod: 0
