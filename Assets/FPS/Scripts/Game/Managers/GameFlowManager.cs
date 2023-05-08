@@ -28,6 +28,7 @@ namespace Unity.FPS.Game
 
         [Header("Lose")] [Tooltip("This string has to be the name of the scene you want to load when losing")]
         public string LoseSceneName = "LoseScene";
+        [Tooltip("Sound played on lost")] public AudioClip DefeatSound;
 
         public GameObject BrokenGlass;
         public bool GameIsEnding { get; private set; }
@@ -46,12 +47,20 @@ namespace Unity.FPS.Game
             AudioUtility.SetMasterVolume(1);
         }
 
+        void OnAllObjectivesCompleted(AllObjectivesCompletedEvent evt) => EndGame(true);
+        void OnPlayerDeath(PlayerDeathEvent evt)
+        {
+            EndGame(false);
+            PlayerDie = true;
+        }
         void Update()
         {
             if (GameIsEnding)
             {
-                BrokenGlass.SetActive(true);
-
+                if (PlayerDie)
+                {
+                    BrokenGlass.SetActive(true);
+                }
                 float timeRatio = 1 - (m_TimeLoadEndGameScene - Time.time) / EndSceneLoadDelay;
                 EndGameFadeCanvasGroup.alpha = timeRatio;
 
@@ -66,8 +75,8 @@ namespace Unity.FPS.Game
             }
         }
 
-        void OnAllObjectivesCompleted(AllObjectivesCompletedEvent evt) => EndGame(true);
-        void OnPlayerDeath(PlayerDeathEvent evt) => EndGame(false);
+        
+
 
         void EndGame(bool win)
         {
@@ -105,6 +114,11 @@ namespace Unity.FPS.Game
             }
             else
             {
+                var audioSource = gameObject.AddComponent<AudioSource>();
+                audioSource.clip = DefeatSound;
+                audioSource.playOnAwake = false;
+                audioSource.outputAudioMixerGroup = AudioUtility.GetAudioGroup(AudioUtility.AudioGroups.HUDVictory);
+                audioSource.PlayScheduled(AudioSettings.dspTime);
                 m_SceneToLoad = LoseSceneName;
                 m_TimeLoadEndGameScene = Time.time + EndSceneLoadDelay;
             }
