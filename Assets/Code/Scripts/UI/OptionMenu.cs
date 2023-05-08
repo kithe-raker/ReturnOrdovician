@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class OptionMenu : MonoBehaviour
 {
     public GameObject Option;
     public GameObject control;
+    public AudioMixer Audio;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,5 +34,13 @@ public class OptionMenu : MonoBehaviour
     public void OnShadowsChanged(bool newValue)
     {
         QualitySettings.shadows = newValue ? ShadowQuality.All : ShadowQuality.Disable;
+    }
+    public void SetBGMValue(float sliderValue)
+    {
+        Audio.SetFloat("BGMVolume",Mathf.Log10((float)sliderValue)*20);
+    }
+    public void CloseOption()
+    {
+        Option.SetActive(false);
     }
 }
