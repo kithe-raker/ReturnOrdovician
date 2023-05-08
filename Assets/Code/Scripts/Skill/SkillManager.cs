@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SkillManager : MonoBehaviour
 {
     public Skill skill;
-    float cooldownTime;
+    public float cooldownTime;
     float activeTime;
     public KeyCode key;
 
@@ -17,9 +18,10 @@ public class SkillManager : MonoBehaviour
     }
     AbilityState state = AbilityState.ready;
 
-
+    
     void Update()
     {
+        
         switch (state)
         {
             case AbilityState.ready:
