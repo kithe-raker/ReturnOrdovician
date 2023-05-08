@@ -38,7 +38,7 @@ namespace Unity.FPS.Gameplay
 
         //public int enemiesKillTest = 10;
 
-        
+
 
 
 
@@ -99,11 +99,21 @@ namespace Unity.FPS.Gameplay
 
             if (m_KillTotal >= change2 && level == 1)
             {
+                // Broadcast on level completed
+                LevelCompletedEvent levelCompletedEvt = Events.LevelCompletedEvent;
+                levelCompletedEvt.completedLevel = level;
+                EventManager.Broadcast(levelCompletedEvt);
+
                 level = 2;
                 Debug.Log("Changed to level 2!");
             }
             else if (m_KillTotal >= change3 && level == 2)
             {
+                // Broadcast on level completed
+                LevelCompletedEvent levelCompletedEvt = Events.LevelCompletedEvent;
+                levelCompletedEvt.completedLevel = level;
+                EventManager.Broadcast(levelCompletedEvt);
+
                 level = 3;
                 Debug.Log("Changed to level 3!");
             }

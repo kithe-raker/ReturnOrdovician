@@ -16,6 +16,7 @@ namespace Unity.FPS.Game
         public static AmmoPickupEvent AmmoPickupEvent = new AmmoPickupEvent();
         public static DamageEvent DamageEvent = new DamageEvent();
         public static DisplayMessageEvent DisplayMessageEvent = new DisplayMessageEvent();
+        public static LevelCompletedEvent LevelCompletedEvent = new LevelCompletedEvent();
     }
 
     public class ObjectiveUpdateEvent : GameEvent
@@ -40,6 +41,11 @@ namespace Unity.FPS.Game
     {
         public GameObject Enemy;
         public int RemainingEnemyCount;
+    }
+
+    public class LevelCompletedEvent : GameEvent
+    {
+        public int completedLevel;
     }
 
     public class PickupEvent : GameEvent
