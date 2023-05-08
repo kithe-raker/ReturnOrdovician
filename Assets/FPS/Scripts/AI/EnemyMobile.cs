@@ -18,7 +18,7 @@ namespace Unity.FPS.AI
 
         [Tooltip("Fraction of the enemy's attack range at which it will stop moving towards target while attacking")]
         [Range(0f, 1f)]
-        public float AttackStopDistanceRatio = 0.5f;
+        public float AttackStopDistanceRatio = 0f;
 
         [Tooltip("The random hit damage effects")]
         public ParticleSystem[] RandomHitSparks;

@@ -61,7 +61,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3622294237253999094}
   - component: {fileID: 6314256142793539334}
-  - component: {fileID: 7516427025940887743}
+  - component: {fileID: 8842598331673431687}
   - component: {fileID: 8202899549096615199}
   - component: {fileID: 1850700313669069675}
   - component: {fileID: 5725732494271578586}
@@ -157,7 +157,7 @@ MonoBehaviour:
   PathReachingRangeColor: {r: 1, g: 0.92156863, b: 0.015686275, a: 1}
   AttackRangeColor: {r: 1, g: 0, b: 0, a: 1}
   DetectionRangeColor: {r: 0, g: 0, b: 1, a: 1}
---- !u!114 &7516427025940887743
+--- !u!114 &8842598331673431687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,24 +166,21 @@ MonoBehaviour:
   m_GameObject: {fileID: 3622294237253999098}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1857b2df8de24b24190ce9e067d2e1e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7e86e8642343cc041a5f465e25238df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   test: 0
-  Animator: {fileID: 391680718432542123}
-  AttackStopDistanceRatio: 0.5
-  RandomHitSparks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  Animator: {fileID: 0}
+  AttackStopDistanceRatio: 0.2
+  RandomHitSparks: []
   OnDetectVfx: []
   OnDetectSfx: {fileID: 0}
   MovementSound: {fileID: 0}
   PitchDistortionMovementSpeed:
     Min: 9.5
     Max: 9.5
-  m_EnemyController: {fileID: 0}
+  m_EnemyController: {fileID: 6314256142793539334}
+  attack_delay: 0.5
 --- !u!114 &8202899549096615199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -696,7 +693,7 @@ MonoBehaviour:
     CrosshairSize: 0
     CrosshairColor: {r: 0, g: 0, b: 0, a: 0}
   FireRateYn: 5
-  ReloadSpeedYn: 1
+  ReloadSpeedYn: 0.1
   MagSizeYn: 99999
   WeaponRoot: {fileID: 6046609771889209007}
   WeaponMuzzle: {fileID: 3793373745547601717}
@@ -1056,7 +1053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DetectionSourcePoint: {fileID: 8254074135621928526}
   DetectionRange: 2000
-  AttackRange: 2
+  AttackRange: 3
   KnownTargetTimeout: 12
   Animator: {fileID: 0}
 --- !u!1001 &6562314201992304163
