@@ -8,6 +8,7 @@ public class MeleeSkill : Skill
     public Transform Pivot;
     public float Damage = .0f;
     public ProjectileBase MeleeAttack;
+    public Animator Melee;
 
     public MeleeSkill() : base("Melee", .3f, .1f)
     {
@@ -16,7 +17,7 @@ public class MeleeSkill : Skill
     public override void Activate()
     {
         base.Activate();
-
+        Melee.SetBool("attack", true);
         if (Pivot != null)
         {
             Instantiate(MeleeAttack, Pivot.transform);
