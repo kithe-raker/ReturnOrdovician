@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate bool PanelInteractEvent();
+
 public class DoorPanelController : MonoBehaviour
 {
     public InteractableObject interaction;
     public SlideDoorController slideDoorController;
+
+    public PanelInteractEvent onPanelInteract;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +30,7 @@ public class DoorPanelController : MonoBehaviour
 
     void OnInteracted()
     {
-        Debug.Log("hello");
-        slideDoorController.SetDoor(true);
+        bool open = onPanelInteract?.Invoke() ?? false;
+        slideDoorController.SetDoor(open);
     }
 }
