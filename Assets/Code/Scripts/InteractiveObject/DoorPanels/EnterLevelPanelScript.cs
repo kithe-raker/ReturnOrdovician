@@ -7,6 +7,7 @@ public class EnterLevelPanelScript : MonoBehaviour
     public SpawnEnemy01 point1;
     public SpawnEnemy02 point2;
     public SpawnEnemy03 point3;
+    public LevelRoomObject previouseRoom;
 
     private DoorPanelController panelController;
 
@@ -34,6 +35,10 @@ public class EnterLevelPanelScript : MonoBehaviour
         point1.CurrentWave = 0;
         point2.CurrentWave = 0;
         point3.CurrentWave = 0;
+        if (previouseRoom)
+        {
+            previouseRoom.SetExitDoors(false);
+        }
         return true;
     }
 
