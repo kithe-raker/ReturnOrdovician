@@ -1648,6 +1648,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1997233770665073882, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
+      propertyPath: Melee
+      value: 
+      objectReference: {fileID: 735462477}
+    - target: {fileID: 1997233770665073882, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
       propertyPath: Damage
       value: 50
       objectReference: {fileID: 0}
@@ -1720,6 +1725,16 @@ PrefabInstance:
         type: 3}
       propertyPath: AccelerationSpeedInAir
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6080459156990978579, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.893
+      objectReference: {fileID: 0}
+    - target: {fileID: 6080459156990978579, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.399
       objectReference: {fileID: 0}
     - target: {fileID: 6717119209339842490, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
@@ -1835,6 +1850,32 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 5782584008852775612, guid: 761cdc9e4e883334cbdcea062d0befa7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 761cdc9e4e883334cbdcea062d0befa7, type: 3}
+--- !u!1 &735462476 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6857277781710450857, guid: 761cdc9e4e883334cbdcea062d0befa7,
+    type: 3}
+  m_PrefabInstance: {fileID: 735462475}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &735462477
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 735462476}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 14b5b9fae1da23140b1ca84a4db8ec40, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1001 &747613495
 PrefabInstance:
   m_ObjectHideFlags: 0
