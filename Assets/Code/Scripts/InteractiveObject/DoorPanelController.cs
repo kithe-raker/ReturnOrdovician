@@ -5,20 +5,15 @@ using UnityEngine;
 public class DoorPanelController : MonoBehaviour
 {
     public InteractableObject interaction;
+    public SlideDoorController slideDoorController;
 
     // Start is called before the first frame update
     void Start()
     {
-        if (interaction != null)
+        if (interaction != null && slideDoorController != null)
         {
             interaction.OnInteract += OnInteracted;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void OnDestroy()
@@ -32,5 +27,6 @@ public class DoorPanelController : MonoBehaviour
     void OnInteracted()
     {
         Debug.Log("hello");
+        slideDoorController.SetDoor(true);
     }
 }
