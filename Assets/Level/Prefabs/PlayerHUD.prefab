@@ -1370,12 +1370,12 @@ GameObject:
   - component: {fileID: 1116158349419979888}
   - component: {fileID: 805788825936429769}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BrokenGlass
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7458191450012339354
 RectTransform:
   m_ObjectHideFlags: 0
