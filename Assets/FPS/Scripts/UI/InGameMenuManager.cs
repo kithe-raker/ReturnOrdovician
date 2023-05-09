@@ -150,5 +150,6 @@ namespace Unity.FPS.UI
         {
             ControlImage.SetActive(show);
         }
+
     }
 }
