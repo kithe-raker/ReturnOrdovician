@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -186,7 +186,7 @@ namespace Unity.FPS.Game
 
         void Awake()
         {
-            DelayBetweenShots = 1/FireRateYn; //yesNo Added
+            DelayBetweenShots = 1; //yesNo Added/FireRateYn
             MaxAmmo = MagSizeYn;
             AmmoReloadRate = (MaxAmmo/ReloadSpeedYn);  //yesNo added end
 

@@ -12,12 +12,8 @@ public class EnemyTermite : EnemyMobile
 
         private float attackTimer=0; //Timer that will start when it attack, stop at attack_delay time
         [SerializeField] float attack_delay=0.75f;// when mantis start causing damage after close enough
+        public Animator FarexAnim;
         
-
-     
-
-
-
 
 
         public override void UpdateCurrentAiState() 
@@ -54,6 +50,7 @@ public class EnemyTermite : EnemyMobile
 
                      if(attackTimer> attack_delay)
                     {
+                        FarexAnim.SetBool("Attack", true);
                         m_EnemyController.OrientTowards(m_EnemyController.KnownDetectedTarget.transform.position);
                         m_EnemyController.TryAtack(m_EnemyController.KnownDetectedTarget.transform.position); 
                         //attackTimer = 0;

@@ -374,8 +374,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   OnDetectVfx: []
-  OnDetectSfx: {fileID: 8300000, guid: 25722734eeccba042a18e26e376ca542, type: 3}
-  MovementSound: {fileID: 0}
+  OnDetectSfx: {fileID: 0}
+  MovementSound: {fileID: 8300000, guid: 9593123b51196224b916c3666758272a, type: 3}
   PitchDistortionMovementSpeed:
     Min: 6
     Max: 6
@@ -952,7 +952,7 @@ MonoBehaviour:
   WeaponAnimator: {fileID: 0}
   MuzzleFlashPrefab: {fileID: 0}
   UnparentMuzzleFlash: 0
-  ShootSfx: {fileID: 8300000, guid: a56e3c9f90e17894eb1625f603eceb54, type: 3}
+  ShootSfx: {fileID: 8300000, guid: 53d2238f4c4b2aa4f8e559c7af9e0126, type: 3}
   ChangeWeaponSfx: {fileID: 0}
   UseContinuousShootSound: 0
   ContinuousShootStartSfx: {fileID: 0}

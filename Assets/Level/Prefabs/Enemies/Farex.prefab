@@ -170,17 +170,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   test: 0
-  Animator: {fileID: 0}
+  Animator: {fileID: 391680718432542123}
   AttackStopDistanceRatio: 0.2
   RandomHitSparks: []
   OnDetectVfx: []
   OnDetectSfx: {fileID: 0}
-  MovementSound: {fileID: 0}
+  MovementSound: {fileID: 8300000, guid: cb1ec08b412a12045aa382bc853298d8, type: 3}
   PitchDistortionMovementSpeed:
     Min: 9.5
     Max: 9.5
   m_EnemyController: {fileID: 6314256142793539334}
   attack_delay: 0.5
+  FarexAnim: {fileID: 391680718432542123}
 --- !u!114 &8202899549096615199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -421,7 +422,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5625621026228245648}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.123}
+  m_LocalPosition: {x: 0, y: 0, z: -1.166}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -432,7 +433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.494}
   m_SizeDelta: {x: 1, y: 0.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2891294711409480046
@@ -661,7 +662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6480459141159064775}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -692,7 +693,7 @@ MonoBehaviour:
     CrosshairSprite: {fileID: 0}
     CrosshairSize: 0
     CrosshairColor: {r: 0, g: 0, b: 0, a: 0}
-  FireRateYn: 5
+  FireRateYn: 1
   ReloadSpeedYn: 0.1
   MagSizeYn: 99999
   WeaponRoot: {fileID: 6046609771889209007}
@@ -700,7 +701,7 @@ MonoBehaviour:
   ShootType: 1
   ProjectilePrefab: {fileID: 2681351028071303765, guid: f897264dfd7994840b7cd5b0c4f84e56,
     type: 3}
-  DelayBetweenShots: 0.8
+  DelayBetweenShots: 1
   BulletSpreadAngle: 0
   BulletsPerShot: 1
   RecoilForce: 1
@@ -723,7 +724,7 @@ MonoBehaviour:
   WeaponAnimator: {fileID: 0}
   MuzzleFlashPrefab: {fileID: 0}
   UnparentMuzzleFlash: 0
-  ShootSfx: {fileID: 0}
+  ShootSfx: {fileID: 8300000, guid: c3128acd3e12ade4d9461f9ace1e3d8f, type: 3}
   ChangeWeaponSfx: {fileID: 0}
   UseContinuousShootSound: 0
   ContinuousShootStartSfx: {fileID: 0}
