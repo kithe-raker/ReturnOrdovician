@@ -597,6 +597,11 @@ PrefabInstance:
       propertyPath: NextRoomTotalWave2
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 809245494530976563, guid: a7823680095baaa4886e487d4ec88b86,
+        type: 3}
+      propertyPath: NextRoomTotalWave3
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6741051660071001483, guid: a7823680095baaa4886e487d4ec88b86,
         type: 3}
       propertyPath: m_Name
@@ -3957,6 +3962,21 @@ PrefabInstance:
       propertyPath: previouseRoom
       value: 
       objectReference: {fileID: 1076086604}
+    - target: {fileID: 809245494530976563, guid: a7823680095baaa4886e487d4ec88b86,
+        type: 3}
+      propertyPath: NextRoomTotalWave1
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 809245494530976563, guid: a7823680095baaa4886e487d4ec88b86,
+        type: 3}
+      propertyPath: NextRoomTotalWave2
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 809245494530976563, guid: a7823680095baaa4886e487d4ec88b86,
+        type: 3}
+      propertyPath: NextRoomTotalWave3
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6741051660071001483, guid: a7823680095baaa4886e487d4ec88b86,
         type: 3}
       propertyPath: m_Name
