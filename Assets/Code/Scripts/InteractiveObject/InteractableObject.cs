@@ -10,6 +10,7 @@ public class InteractableObject : MonoBehaviour
 
     public void InvokeOnInteract()
     {
+        Debug.Log("Start");
         OnInteract();
     }
 
