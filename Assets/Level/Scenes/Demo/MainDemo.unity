@@ -1876,7 +1876,7 @@ PrefabInstance:
     - target: {fileID: 5160327008362092617, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.100006
+      value: 2.0999756
       objectReference: {fileID: 0}
     - target: {fileID: 5235238185369650614, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
@@ -2339,6 +2339,11 @@ PrefabInstance:
         type: 3}
       propertyPath: Damage
       value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 1997233770665073882, guid: 761cdc9e4e883334cbdcea062d0befa7,
+        type: 3}
+      propertyPath: cooldownTime
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 2020865915525802225, guid: 761cdc9e4e883334cbdcea062d0befa7,
         type: 3}
