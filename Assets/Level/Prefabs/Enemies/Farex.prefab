@@ -1056,7 +1056,7 @@ MonoBehaviour:
   DetectionRange: 2000
   AttackRange: 3
   KnownTargetTimeout: 12
-  Animator: {fileID: 0}
+  Animator: {fileID: 391680718432542123}
 --- !u!1001 &6562314201992304163
 PrefabInstance:
   m_ObjectHideFlags: 0

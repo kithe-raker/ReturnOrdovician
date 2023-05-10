@@ -611,7 +611,7 @@ MonoBehaviour:
   DetectionRange: 20000
   AttackRange: 100
   KnownTargetTimeout: 12
-  Animator: {fileID: 0}
+  Animator: {fileID: 6618365500650959918}
 --- !u!1 &2715869357654122521
 GameObject:
   m_ObjectHideFlags: 0

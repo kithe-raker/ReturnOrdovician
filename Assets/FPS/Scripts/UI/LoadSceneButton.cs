@@ -4,14 +4,12 @@ using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class LoadSceneButton : MonoBehaviour
+{
+    public string SceneName = "";
+    public void LoadTargetScene()
     {
-        public string SceneName = "";
-
-
-        public void LoadTargetScene()
-        {
-            SceneManager.LoadScene(SceneName);
+        Time.timeScale = 1f;
         Debug.Log(SceneName);
-        }
-
+        SceneManager.LoadScene(SceneName);
     }
+}

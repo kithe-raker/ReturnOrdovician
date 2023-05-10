@@ -10,10 +10,9 @@ public class VODhandler : MonoBehaviour
     // Start is called before the first frame update
     public VideoPlayer VOD;
     public string GameStart = "";
-    bool button = false;
+    
     void Start()
     {
-        
         
     }
 
@@ -21,11 +20,12 @@ public class VODhandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Invoke("Ending", 1f);
+        StartCoroutine(Ending());
     }
-    public void Ending()
+    IEnumerator Ending()
     {
-        if (!VOD.isPlaying || button)
+        yield return new WaitForSeconds(1);
+        if (!VOD.isPlaying)
         {
             Debug.Log("end");
             SceneManager.LoadScene(GameStart);
@@ -33,6 +33,8 @@ public class VODhandler : MonoBehaviour
     }
     public void isPress()
     {
-        button = true;
+        Debug.Log("boop");
+        VOD.Stop();
+        SceneManager.LoadScene(GameStart);
     }
 }
