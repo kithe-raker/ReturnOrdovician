@@ -24,13 +24,13 @@ namespace Unity.FPS.Gameplay
 
         public bool buttonPressed = false;
 
-        
 
 
 
 
 
 
+        public GameObject Text;
 
         //Level
         public int level = 1;
@@ -135,6 +135,10 @@ namespace Unity.FPS.Gameplay
             if (/*targetRemaining == 0*/m_KillTotal >= KillsToCompleteObjective && buttonPressed)
             {
                 CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
+            }
+            if(m_KillTotal >= KillsToCompleteObjective)
+            {
+                Text.SetActive(true);
             }
         }
     }
