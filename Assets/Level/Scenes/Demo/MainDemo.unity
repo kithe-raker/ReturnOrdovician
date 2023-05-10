@@ -1891,6 +1891,11 @@ PrefabInstance:
       propertyPath: DefeatSound
       value: 
       objectReference: {fileID: 8300000, guid: 716a93adfa3a27a419f75925510fe7a7, type: 3}
+    - target: {fileID: 1315839542190839936, guid: c996b53e9f849234393d1e90f68d1679,
+        type: 3}
+      propertyPath: WinGameMessage
+      value: The Station power is restored
+      objectReference: {fileID: 0}
     - target: {fileID: 1315839542190839937, guid: c996b53e9f849234393d1e90f68d1679,
         type: 3}
       propertyPath: m_RootOrder
