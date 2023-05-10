@@ -7,11 +7,11 @@ using UnityEngine.UI;
 
 public class Abilities : MonoBehaviour
 {
-    private SkillManager skill;
+    private SkillManager skillManager;
     private PlayerCharacterControllerDoubleJump control;
     public Image abilityImg1;
     public Image abilityImg2;
-    public float cooldown1;
+    public float cooldown1, meleeCooldown;
     public float cooldown2;
     int dashamt;
     bool isCooldown1 = false;
@@ -26,20 +26,22 @@ public class Abilities : MonoBehaviour
                 GameObject.FindObjectOfType<PlayerCharacterControllerDoubleJump>();
         DebugUtility.HandleErrorIfNullFindObject<PlayerCharacterControllerDoubleJump, Abilities>(
             playerCharacterController, this);
-        skill = playerCharacterController.GetComponent<SkillManager>();
-        DebugUtility.HandleErrorIfNullGetComponent<PlayerCharacterControllerDoubleJump, Abilities>(skill, this,
+        skillManager = playerCharacterController.GetComponent<SkillManager>();
+        DebugUtility.HandleErrorIfNullGetComponent<PlayerCharacterControllerDoubleJump, Abilities>(skillManager, this,
             playerCharacterController.gameObject);
         control = playerCharacterController.GetComponent<PlayerCharacterControllerDoubleJump>();
-        DebugUtility.HandleErrorIfNullGetComponent<PlayerCharacterControllerDoubleJump, Abilities>(skill, this,
+        DebugUtility.HandleErrorIfNullGetComponent<PlayerCharacterControllerDoubleJump, Abilities>(skillManager, this,
             playerCharacterController.gameObject);
         abilityImg1.fillAmount = 0;
         abilityImg2.fillAmount = 0;
+
+        meleeCooldown = skillManager.skill.cooldownTime;
     }
 
     // Update is called once per frame
     void Update()
     {
-        cooldown1 = skill.skill.cooldownTime + .1f;
+        cooldown1 = skillManager.cooldownTime;
         cooldown2 = control.dashCooldown;
         dashamt = control.dash;
         AbilityMelee();
@@ -51,22 +53,7 @@ public class Abilities : MonoBehaviour
     }
     public void AbilityMelee()
     {
-        if (Input.GetKey(ability1) && !isCooldown1)
-        {
-            isCooldown1 = true;
-            abilityImg1.fillAmount = 1;
-        }
-
-        if (isCooldown1)
-        {
-            abilityImg1.fillAmount -= 1 / cooldown1 * Time.deltaTime;
-
-            if (abilityImg1.fillAmount <= 0)
-            {
-                abilityImg1.fillAmount = 0;
-                isCooldown1 = false;
-            }
-        }
+        abilityImg1.fillAmount = cooldown1 / meleeCooldown;
     }
     public void AbilityDash()
     {
