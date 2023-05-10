@@ -112,7 +112,7 @@ namespace Unity.FPS.UI
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 Time.timeScale = 0f;
-                AudioUtility.SetMasterVolume(VolumeWhenMenuOpen);
+                //AudioUtility.SetMasterVolume(VolumeWhenMenuOpen);
 
                 EventSystem.current.SetSelectedGameObject(null);
             }
@@ -121,7 +121,7 @@ namespace Unity.FPS.UI
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 Time.timeScale = 1f;
-                AudioUtility.SetMasterVolume(1);
+                //AudioUtility.SetMasterVolume(1);
             }
 
         }

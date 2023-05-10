@@ -1114,7 +1114,7 @@ MonoBehaviour:
     CrosshairSprite: {fileID: 21300000, guid: e881aa18189b12f4e915fc5b14ddc421, type: 3}
     CrosshairSize: 40
     CrosshairColor: {r: 1, g: 0, b: 0, a: 1}
-  FireRateYn: 1.5
+  FireRateYn: 3
   ReloadSpeedYn: 1.8
   MagSizeYn: 8
   WeaponRoot: {fileID: 6912019942639516440}
@@ -1282,7 +1282,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243115921504442520, guid: fcc71635aab95ff4fbdf1880bf2afa2f,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 53d2238f4c4b2aa4f8e559c7af9e0126, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
