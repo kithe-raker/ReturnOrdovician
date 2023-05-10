@@ -80,7 +80,7 @@ MonoBehaviour:
   Radius: 0.5
   Root: {fileID: 6201078290741449209}
   Tip: {fileID: 7712249270394406840}
-  MaxLifeTime: 1
+  MaxLifeTime: 0.1
   ImpactVfx: {fileID: 7655095426451682942, guid: 4d48b487f11e62940a978c7c0c0cbcb4,
     type: 3}
   ImpactVfxLifetime: 1
