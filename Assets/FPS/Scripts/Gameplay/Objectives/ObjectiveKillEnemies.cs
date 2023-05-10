@@ -24,7 +24,7 @@ namespace Unity.FPS.Gameplay
 
         public bool buttonPressed = false;
 
-
+        
 
 
 
@@ -78,6 +78,7 @@ namespace Unity.FPS.Gameplay
             // update the objective text according to how many enemies remain to kill
             if (/*targetRemaining == 0*/m_KillTotal == KillsToCompleteObjective&&buttonPressed)
             {
+                buttonPressed = false;
                 CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
             }
             else if (/*targetRemaining == 1*/m_KillTotal == 149)
@@ -128,6 +129,13 @@ namespace Unity.FPS.Gameplay
         void OnDestroy()
         {
             EventManager.RemoveListener<EnemyKillEvent>(OnEnemyKilled);
+        }
+        private void Update()
+        {
+            if (/*targetRemaining == 0*/m_KillTotal == KillsToCompleteObjective && buttonPressed)
+            {
+                CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
+            }
         }
     }
 }

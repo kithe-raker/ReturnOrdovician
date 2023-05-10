@@ -7,6 +7,28 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5665349625660695756, guid: dadf101a93b40454389ec1b2d316ff98,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: c005e0cd8c5909849b114ab2d65dfd1b,
+        type: 2}
+    - target: {fileID: 5665349625660695756, guid: dadf101a93b40454389ec1b2d316ff98,
+        type: 3}
+      propertyPath: m_fontStyle
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5665349625660695756, guid: dadf101a93b40454389ec1b2d316ff98,
+        type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 7273449079385090, guid: c005e0cd8c5909849b114ab2d65dfd1b,
+        type: 2}
+    - target: {fileID: 5665349625660695756, guid: dadf101a93b40454389ec1b2d316ff98,
+        type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 5665349626074937816, guid: dadf101a93b40454389ec1b2d316ff98,
         type: 3}
       propertyPath: m_Name
@@ -87,3 +109,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bcd74d8cdf514f4d8ad796a6cbb03ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  point1: {fileID: 0}
+  point2: {fileID: 0}
+  point3: {fileID: 0}
+  NextRoomTotalWave1: -1
+  NextRoomTotalWave2: -1
+  NextRoomTotalWave3: -1
+  previouseRoom: {fileID: 0}
