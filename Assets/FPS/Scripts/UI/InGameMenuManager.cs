@@ -3,11 +3,14 @@ using Unity.FPS.Gameplay;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 namespace Unity.FPS.UI
 {
     public class InGameMenuManager : MonoBehaviour
     {
+        
+        public float TrueVol;
         [Tooltip("Root GameObject of the menu used to toggle its activation")]
         public GameObject MenuRoot;
 
@@ -29,10 +32,12 @@ namespace Unity.FPS.UI
         [Tooltip("GameObject for the controls")]
         public GameObject ControlImage;
 
+        
+
         PlayerInputHandler m_PlayerInputsHandler;
         Health m_PlayerHealth;
         FramerateCounter m_FramerateCounter;
-
+        public AudioMixer AudioMenu;
         void Start()
         {
             m_PlayerInputsHandler = FindObjectOfType<PlayerInputHandler>();
@@ -106,13 +111,15 @@ namespace Unity.FPS.UI
         void SetPauseMenuActivation(bool active)
         {
             MenuRoot.SetActive(active);
-
+            
             if (MenuRoot.activeSelf)
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 Time.timeScale = 0f;
                 //AudioUtility.SetMasterVolume(VolumeWhenMenuOpen);
+                AudioMenu.SetFloat("cooling", Mathf.Log10((float)0.001) * 20);
+                AudioMenu.SetFloat("Enemies", Mathf.Log10((float)0.001) * 20);
 
                 EventSystem.current.SetSelectedGameObject(null);
             }
@@ -121,7 +128,8 @@ namespace Unity.FPS.UI
                 Cursor.lockState = CursorLockMode.Locked;
                 Cursor.visible = false;
                 Time.timeScale = 1f;
-                //AudioUtility.SetMasterVolume(1);
+                AudioMenu.SetFloat("cooling", Mathf.Log10((float)TrueVol*(2/3)) * 20);
+                AudioMenu.SetFloat("Enemies", Mathf.Log10((float)TrueVol * (2 / 3)) * 20);
             }
 
         }

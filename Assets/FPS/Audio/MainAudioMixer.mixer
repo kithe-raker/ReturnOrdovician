@@ -30,8 +30,12 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: e7a30f3c535a3e54889b370fe7961bc1
+    name: Enemies
   - guid: 8dff9dea73604914285161ca501649a9
     name: MasterVolume
+  - guid: 81edceddc000acd4a86a5ea0b52dd037
+    name: cooling
   m_AudioMixerGroupViews:
   - guids:
     - 843be61932195494294647f056db84dd
@@ -128,6 +132,7 @@ AudioMixerSnapshotController:
     ca2ad2f547ab9c649bd6082a8bee53f2: 2
     a9a26df55c599a142875126a0716a7e8: 1
     de0a7006a1c79994eb4bc85012aef212: 2.5
+    818def36f0c7382409bb8c30155479e7: -5.079878
     bd2f501790549b745aec103b950bfa0c: 0.704
     b8d51f1707b7f4f4887b7fe8ccdc5379: 0.171
     776ba3370fe4fc24a91a04e1cab5a7b0: 0.823

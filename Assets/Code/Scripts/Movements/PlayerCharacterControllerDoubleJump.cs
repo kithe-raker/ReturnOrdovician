@@ -1,6 +1,7 @@
 ﻿using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.Events;
+using Unity.FPS.UI;
 using System.Collections;
 
 namespace Unity.FPS.Gameplay
@@ -8,6 +9,7 @@ namespace Unity.FPS.Gameplay
     [RequireComponent(typeof(CharacterController), typeof(PlayerInputHandler), typeof(AudioSource))]
     public class PlayerCharacterControllerDoubleJump : MonoBehaviour
     {
+        
         [Header("References")] [Tooltip("Reference to the main camera used for the player")]
         public Camera PlayerCamera;
 
@@ -163,6 +165,7 @@ namespace Unity.FPS.Gameplay
         }
         void Awake()
         {
+            
             ActorsManager actorsManager = FindObjectOfType<ActorsManager>();
             if (actorsManager != null)
                 actorsManager.SetPlayer(gameObject);
@@ -263,6 +266,7 @@ namespace Unity.FPS.Gameplay
 
         void OnDie()
         {
+            
             IsDead = true;
 
             // Tell the weapons manager to switch to a non-existing weapon in order to lower the weapon

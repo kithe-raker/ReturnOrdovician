@@ -1,12 +1,14 @@
 ﻿using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 
 namespace Unity.FPS.Gameplay
 {
     [RequireComponent(typeof(CharacterController), typeof(PlayerInputHandler), typeof(AudioSource))]
     public class PlayerCharacterController : MonoBehaviour
     {
+        
         [Header("References")] [Tooltip("Reference to the main camera used for the player")]
         public Camera PlayerCamera;
 
@@ -68,8 +70,8 @@ namespace Unity.FPS.Gameplay
         [Header("Audio")] [Tooltip("Amount of footstep sounds played when moving one meter")]
         public float FootstepSfxFrequency = 1f;
 
-        [Tooltip("Amount of footstep sounds played when moving one meter while sprinting")]
-        public float FootstepSfxFrequencyWhileSprinting = 1f;
+        //[Tooltip("Amount of footstep sounds played when moving one meter while sprinting")]
+        //public float FootstepSfxFrequencyWhileSprinting = 1f;
 
         [Tooltip("Sound played for footsteps")]
         public AudioClip FootstepSfx;
@@ -340,9 +342,8 @@ namespace Unity.FPS.Gameplay
                     }
 
                     // footsteps sound
-                    float chosenFootstepSfxFrequency =
-                        (isSprinting ? FootstepSfxFrequencyWhileSprinting : FootstepSfxFrequency);
-                    if (m_FootstepDistanceCounter >= 1f / chosenFootstepSfxFrequency)
+                    //float chosenFootstepSfxFrequency = FootstepSfxFrequency;
+                    if (m_FootstepDistanceCounter >= 0.5f )
                     {
                         m_FootstepDistanceCounter = 0f;
                         AudioSource.PlayOneShot(FootstepSfx);

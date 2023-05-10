@@ -5,11 +5,12 @@ using UnityEngine;
 public class First3WeaponsChoice : MonoBehaviour
 {
 
-
+    
     public List<GameObject> item;
     int numOfItems;
     public List<Transform> point;
     int numOfPoint;
+    public GameObject UI;
 
     GameObject CompactSmg;
     GameObject Pistol;
@@ -18,6 +19,7 @@ public class First3WeaponsChoice : MonoBehaviour
     // Start is called before the first frame update 
     void Start()
     {
+        UI.SetActive(true);
         numOfItems = item.Count;
         numOfPoint = point.Count;
     }
@@ -44,6 +46,7 @@ public class First3WeaponsChoice : MonoBehaviour
             Destroy(Pistol);
             Destroy(Revolver);
             once = 3;
+            UI.SetActive(true);
         }
      
     }

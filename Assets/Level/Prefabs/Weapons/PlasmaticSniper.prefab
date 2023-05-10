@@ -156,7 +156,7 @@ MonoBehaviour:
   MuzzleFlashPrefab: {fileID: 2152083404160685561, guid: f2d4d25e3fcc5244da2d65e371252017,
     type: 3}
   UnparentMuzzleFlash: 0
-  ShootSfx: {fileID: 8300000, guid: 4b01a8f0d0f7a9c47a47c4a49d63a304, type: 3}
+  ShootSfx: {fileID: 8300000, guid: 0aff549e9400fe24bbe0bf37214aa381, type: 3}
   ChangeWeaponSfx: {fileID: 8300000, guid: 6f3e0904bbbace745bdef08cdbcdfec0, type: 3}
   UseContinuousShootSound: 0
   ContinuousShootStartSfx: {fileID: 0}
@@ -277,7 +277,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243115921504442520, guid: fcc71635aab95ff4fbdf1880bf2afa2f,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 53d2238f4c4b2aa4f8e559c7af9e0126, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4b01a8f0d0f7a9c47a47c4a49d63a304, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.3
   m_Pitch: 1
