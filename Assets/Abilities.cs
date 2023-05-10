@@ -24,8 +24,8 @@ public class Abilities : MonoBehaviour
     {
         PlayerCharacterControllerDoubleJump playerCharacterController =
                 GameObject.FindObjectOfType<PlayerCharacterControllerDoubleJump>();
-            DebugUtility.HandleErrorIfNullFindObject<PlayerCharacterControllerDoubleJump, Abilities>(
-                playerCharacterController, this);
+        DebugUtility.HandleErrorIfNullFindObject<PlayerCharacterControllerDoubleJump, Abilities>(
+            playerCharacterController, this);
         skill = playerCharacterController.GetComponent<SkillManager>();
         DebugUtility.HandleErrorIfNullGetComponent<PlayerCharacterControllerDoubleJump, Abilities>(skill, this,
             playerCharacterController.gameObject);
@@ -39,19 +39,19 @@ public class Abilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        cooldown1 = skill.cooldownTime;
+        cooldown1 = skill.skill.cooldownTime + .1f;
         cooldown2 = control.dashCooldown;
         dashamt = control.dash;
         AbilityMelee();
         AbilityDash();
-        if(cooldown1 <= 0)
+        if (cooldown1 <= 0)
         {
             cooldown1 = 0;
         }
     }
     public void AbilityMelee()
     {
-        if(Input.GetKey(ability1)&& !isCooldown1)
+        if (Input.GetKey(ability1) && !isCooldown1)
         {
             isCooldown1 = true;
             abilityImg1.fillAmount = 1;
@@ -61,7 +61,7 @@ public class Abilities : MonoBehaviour
         {
             abilityImg1.fillAmount -= 1 / cooldown1 * Time.deltaTime;
 
-            if(abilityImg1.fillAmount <= 0)
+            if (abilityImg1.fillAmount <= 0)
             {
                 abilityImg1.fillAmount = 0;
                 isCooldown1 = false;
@@ -70,7 +70,7 @@ public class Abilities : MonoBehaviour
     }
     public void AbilityDash()
     {
-        if ((Input.GetKey(ability2) && !isCooldown2) && dashamt >=3)
+        if ((Input.GetKey(ability2) && !isCooldown2) && dashamt >= 3)
         {
             isCooldown2 = true;
             abilityImg2.fillAmount = 1;
