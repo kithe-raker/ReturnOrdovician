@@ -2923,6 +2923,26 @@ AudioSource:
     type: 3}
   m_PrefabInstance: {fileID: 735462475}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &904566505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 904566500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6018a7da39ef3604c8233bdfedfa68e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isNotCooldown: 1
+  arm: {fileID: 1008914870}
+--- !u!1 &1008914870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6717119209339842490, guid: 761cdc9e4e883334cbdcea062d0befa7,
+    type: 3}
+  m_PrefabInstance: {fileID: 735462475}
+  m_PrefabAsset: {fileID: 0}
 --- !u!20 &1027763215 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8303093099919959869, guid: 761cdc9e4e883334cbdcea062d0befa7,

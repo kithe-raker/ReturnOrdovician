@@ -97,9 +97,12 @@ namespace Unity.FPS.Gameplay
 
         [Header("YesNo added")]
         public Transform weaponSpawnLocation;
+        public bool IsMelee = true;
+        
 
         void Start()
         {
+            
             ActiveWeaponIndex = -1;
             m_WeaponSwitchState = WeaponSwitchState.Down;
 
@@ -132,9 +135,9 @@ namespace Unity.FPS.Gameplay
             if (activeWeapon != null && activeWeapon.IsReloading)
                 return;
 
-            if (activeWeapon != null && m_WeaponSwitchState == WeaponSwitchState.Up)
+            if (activeWeapon != null && m_WeaponSwitchState == WeaponSwitchState.Up && !IsMelee)
             {
-                if (!activeWeapon.AutomaticReload && m_InputHandler.GetReloadButtonDown() && activeWeapon.CurrentAmmoRatio < 1.0f)
+                if (!activeWeapon.AutomaticReload && m_InputHandler.GetReloadButtonDown() && activeWeapon.CurrentAmmoRatio < 1.0f )
                 {
                     IsAiming = false;
                     activeWeapon.StartReloadAnimation();
