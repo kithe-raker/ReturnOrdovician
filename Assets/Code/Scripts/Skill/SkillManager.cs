@@ -18,10 +18,10 @@ public class SkillManager : MonoBehaviour
     }
     AbilityState state = AbilityState.ready;
 
-    
+
     void Update()
     {
-        
+
         switch (state)
         {
             case AbilityState.ready:
