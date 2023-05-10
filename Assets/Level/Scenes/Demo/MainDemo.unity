@@ -152,17 +152,37 @@ PrefabInstance:
     - target: {fileID: 1073633183061636783, guid: ab92d9a3b21a7a04eae0980853773162,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 40.66
+      value: 39.84
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073633183061636783, guid: ab92d9a3b21a7a04eae0980853773162,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1073633183695969995, guid: ab92d9a3b21a7a04eae0980853773162,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.964
+      value: 2.965
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073633183746285611, guid: ab92d9a3b21a7a04eae0980853773162,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073633183746285611, guid: ab92d9a3b21a7a04eae0980853773162,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1073633184284334440, guid: ab92d9a3b21a7a04eae0980853773162,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 44.594
+      value: 45.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 1073633184284334440, guid: ab92d9a3b21a7a04eae0980853773162,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1073633184374765746, guid: ab92d9a3b21a7a04eae0980853773162,
         type: 3}
@@ -182,7 +202,7 @@ PrefabInstance:
     - target: {fileID: 1073633184374765746, guid: ab92d9a3b21a7a04eae0980853773162,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 35.183
+      value: 31.596
       objectReference: {fileID: 0}
     - target: {fileID: 1073633184374765746, guid: ab92d9a3b21a7a04eae0980853773162,
         type: 3}
@@ -2752,7 +2772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerCamera: {fileID: 1027763215}
   AudioSource: {fileID: 904566504}
-  GravityDownForce: 11.5
+  GravityDownForce: 12
   GroundCheckLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2766,7 +2786,7 @@ MonoBehaviour:
   KillHeight: -50
   RotationSpeed: 200
   AimingRotationMultiplier: 0.4
-  JumpForce: 9
+  JumpForce: 7
   CameraHeightRatio: 0.9
   CapsuleHeightStanding: 1.2
   CapsuleHeightCrouching: 0.9
@@ -4418,6 +4438,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1690965945553803017, guid: 460237d8ec14daa40b5c4d22a36fb020,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.817
+      objectReference: {fileID: 0}
     - target: {fileID: 1690965945799683481, guid: 460237d8ec14daa40b5c4d22a36fb020,
         type: 3}
       propertyPath: m_RootOrder
@@ -4436,7 +4461,7 @@ PrefabInstance:
     - target: {fileID: 1690965945799683481, guid: 460237d8ec14daa40b5c4d22a36fb020,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 185.91
+      value: 186.12
       objectReference: {fileID: 0}
     - target: {fileID: 1690965945799683481, guid: 460237d8ec14daa40b5c4d22a36fb020,
         type: 3}
@@ -4477,6 +4502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WeaponChoiceLevel2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690965947578479424, guid: 460237d8ec14daa40b5c4d22a36fb020,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.92
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 460237d8ec14daa40b5c4d22a36fb020, type: 3}

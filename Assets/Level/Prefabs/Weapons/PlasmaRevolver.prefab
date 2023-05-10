@@ -1170,7 +1170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wc: {fileID: 4074630817721888088}
-  ProjectilePrefabAlt: {fileID: 401681035245178445, guid: 3c5ac67dc61f4cd4f8a7b27591ed63a9,
+  ProjectilePrefabAlt: {fileID: 1916838409554182979, guid: d3cb6f17d55dfa141bc1c546dda03dc0,
     type: 3}
 --- !u!114 &3627033265179425259
 MonoBehaviour:
