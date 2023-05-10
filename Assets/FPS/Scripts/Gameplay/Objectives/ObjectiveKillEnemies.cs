@@ -76,10 +76,11 @@ namespace Unity.FPS.Gameplay
             int targetRemaining = MustKillAllEnemies ? evt.RemainingEnemyCount : KillsToCompleteObjective - m_KillTotal;
 
             // update the objective text according to how many enemies remain to kill
-            if (/*targetRemaining == 0*/m_KillTotal >= KillsToCompleteObjective&&buttonPressed)
+            if (/*targetRemaining == 0*/m_KillTotal >= KillsToCompleteObjective)
             {
+                Text.SetActive(true);
                 buttonPressed = false;
-                CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
+                //CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
             }
             else if (/*targetRemaining == 1*/m_KillTotal == 149)
             {
@@ -136,10 +137,8 @@ namespace Unity.FPS.Gameplay
             {
                 CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
             }
-            if(m_KillTotal >= KillsToCompleteObjective)
-            {
-                Text.SetActive(true);
-            }
+            
         }
     }
+    
 }

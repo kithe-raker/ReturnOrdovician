@@ -4007,7 +4007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f0530ce9b08df4db518cbb71b450d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameStart: MainDemo
+  GameStart: CutScene
   option: {fileID: 665179529}
 --- !u!1 &2086681679
 GameObject:
