@@ -62,7 +62,7 @@ MonoBehaviour:
   GravityDownAcceleration: 50
   TrajectoryCorrectionDistance: -1
   InheritWeaponVelocity: 0
-  Damage: 50
+  Damage: 120
   AreaOfDamage: {fileID: 7654418512094989433}
   RadiusColor: {r: 0, g: 1, b: 1, a: 1}
   YesNoTimeStopMod: 0
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0244d6b9e98532469c7be0732490a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AreaOfEffectDistance: 5
+  AreaOfEffectDistance: 7
   DamageRatioOverDistance:
     serializedVersion: 2
     m_Curve:
