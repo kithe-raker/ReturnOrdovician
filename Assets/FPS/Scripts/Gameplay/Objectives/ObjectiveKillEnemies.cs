@@ -12,7 +12,7 @@ namespace Unity.FPS.Gameplay
         public bool MustKillAllEnemies = true;
 
         [Tooltip("If MustKillAllEnemies is false, this is the amount of enemy kills required")]
-        public int KillsToCompleteObjective = 5;
+        public int KillsToCompleteObjective = 150;
 
         [Tooltip("Start sending notification about remaining enemies when this amount of enemies is left")]
         public int NotificationEnemiesRemainingThreshold = 3;
@@ -22,6 +22,7 @@ namespace Unity.FPS.Gameplay
         public int killedTriggerFarex;
         public int killedTriggerWasp;
 
+        public bool buttonPressed = false;
 
 
 
@@ -47,7 +48,7 @@ namespace Unity.FPS.Gameplay
             base.Start();
 
             EventManager.AddListener<EnemyKillEvent>(OnEnemyKilled);
-            KillsToCompleteObjective = 9;
+           
 
             // set a title and description specific for this type of objective, if it hasn't one
             if (string.IsNullOrEmpty(Title))
@@ -70,12 +71,12 @@ namespace Unity.FPS.Gameplay
 
 
             if (MustKillAllEnemies)
-                KillsToCompleteObjective = 9;
+                KillsToCompleteObjective = 150;
 
             int targetRemaining = MustKillAllEnemies ? evt.RemainingEnemyCount : KillsToCompleteObjective - m_KillTotal;
 
             // update the objective text according to how many enemies remain to kill
-            if (/*targetRemaining == 0*/m_KillTotal == 150)
+            if (/*targetRemaining == 0*/m_KillTotal == KillsToCompleteObjective&&buttonPressed)
             {
                 CompleteObjective(string.Empty, GetUpdatedCounterAmount(), "Objective complete : " + Title);
             }
