@@ -24,12 +24,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 864680947086993021}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 202.8586}
+  m_LocalPosition: {x: 0, y: 0, z: 0.41800004}
+  m_LocalScale: {x: 10, y: 10, z: 101.4293}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3006520136722594669}
-  m_RootOrder: 0
+  m_Father: {fileID: 3865664631624157675}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2495082790299248058
 GameObject:
@@ -58,10 +58,9 @@ Transform:
   m_GameObject: {fileID: 2495082790299248058}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0.418}
-  m_LocalScale: {x: 1, y: 1, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 0.3}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3762216583416192576}
+  m_Children: []
   m_Father: {fileID: 3865664631624157675}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -145,6 +144,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3006520136722594669}
+  - {fileID: 3762216583416192576}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -176,7 +176,7 @@ MonoBehaviour:
   GravityDownAcceleration: 20
   TrajectoryCorrectionDistance: -1
   InheritWeaponVelocity: 0
-  Damage: 16
+  Damage: 40
   AreaOfDamage: {fileID: 0}
   RadiusColor: {r: 0, g: 1, b: 1, a: 1}
   YesNoTimeStopMod: 0
