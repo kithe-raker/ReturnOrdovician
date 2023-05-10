@@ -17,7 +17,8 @@ public class MeleeSkill : Skill
     public override void Activate()
     {
         base.Activate();
-        Melee.SetBool("attack", true);
+        //Melee.SetBool("attack", true);
+        Melee.SetTrigger("attackTrigger");
         if (Pivot != null)
         {
             Instantiate(MeleeAttack, Pivot.transform);
