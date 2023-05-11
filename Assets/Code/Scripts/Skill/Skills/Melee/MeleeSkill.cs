@@ -12,6 +12,7 @@ public class MeleeSkill : Skill
 
     public MeleeSkill() : base("Melee", .3f, .1f)
     {
+
     }
 
     public override void Activate()
