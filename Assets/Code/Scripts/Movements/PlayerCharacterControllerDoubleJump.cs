@@ -443,7 +443,8 @@ namespace Unity.FPS.Gameplay
                     // footsteps sound
                     float chosenFootstepSfxFrequency =
                         (isSprinting ? FootstepSfxFrequencyWhileSprinting : FootstepSfxFrequency);
-                    if (m_FootstepDistanceCounter >= 1f / chosenFootstepSfxFrequency)
+
+                    if (m_FootstepDistanceCounter >= 1f/ chosenFootstepSfxFrequency)
                     {
                         m_FootstepDistanceCounter = 0f;
                         AudioSource.PlayOneShot(FootstepSfx);
